@@ -71,7 +71,7 @@ body {
 
 .main-header nav ul li a.active {
   color: #EB0000;
-  text-decoration: underline;
+  background-color: rgb(235, 235, 235);
 }
 
 .main-header nav ul li a:hover {
@@ -145,6 +145,14 @@ body {
   .main-header nav ul li a:hover {
     background: none;
     text-decoration: underline;
+  }
+
+  .main-header nav ul li a.active {
+    background-color: transparent;
+  }
+
+  .main-header nav ul li a.active:hover {
+    text-decoration: none;
   }
 
   .main-header .menu {
