@@ -1,15 +1,28 @@
-/* main-header */
-const menu = document.querySelector('#menu')
-const close = document.querySelector('#close')
-const nav = document.querySelector('#nav')
+/* header */
+const menu = document.querySelector('#menu');
+const close = document.querySelector('#close');
+const nav = document.querySelector('#nav');
+const header = document.querySelector('#header')
+const body = document.querySelector('body');
+const headerHeight = header.getBoundingClientRect().height;
 
 menu.addEventListener('click', () => {
-  nav.classList.add('open-nav')
+  nav.classList.add('open-nav');
 })
 
 close.addEventListener('click', () => {
-  nav.classList.remove('open-nav')
+  nav.classList.remove('open-nav');
 })
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > headerHeight) {
+    body.style.marginTop = headerHeight + 'px';
+    header.classList.add('sticky');
+  } else {
+    body.style.marginTop = '0px';
+    header.classList.remove('sticky');
+  }
+});
 
 /* subheader */
 function updateDateTime() {

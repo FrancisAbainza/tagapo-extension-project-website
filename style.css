@@ -4,35 +4,44 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  height: 2000px;
 }
 
 * {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+  box-sizing: border-box;
+  --primary-color: #EB0000;
+  --primary-color-hover: #c70000;
 }
 
-/* header > main-header */
-.main-header {
+/* header */
+header {
+  background-color: white;
+  padding: 12px 24px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+}
+
+header .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: auto;
-  padding: 24px;
 }
 
-.main-header .logo-text {
+header .logo-text {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.main-header .logo-image {
+header .logo-image {
   width: 90px;
 }
 
-.main-header nav {
+header nav {
   position: fixed;
   right: 0;
   top: 0;
@@ -46,49 +55,68 @@ body {
   box-shadow: -1px 0px 10px rgba(0, 0, 0, .5);
 }
 
-.main-header nav .close {
+header nav .close {
   width: 50px;
   margin: 24px;
   cursor: pointer;
 }
 
-.main-header nav ul {
+header nav ul {
   display: flex;
   flex-direction: column;
   padding: 0;
 }
 
-.main-header nav ul li {
+header nav ul li {
   list-style-type: none;
 }
 
-.main-header nav ul li a {
+header nav ul li a {
   display: block;
   text-decoration: none;
   padding: 24px;
   color: black;
 }
 
-.main-header nav ul li a.active {
-  color: #EB0000;
+header nav ul li a.active {
+  color: var(--primary-color);
   background-color: rgb(235, 235, 235);
 }
 
-.main-header nav ul li a:hover {
+header nav ul li a:hover {
   background-color: rgb(235, 235, 235);
 }
 
-.main-header .menu {
+header .menu {
   cursor: pointer;
 }
 
-.main-header .open-nav {
+header .open-nav {
   transform: translateX(0px);
 }
 
-/* header > subheader */
+header.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: reveal .5s ease-in-out forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .subheader {
-  background-color: #EB0000;
+  background-color: var(--primary-color);
   padding: 12px 24px;
 }
 
@@ -98,28 +126,80 @@ body {
   color: white;
 }
 
+/* Banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background:
+    linear-gradient(to bottom, transparent 60%, white 80%),
+    url(./images/banner-img.png) center -50px no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 80vh;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+.banner .title {
+  font-size: 50px;
+}
+
+.banner .title span {
+  color: var(--primary-color);
+}
+
+.banner>* {
+  max-width: 1200px;
+}
+
+/* Reusables */
+.solid-button {
+  border: none;
+  border-radius: 50vh;
+  padding: 10px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.solid-button:hover {
+  background-color: var(--primary-color-hover);
+}
+
 /* Tablet breakpoint */
 @media only screen and (min-width: 920px) {
 
-  /* header > main-header */
-  .main-header {
-    padding: 24px 48px;
+  /* header */
+  header {
+    padding: 12px 48px;
   }
 
   .subheader {
     padding: 12px 48px;
+  }
+
+  /* banner */
+  .banner {
+    padding: 12px 48px;
+  }
+
+  .banner .title {
+    font-size: 60px;
   }
 }
 
 /* Desktop breakpoint */
 @media only screen and (min-width: 1400px) {
 
-  /* header > main-header */
-  .main-header {
-    padding: 24px 0;
+  /* header */
+  .header {
+    padding: 12px 0;
   }
 
-  .main-header nav {
+  header nav {
     position: unset;
     width: unset;
     height: unset;
@@ -128,34 +208,34 @@ body {
     transform: translateX(0);
   }
 
-  .main-header nav .close {
+  header nav .close {
     display: none;
   }
 
-  .main-header nav ul {
+  header nav ul {
     display: flex;
     flex-direction: row;
     gap: 24px;
   }
 
-  .main-header nav ul li a {
+  header nav ul li a {
     padding: 0;
   }
 
-  .main-header nav ul li a:hover {
+  header nav ul li a:hover {
     background: none;
     text-decoration: underline;
   }
 
-  .main-header nav ul li a.active {
+  header nav ul li a.active {
     background-color: transparent;
   }
 
-  .main-header nav ul li a.active:hover {
+  header nav ul li a.active:hover {
     text-decoration: none;
   }
 
-  .main-header .menu {
+  header .menu {
     display: none;
   }
 
