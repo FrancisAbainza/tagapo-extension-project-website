@@ -1,28 +1,32 @@
 /* header */
-const menu = document.querySelector('#menu');
-const close = document.querySelector('#close');
-const nav = document.querySelector('#nav');
-const header = document.querySelector('#header')
-const body = document.querySelector('body');
-const headerHeight = header.getBoundingClientRect().height;
+function initializeHeader() {
+  const menu = document.querySelector('#menu');
+  const close = document.querySelector('#close');
+  const nav = document.querySelector('#nav');
+  const header = document.querySelector('#header')
+  const body = document.querySelector('body');
+  const headerHeight = header.getBoundingClientRect().height;
 
-menu.addEventListener('click', () => {
-  nav.classList.add('open-nav');
-})
+  menu.addEventListener('click', () => {
+    nav.classList.add('open-nav');
+  })
 
-close.addEventListener('click', () => {
-  nav.classList.remove('open-nav');
-})
+  close.addEventListener('click', () => {
+    nav.classList.remove('open-nav');
+  })
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > headerHeight) {
-    body.style.marginTop = headerHeight + 'px';
-    header.classList.add('sticky');
-  } else {
-    body.style.marginTop = '0px';
-    header.classList.remove('sticky');
-  }
-});
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > headerHeight) {
+      body.style.marginTop = headerHeight + 'px';
+      header.classList.add('sticky');
+    } else {
+      body.style.marginTop = '0px';
+      header.classList.remove('sticky');
+    }
+  });
+}
+
+initializeHeader();
 
 /* subheader */
 function updateDateTime() {
@@ -43,3 +47,33 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 updateDateTime();
+
+/* history > carousel */
+function initializeCarousel() {
+  const carouselLeftBtn = document.querySelector('#carouselLeftBtn');
+  const carouselRightBtn = document.querySelector('#carouselRightBtn');
+  const carouselContainer = document.querySelector('#carouselContainer');
+  let currentPage = 0;
+
+  carouselLeftBtn.addEventListener('click', () => {
+    currentPage--;
+    carouselRightBtn.style.visibility = 'visible';
+    carouselContainer.style.transform = `translateX(calc(-${100 * currentPage}% - ${12 * currentPage}px))`;
+
+    if (currentPage === 0) {
+      carouselLeftBtn.style.visibility = 'hidden';
+    }
+  });
+
+  carouselRightBtn.addEventListener('click', () => {
+    currentPage++;
+    carouselLeftBtn.style.visibility = 'visible';
+    carouselContainer.style.transform = `translateX(calc(-${100 * currentPage}% - ${12 * currentPage}px))`;
+
+    if (currentPage === 2) {
+      carouselRightBtn.style.visibility = 'hidden';
+    }
+  });
+}
+
+initializeCarousel();

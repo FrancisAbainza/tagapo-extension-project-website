@@ -3,10 +3,6 @@ html {
   min-width: 100%;
 }
 
-body {
-  height: 2000px;
-}
-
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -20,6 +16,7 @@ header {
   background-color: white;
   padding: 12px 24px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+  z-index: 999;
 }
 
 header .container {
@@ -138,7 +135,7 @@ header.sticky {
     url(./images/banner-img.png) center -50px no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 80vh;
+  min-height: 85vh;
   padding: 12px 24px;
   text-align: center;
 }
@@ -153,6 +150,92 @@ header.sticky {
 
 .banner>* {
   max-width: 1200px;
+}
+
+/* history */
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/history/history-bg.png) center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 80vh;
+  padding: 48px 24px;
+}
+
+.history .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 15px;
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  padding: 24px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+  text-align: center;
+}
+
+.history .card .header h2 {
+  font-size: 40px;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+.history .card .header h2 span {
+  color: var(--primary-color);
+}
+
+.history .card .carousel {
+  align-self: center;
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.history .card .carousel button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.history .card .carousel button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.history .card .carousel button.left-btn {
+  visibility: hidden;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.history .card .carousel button.right-btn {
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.history .card .carousel .container {
+  display: flex;
+  gap: 12px;
+  transition: transform 1s ease-in-out;
+}
+
+.history .card .carousel img {
+  border-radius: 15px;
+  width: 100%;
 }
 
 /* Reusables */
@@ -188,6 +271,20 @@ header.sticky {
 
   .banner .title {
     font-size: 60px;
+  }
+
+  /* history */
+  .history {
+    padding: 48px 48px;
+  }
+
+  .history .card {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .history .card .header {
+    max-width: 50%;
   }
 }
 
