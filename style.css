@@ -34,6 +34,11 @@ header .logo-text a {
   gap: 12px;
   color: black;
   text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+header .logo-text a:hover {
+  color: var(--primary-color);
 }
 
 header .logo-image {
@@ -387,6 +392,45 @@ header.sticky {
   width: 100%;
 } */
 
+/* footer */
+footer {
+  background-color: #221F1F;
+  color: white;
+  padding: 24px;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+footer .container .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+footer .container .logo-text img {
+  width: 100px;
+}
+
+footer .container .location-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+footer .container .location-group iframe {
+  width: 100%;
+  height: 300px;
+}
+
 /* Reusables */
 .solid-button {
   border: none;
@@ -401,6 +445,7 @@ header.sticky {
   background-color: var(--primary-color-hover);
 }
 
+/* ================================================================== */
 /* Tablet breakpoint */
 @media only screen and (min-width: 920px) {
 
@@ -440,8 +485,35 @@ header.sticky {
   .sectors {
     padding: 96px 48px;
   }
+
+  /* footer */
+  footer {
+    padding: 24px 48px;
+  }
+
+  footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer .container .logo-text {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  footer .container .location-group {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  footer .container .location-group iframe {
+    width: 300px;
+    height: 200px;
+  }
 }
 
+/* ================================================================== */
 /* Desktop breakpoint */
 @media only screen and (min-width: 1400px) {
 

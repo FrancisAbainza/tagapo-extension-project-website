@@ -77,3 +77,14 @@ function initializeCarousel() {
 }
 
 initializeCarousel();
+
+/* footer */
+function initializeFooter() {
+  const currentYearElement = document.querySelector('#currentYearElement');
+  const date = new Date();
+  const currentYear = date.getFullYear();
+
+  currentYearElement.textContent = currentYear;
+}
+
+initializeFooter();
