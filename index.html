@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Barangay Tagapo Website</title>
+  <link rel="icon" href="./images/tagapo-logo.png" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +16,16 @@
 </head>
 
 <body>
+  <!-- header -->
   <header id="header">
     <div class="container" id="mainHeader">
       <div class="logo-text">
-        <a href="/"><img src="./images/tagapo-logo.png" alt="tagapo logo image" class="logo-image"></a>
-        <div>
-          <p>City of Sta. Rosa</p>
-          <h2>BARANGAY TAGAPO</h2>
-        </div>
+        <a href="/"><img src="./images/tagapo-logo.png" alt="tagapo logo image" class="logo-image">
+          <div>
+            <p>City of Sta. Rosa</p>
+            <h2>BARANGAY TAGAPO</h2>
+          </div>
+        </a>
       </div>
 
       <nav id="nav">
@@ -62,6 +65,7 @@
     <p id="datetime"></p>
   </div>
 
+  <!-- banner -->
   <section class="banner">
     <h1 class="title">Welcome to<br />Barangay <span>Tagapo</span></h1>
     <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -69,6 +73,7 @@
     <a href="#" class="solid-button">Contact Us</a>
   </section>
 
+  <!-- history -->
   <section class="history">
     <div class="card">
       <div class="header">
@@ -101,6 +106,122 @@
       </div>
     </div>
   </section>
+
+  <!-- sectors -->
+  <section class="sectors">
+    <h2>Barangay <span>Sectors</span></h2>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <div class="container">
+      <div class="card health">
+        <a href="health.html">
+          <div class="bg-image"></div>
+          <div class="red-blend"></div>
+          <div class="content">
+            <h3>Health</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card security">
+        <a href="security.html">
+          <div class="bg-image"></div>
+          <div class="red-blend"></div>
+          <div class="content">
+            <h3>Security</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card business">
+        <a href="business.html">
+          <div class="bg-image"></div>
+          <div class="red-blend"></div>
+          <div class="content">
+            <h3>Business</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card sk">
+        <a href="sk.html">
+          <div class="bg-image"></div>
+          <div class="red-blend"></div>
+          <div class="content">
+            <h3>SK</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card environment">
+        <a href="environment">
+          <div class="bg-image"></div>
+          <div class="red-blend"></div>
+          <div class="content">
+            <h3>Environment</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="location">
+    <div class="background">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4625.946945187707!2d121.1074051967724!3d14.319442720489432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9e023ad7d8f%3A0x83a71962efcab79e!2sMarco%20Polo%20Place%20Subdivision!5e1!3m2!1sen!2sph!4v1748533970381!5m2!1sen!2sph"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="card">
+      <div class="header">
+        <div class="logo-title">
+          <svg width="25" height="36" viewBox="0 0 25 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_1274_385" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+              height="36">
+              <path
+                d="M12.4219 34.5796C12.4219 34.5796 1.17188 21.4546 1.17188 13.0171C1.17188 6.81084 6.21563 1.76709 12.4219 1.76709C18.6281 1.76709 23.6719 6.81084 23.6719 13.0171C23.6719 21.4546 12.4219 34.5796 12.4219 34.5796Z"
+                fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M12.4219 17.7046C15.0107 17.7046 17.1094 15.6059 17.1094 13.0171C17.1094 10.4283 15.0107 8.32959 12.4219 8.32959C9.83304 8.32959 7.73438 10.4283 7.73438 13.0171C7.73438 15.6059 9.83304 17.7046 12.4219 17.7046Z"
+                fill="black" />
+            </mask>
+            <g mask="url(#mask0_1274_385)">
+              <path d="M34.9219 -3.85791H-10.0781V41.1421H34.9219V-3.85791Z" fill="#EB0000" />
+            </g>
+          </svg>
+          <p>Purok 1</p>
+        </div>
+        <div class="buttons">
+          <button class="left-btn" id="locationCarouselLeftBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.5939 23.3536L0.423756 13.1835C0.269663 13.0294 0.160256 12.8625 0.0955374 12.6827C0.0318456 12.5029 0 12.3103 0 12.1049C0 11.8994 0.0318456 11.7068 0.0955374 11.527C0.160256 11.3472 0.269663 11.1803 0.423756 11.0262L10.5939 0.856059C10.8764 0.573555 11.2293 0.425626 11.6525 0.412271C12.0768 0.399944 12.443 0.547873 12.7512 0.856059C13.0594 1.13856 13.2202 1.49144 13.2335 1.91468C13.2458 2.33895 13.0979 2.70518 12.7897 3.01336L5.23917 10.5639H22.4591C22.8957 10.5639 23.2619 10.7113 23.5578 11.0062C23.8526 11.302 24 11.6683 24 12.1049C24 12.5415 23.8526 12.9072 23.5578 13.202C23.2619 13.4979 22.8957 13.6458 22.4591 13.6458H5.23917L12.7897 21.1963C13.0722 21.4788 13.2202 21.8384 13.2335 22.275C13.2458 22.7116 13.0979 23.0711 12.7897 23.3536C12.5072 23.6618 12.1477 23.8159 11.7111 23.8159C11.2745 23.8159 10.9021 23.6618 10.5939 23.3536Z"
+                fill="black" />
+            </svg>
+          </button>
+          <button class="right-btn" id="locationCarouselRightBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.2488 23.3463C10.9663 23.0638 10.8184 22.7043 10.805 22.2677C10.7927 21.8311 10.9278 21.4715 11.2103 21.189L18.7608 13.6385H1.54093C1.10433 13.6385 0.738106 13.4905 0.442247 13.1947C0.147416 12.8998 0 12.5341 0 12.0975C0 11.6609 0.147416 11.2947 0.442247 10.9989C0.738106 10.704 1.10433 10.5566 1.54093 10.5566H18.7608L11.2103 3.00605C10.9278 2.72354 10.7927 2.36399 10.805 1.9274C10.8184 1.4908 10.9663 1.13125 11.2488 0.848743C11.5313 0.566239 11.8908 0.424988 12.3274 0.424988C12.764 0.424988 13.1236 0.566239 13.4061 0.848743L23.5762 11.0189C23.7303 11.1473 23.8397 11.3076 23.9045 11.4997C23.9682 11.6928 24 11.8921 24 12.0975C24 12.303 23.9682 12.4956 23.9045 12.6754C23.8397 12.8552 23.7303 13.0221 23.5762 13.1762L13.4061 23.3463C13.1236 23.6288 12.764 23.7701 12.3274 23.7701C11.8908 23.7701 11.5313 23.6288 11.2488 23.3463Z"
+                fill="black" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <h2>Marco Polo Place Subdivision</h2>
+      <div class="carousel" id="locationCarousel">
+        <div class="container" id="locationCarouselContainer">
+          <img src="./images/history/history-img-1.jpg" alt="barangay tagapo image">
+          <img src="./images/history/history-img-2.jpg" alt="barangay tagapo image">
+          <img src="./images/history/history-img-3.jpg" alt="barangay tagapo image">
+        </div>
+      </div>
+    </div>
+  </section> -->
 </body>
 
 </html>
