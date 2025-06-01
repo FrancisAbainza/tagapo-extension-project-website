@@ -9,6 +9,9 @@ html {
   box-sizing: border-box;
   --primary-color: #EB0000;
   --primary-color-hover: #c70000;
+  --display-medium: 45px;
+  --display-small: 36px;
+  --headline-small: 24px
 }
 
 /* header */
@@ -148,7 +151,7 @@ header.sticky {
 }
 
 .banner .title {
-  font-size: 50px;
+  font-size: var(--display-medium);
 }
 
 .banner .title span {
@@ -185,7 +188,7 @@ header.sticky {
 }
 
 .history .card .header h2 {
-  font-size: 40px;
+  font-size: var(--display-small);
   border-left: 3px solid var(--primary-color);
   padding-left: 12px;
   margin-bottom: 12px;
@@ -256,7 +259,7 @@ header.sticky {
 }
 
 .sectors h2 {
-  font-size: 40px;
+  font-size: var(--display-small);
 }
 
 .sectors h2 span {
@@ -340,57 +343,218 @@ header.sticky {
 }
 
 .sectors .container .card .content h3 {
-  font-size: 24px;
+  font-size: var(--headline-small);
   font-weight: normal;
 }
 
-/* location */
-/* .buffer {
-  height: 500px;
-}
-
-.location {
-  position: relative;
+/* map */
+.map {
   display: flex;
-  justify-content: end;
   align-items: center;
-  padding: 48px 24px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 24px 96px;
 }
 
-.location .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.map h2 {
+  font-size: var(--display-small);
 }
 
-.location .background iframe {
-  object-fit: cover;
+.map h2 span {
+  color: var(--primary-color);
+}
+
+.map>.container {
+  margin: auto;
   width: 100%;
-  height: 100%;
+  max-width: 1200px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
 }
 
-.location .card {
-  border-radius: 15px;
-  width: 40%;
+.map>.container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
   padding: 12px;
   background-color: white;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-  z-index: 99;
 }
 
-.location .card .carousel {
-  width: 100%;
-  overflow: hidden;
-}
-
-.location .card .carousel .container {
+.map>.container .card .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.location .card .carousel img {
+
+.map>.container .card .header p {
+  font-weight: bold;
+}
+
+.map>.container .card .header .buttons button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50vh;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+}
+
+.map>.container .card .header .buttons button:hover {
+  background-color: black;
+}
+
+.map>.container .card .header .buttons button:hover svg path {
+  fill: white;
+}
+
+.map>.container .card .header .buttons .left-btn {
+  visibility: hidden;
+}
+
+.map>.container .card .title {
+  font-size: var(--headline-small);
+}
+
+.map>.container .card .carousel {
+  display: none;
+}
+
+.map>.container .map-container {
+  position: relative;
+}
+
+.map>.container .map-container h3 {
+  position: absolute;
+  top: 54.20%;
+  left: 65.28%;
+  font-size: 16px;
+  color: var(--primary-color);
+  transform: translate(-50%, -50%);
+}
+
+.map>.container .map-container .marker {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transform: translate(-50%, -100%);
+}
+
+.map>.container .map-container .marker:hover svg g path {
+  fill: black;
+}
+
+.map>.container .map-container .marker svg {
+  width: 16px;
+  transition: width .4s ease-in-out;
+}
+
+.map>.container .map-container .marker p {
+  display: none;
+  transition: fill .4s ease-in-out;
+}
+
+.map>.container .map-container .location-villadeoro {
+  top: 65.36%;
+  left: 6.75%;
+}
+
+.map>.container .map-container .location-rosaflor {
+  top: 42.31%;
+  left: 16.20%;
+}
+
+.map>.container .map-container .location-rosewood {
+  top: 36.38%;
+  left: 20.52%;
+}
+
+.map>.container .map-container .location-howard {
+  top: 65.63%;
+  left: 21.15%;
+}
+
+.map>.container .map-container .location-cataquiz {
+  top: 63.42%;
+  left: 24.57%;
+}
+
+.map>.container .map-container .location-fairfield {
+  top: 32.93%;
+  left: 29.52%;
+}
+
+.map>.container .map-container .location-progressive {
+  top: 50.04%;
+  left: 30.69%;
+}
+
+.map>.container .map-container .location-anros {
+  top: 65.36%;
+  left: 29.52%;
+}
+
+.map>.container .map-container .location-richfield {
+  top: 28.24%;
+  left: 34.02%;
+}
+
+.map>.container .map-container .location-amihan {
+  top: 58.04%;
+  left: 38.43%;
+}
+
+.map>.container .map-container .location-tionco {
+  top: 67.43%;
+  left: 37.71%;
+}
+
+.map>.container .map-container .location-farmview {
+  top: 24.24%;
+  left: 39.69%;
+}
+
+.map>.container .map-container .location-jb {
+  top: 54.73%;
+  left: 42.22%;
+}
+
+.map>.container .map-container .location-rosada {
+  top: 44.80%;
+  left: 42.84%;
+}
+
+.map>.container .map-container .location-zavalla3 {
+  top: 59.98%;
+  left: 46.08%;
+}
+
+.map>.container .map-container .location-marcopolo {
+  top: 49.63%;
+  left: 49.14%;
+}
+
+.map>.container .map-container img {
+  display: block;
   width: 100%;
-} */
+}
+
+.active-location svg {
+  width: 32px !important;
+}
+
+.active-location svg g path {
+  fill: black !important;
+}
 
 /* footer */
 footer {
@@ -448,6 +612,10 @@ footer .container .location-group iframe {
 /* ================================================================== */
 /* Tablet breakpoint */
 @media only screen and (min-width: 920px) {
+  * {
+    --display-medium: 52px;
+    --display-small: 44px;
+  }
 
   /* header */
   header {
@@ -464,7 +632,7 @@ footer .container .location-group iframe {
   }
 
   .banner .title {
-    font-size: 60px;
+    font-size: var(--display-medium);
   }
 
   /* history */
@@ -484,6 +652,63 @@ footer .container .location-group iframe {
   /* sectors */
   .sectors {
     padding: 96px 48px;
+  }
+
+  /* location */
+  .map {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0px 48px 96px;
+  }
+
+  .map>.container {
+    position: relative;
+  }
+
+  .map>.container .map-container .marker {
+    transform: translate(-50%, -80%);
+  }
+
+  .map>.container .card {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border-radius: 15px;
+    width: 40%;
+    z-index: 99;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+  }
+
+  .map>.container .card .carousel {
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .map>.container .card .carousel .container {
+    display: flex;
+    gap: 12px;
+    transition: transform 1s ease-in-out;
+  }
+
+  .map>.container .card .carousel .container img {
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .map>.container .map-container h3 {
+    top: 22.26%;
+    left: 12.67%;
+    font-size: var(--headline-small);
+  }
+
+  .map>.container .map-container .marker p {
+    display: block;
   }
 
   /* footer */
