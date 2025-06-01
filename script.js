@@ -78,7 +78,7 @@ function initializeHistoryScript() {
     /* Add translate x to the carousel container to move to the current image */
     carouselContainer.style.transform = `translateX(calc(-${100 * currentPage}% - ${12 * currentPage}px))`;
 
-    if (currentPage === 2) {
+    if (currentPage === 5) {
       carouselRightBtn.style.visibility = 'hidden';
     }
   });
