@@ -470,7 +470,7 @@ header.sticky {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
 }
 
 .map>.container .map-container .marker:hover svg g path {
@@ -488,82 +488,82 @@ header.sticky {
 }
 
 .map>.container .map-container .location-villadeoro {
-  top: 68.36%;
+  top: 66.36%;
   left: 6.75%;
 }
 
 .map>.container .map-container .location-rosaflor {
-  top: 45.31%;
+  top: 43.50%;
   left: 16.20%;
 }
 
 .map>.container .map-container .location-rosewood {
-  top: 39.38%;
+  top: 38.38%;
   left: 20.52%;
 }
 
 .map>.container .map-container .location-howard {
-  top: 68.63%;
+  top: 67.63%;
   left: 21.15%;
 }
 
 .map>.container .map-container .location-cataquiz {
-  top: 66.42%;
+  top: 65.42%;
   left: 24.57%;
 }
 
 .map>.container .map-container .location-fairfield {
-  top: 33.93%;
+  top: 32.93%;
   left: 29.52%;
 }
 
 .map>.container .map-container .location-progressive {
-  top: 53.04%;
+  top: 51.04%;
   left: 30.69%;
 }
 
 .map>.container .map-container .location-anros {
-  top: 68.36%;
+  top: 67.36%;
   left: 29.52%;
 }
 
 .map>.container .map-container .location-richfield {
-  top: 31.24%;
+  top: 29.24%;
   left: 34.02%;
 }
 
 .map>.container .map-container .location-amihan {
-  top: 61.04%;
+  top: 60.04%;
   left: 38.43%;
 }
 
 .map>.container .map-container .location-tionco {
-  top: 70.43%;
+  top: 68.43%;
   left: 37.71%;
 }
 
 .map>.container .map-container .location-farmview {
-  top: 27.24%;
+  top: 26.24%;
   left: 39.69%;
 }
 
 .map>.container .map-container .location-jb {
-  top: 57.73%;
-  left: 42.22%;
+  top: 56.73%;
+  left: 41.62%;
 }
 
 .map>.container .map-container .location-rosada {
-  top: 47.80%;
+  top: 45.80%;
   left: 42.84%;
 }
 
 .map>.container .map-container .location-zavalla3 {
-  top: 62.98%;
+  top: 60.98%;
   left: 46.08%;
 }
 
 .map>.container .map-container .location-marcopolo {
-  top: 52.63%;
+  top: 51.63%;
   left: 49.14%;
 }
 
@@ -749,10 +749,6 @@ footer .container .location-group iframe {
 
   .map>.container {
     position: relative;
-  }
-
-  .map>.container .map-container .marker {
-    transform: translate(-50%, -80%);
   }
 
   .map>.container .card {
