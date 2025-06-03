@@ -90,22 +90,38 @@ function initializeHistoryScript() {
 /* map */
 function initializeMapScript() {
   const subdivisions = [
-    { id: "#locationVilladeoro", name: "Villa De Oro Subdivision", purok: "Purok 6" },
-    { id: "#locationRosaflor", name: "Rosaflor Subdivision", purok: "Purok 7" },
-    { id: "#locationRosewood", name: "Rosewood Compound", purok: "Purok 6" },
-    { id: "#locationHoward", name: "Howard Compound", purok: "Purok 1" },
-    { id: "#locationCataquiz", name: "Cataquiz Compound", purok: "Purok 7" },
-    { id: "#locationFairfield", name: "Fairfield Subdivision", purok: "Purok --" },
-    { id: "#locationProgressive", name: "Progressive Village Compound", purok: "Purok 4" },
-    { id: "#locationAnros", name: "Anros Compound", purok: "Purok --" },
-    { id: "#locationRichfield", name: "Richfield Subdivision", purok: "Purok --" },
-    { id: "#locationAmihan", name: "Amihan Subdivision", purok: "Purok 3" },
-    { id: "#locationTionco", name: "Tionco Compound", purok: "Purok --" },
-    { id: "#locationFarmview", name: "Farmview Compound", purok: "Purok 3" },
-    { id: "#locationJb", name: "JB Village Compound", purok: "Purok 1" },
-    { id: "#locationRosada", name: "Rosada Subdivision", purok: "Purok 3" },
-    { id: "#locationZavalla3", name: "Zavalla 3 Compound", purok: "Purok 7" },
     { id: "#locationMarcopolo", name: "Marco Polo Place Subdivision", purok: "Purok 1" },
+    { id: "#locationZavalla3", name: "Zavalla 3 Compound", purok: "Purok 1" },
+    { id: "#locationDonPablo", name: "Don Pablo Compound", purok: "Purok 1" },
+    { id: "#locationAlinsod", name: "Alinsod Compound", purok: "Purok 2" },
+    { id: "#locationAmarante", name: "Amarante Compound", purok: "Purok 2" },
+    { id: "#locationBatitis", name: "Batitis Compound", purok: "Purok 2" },
+    { id: "#locationAmihan", name: "Amihan Subdivision", purok: "Purok 3" },
+    { id: "#locationFarmview", name: "Farmview Compound", purok: "Purok 3" },
+    { id: "#locationRichfield", name: "Richfield Subdivision", purok: "Purok 3" },
+    { id: "#locationJb", name: "JB Village Compound", purok: "Purok 3" },
+    { id: "#locationFairfield", name: "Fairfield Subdivision", purok: "Purok 3" },
+    { id: "#locationRosada", name: "Rosada Subdivision", purok: "Purok 3" },
+    { id: "#locationDonaRosina", name: "Doña Rosina Compound", purok: "Purok 3" },
+    { id: "#locationProgressive", name: "Progressive Village Compound", purok: "Purok 4" },
+    { id: "#locationBuenaRosa10", name: "Buena Rosa 10 Compound", purok: "Purok 4" },
+    { id: "#locationCataquiz", name: "Cataquiz Compound", purok: "Purok 4" },
+    { id: "#locationAhas", name: "Ahas Compound", purok: "Purok 5" },
+    { id: "#locationFlorenceville", name: "Florenceville Comp", purok: "Purok 6" },
+    { id: "#locationVilladeoro", name: "Villa De Oro Subdivision", purok: "Purok 6" },
+    { id: "#locationRomanville", name: "Romanville Compound", purok: "Purok 6" },
+    { id: "#locationRosewood", name: "Rosewood Compound", purok: "Purok 6" },
+    { id: "#locationRosaflor", name: "Rosaflor Subdivision", purok: "Purok 6" },
+    { id: "#locationHoward", name: "Howard Compound", purok: "Purok 7" },
+    { id: "#locationLimpo", name: "Limpo Compound", purok: "Purok 7" },
+    { id: "#locationMetrogate", name: "Metrogate Compound", purok: "Purok 7" },
+    { id: "#locationGruenvilleII", name: "Gruenville II Compound", purok: "Purok --" },
+    { id: "#locationIlemHomes", name: "Ilem Homes Compound", purok: "Purok --" },
+    { id: "#locationTionco", name: "Tionco Compound", purok: "Purok --" },
+    { id: "#locationCelinaHomes5", name: "Celina Homes 5 Compound", purok: "Purok --" },
+    { id: "#locationAnros", name: "Anros Compound", purok: "Purok --" },
+    { id: "#locationPambuanAlley", name: "Pambuan Alley Compound", purok: "Purok --" },
+    { id: "#locationPerlas", name: "Perlas Compound", purok: "Purok --" },
   ]
   const mapCarouselLeftBtn = document.querySelector('#mapCarouselLeftBtn');
   const mapCarouselRightBtn = document.querySelector('#mapCarouselRightBtn');
@@ -261,3 +277,10 @@ initializeHistoryScript();
 initializeMapScript();
 initializeFooterScript();
 initializeIntersectAnimations();
+
+document.querySelector('#mapContainer').addEventListener('click', function(e) {
+  const rect = this.getBoundingClientRect();
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
+  console.log(`top: ${y.toFixed(2)}%; left: ${x.toFixed(2)}%;`);
+});
