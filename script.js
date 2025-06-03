@@ -277,10 +277,3 @@ initializeHistoryScript();
 initializeMapScript();
 initializeFooterScript();
 initializeIntersectAnimations();
-
-document.querySelector('#mapContainer').addEventListener('click', function(e) {
-  const rect = this.getBoundingClientRect();
-  const x = ((e.clientX - rect.left) / rect.width) * 100;
-  const y = ((e.clientY - rect.top) / rect.height) * 100;
-  console.log(`top: ${y.toFixed(2)}%; left: ${x.toFixed(2)}%;`);
-});
