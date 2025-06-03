@@ -17,8 +17,8 @@
 
 <body>
   <!-- header -->
-  <header id="header">
-    <div class="container" id="mainHeader">
+  <header class="hidden" id="header">
+    <div class="container" id="headerContainer">
       <div class="logo-text">
         <a href="/"><img src="./images/tagapo-logo.png" alt="barangay tagapo logo image" class="logo-image">
           <div>
@@ -61,21 +61,25 @@
     </div>
   </header>
 
-  <div class="subheader">
+  <div class="subheader hidden" id="subheader">
     <p id="datetime"></p>
   </div>
 
   <!-- banner -->
   <section class="banner">
-    <h1 class="title">Welcome to<br />Barangay <span>Tagapo</span></h1>
-    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    <div class="background hidden" id="bannerBg"></div>
+    <h1 class="title hidden" id="bannerTitle">Welcome to<br />Barangay <span>Tagapo</span></h1>
+    <p class="desc hidden" id="bannerDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut
+      labore
       et.</p>
-    <a href="#" class="solid-button">Contact Us</a>
+    <a href="#" class="solid-button hidden" id="bannerBtn">Contact Us</a>
   </section>
 
   <!-- history -->
   <section class="history">
-    <article class="card">
+    <div class="background hidden" id="historyBg"></div>
+    <article class="card hidden" id="historyCard">
       <div class="header">
         <h2><span>History</span> of Tagapo</h2>
         <p>Barangay Tagapo, located in Santa Rosa, Laguna, was originally part of the established settlement of Barrio
@@ -111,7 +115,7 @@
   </section>
 
   <!-- sectors -->
-  <section class="sectors">
+  <section class="sectors hidden" id="sectors">
     <h2>Barangay <span>Sectors</span></h2>
     <p>Lorem ipsum dolor sit amet consectetur.</p>
     <div class="container">
@@ -172,7 +176,7 @@
     </div>
   </section>
 
-  <section class="map">
+  <section class="map hidden" id="map">
     <h2>Barangay <span>Map</span></h2>
     <p>Lorem ipsum dolor sit amet consectetur.</p>
     <div class="container">

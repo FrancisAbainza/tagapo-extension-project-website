@@ -1,11 +1,10 @@
 /* header */
 function initializeHeaderScript() {
+  const header = document.querySelector('#header');
   const menu = document.querySelector('#menu');
   const close = document.querySelector('#close');
   const nav = document.querySelector('#nav');
-  const header = document.querySelector('#header')
   const body = document.querySelector('body');
-  const headerHeight = header.getBoundingClientRect().height;
 
   menu.addEventListener('click', () => {
     nav.classList.add('open-nav');
@@ -16,37 +15,41 @@ function initializeHeaderScript() {
   })
 
   window.addEventListener('scroll', () => {
+    const headerHeight = header.getBoundingClientRect().height;
+
     if (window.scrollY > headerHeight) {
       body.style.marginTop = headerHeight + 'px';
       header.classList.add('sticky');
     } else {
       body.style.marginTop = '0px';
       header.classList.remove('sticky');
+      header.classList.remove('animate-fadein-delayed');
+      header.classList.remove('hidden');
     }
   });
 }
 
-initializeHeaderScript();
-
 /* subheader */
-function updateDateTime() {
-  const now = new Date();
-  const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-  };
-  const formatted = now.toLocaleString('en-US', options);
-  document.getElementById('datetime').textContent = "Philippine Standard Time: " + formatted;
-}
+function initializeSubheaderScript() {
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    };
+    const formatted = now.toLocaleString('en-US', options);
+    document.getElementById('datetime').textContent = "Philippine Standard Time: " + formatted;
+  }
 
-setInterval(updateDateTime, 1000);
-updateDateTime();
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+}
 
 /* history */
 function initializeHistoryScript() {
@@ -83,8 +86,6 @@ function initializeHistoryScript() {
     }
   });
 }
-
-initializeHistoryScript();
 
 /* map */
 function initializeMapScript() {
@@ -165,7 +166,7 @@ function initializeMapScript() {
     mapCardTitle.textContent = subdivisions[currentPage].name;
     mapCardPurok.textContent = subdivisions[currentPage].purok;
 
-    if (currentPage === 15) {
+    if (currentPage === subdivisions.length - 1) {
       mapCarouselRightBtn.style.visibility = 'hidden';
     }
   });
@@ -202,10 +203,8 @@ function initializeMapScript() {
         mapCarouselRightBtn.style.visibility = 'hidden';
       }
     })
-  })
+  });
 }
-
-initializeMapScript();
 
 /* footer */
 function initializeFooterScript() {
@@ -216,4 +215,49 @@ function initializeFooterScript() {
   currentYearElement.textContent = currentYear;
 }
 
+/* General */
+function initializeIntersectAnimations() {
+  const header = document.querySelector('#header');
+  const subheader = document.querySelector('#subheader');
+  const bannerBg = document.querySelector('#bannerBg');
+  const bannerTitle = document.querySelector('#bannerTitle');
+  const bannerDesc = document.querySelector('#bannerDesc');
+  const bannerBtn = document.querySelector('#bannerBtn');
+  const historyBg = document.querySelector('#historyBg');
+  const historyCard = document.querySelector('#historyCard');
+  const sectors = document.querySelector('#sectors');
+  const map = document.querySelector('#map');
+
+
+  observeElement(header, "animate-fadein-delayed");
+  observeElement(subheader, "animate-fadein-delayed");
+  observeElement(bannerBg, "animate-movedown-delayed");
+  observeElement(bannerTitle, "animate-movedown");
+  observeElement(bannerDesc, "animate-fadein-delayed");
+  observeElement(bannerBtn, "animate-fadein-delayed");
+  observeElement(historyBg, "animate-fadein");
+  observeElement(historyCard, "animate-scaleup");
+  observeElement(sectors, "animate-scaleup");
+  observeElement(map, "animate-scaleup");
+}
+
+/* Reusables */
+function observeElement(element, className) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(className);
+      }
+    });
+  });
+
+  observer.observe(element);
+}
+
+/* Run all sections' script */
+initializeHeaderScript();
+initializeSubheaderScript();
+initializeHistoryScript();
+initializeMapScript();
 initializeFooterScript();
+initializeIntersectAnimations();
