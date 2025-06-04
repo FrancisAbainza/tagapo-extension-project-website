@@ -215,7 +215,7 @@ function initializeMapScript() {
         mapCarouselLeftBtn.style.visibility = 'hidden';
       }
 
-      if (currentPage === 15) {
+      if (currentPage === subdivisions.length - 1) {
         mapCarouselRightBtn.style.visibility = 'hidden';
       }
     })
