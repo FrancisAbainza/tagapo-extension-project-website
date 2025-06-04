@@ -272,104 +272,6 @@ header.sticky {
   width: 100%;
 }
 
-/* sectors */
-.sectors {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 96px 24px;
-  text-align: center;
-}
-
-.sectors h2 {
-  font-size: var(--display-small);
-}
-
-.sectors h2 span {
-  color: var(--primary-color);
-}
-
-.sectors .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin: auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.sectors .container .card {
-  position: relative;
-  flex: 1;
-  border-radius: 15px;
-  min-width: 200px;
-  height: 300px;
-  overflow: hidden;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
-  transition: transform .2s ease-in-out;
-}
-
-.sectors .container .card:hover {
-  transform: scale(1.05, 1.05);
-}
-
-.sectors .container .card:hover .red-blend {
-  opacity: 0;
-}
-
-.sectors .container .health .bg-image {
-  background: url(./images/sectors/health-sector-img.jpg) -70px no-repeat;
-}
-
-.sectors .container .security .bg-image {
-  background: url(./images/sectors/security-sector-img.jpg) center no-repeat;
-}
-
-.sectors .container .business .bg-image {
-  background: url(./images/sectors/business-sector-img.jpg) center no-repeat;
-}
-
-.sectors .container .sk .bg-image {
-  background: url(./images/sectors/sk-sector-img.jpg) center no-repeat;
-}
-
-.sectors .container .environment .bg-image {
-  background: url(./images/sectors/environment-sector-img.jpg) center no-repeat;
-}
-
-.sectors .container .card .bg-image {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  z-index: -1;
-}
-
-.sectors .container .card .red-blend {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(235, 0, 0, 1);
-  mix-blend-mode: color;
-  opacity: 0.8;
-  transition: opacity .2s ease-in-out;
-}
-
-.sectors .container .card .content {
-  background-color: rgba(0, 0, 0, .3);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  color: white;
-  padding: 0px 24px 12px;
-}
-
-.sectors .container .card .content h3 {
-  font-size: var(--headline-small);
-  font-weight: normal;
-}
-
 /* map */
 .map {
   display: flex;
@@ -668,6 +570,104 @@ header.sticky {
   display: block !important;
 }
 
+/* sectors */
+.sectors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.sectors h2 {
+  font-size: var(--display-small);
+}
+
+.sectors h2 span {
+  color: var(--primary-color);
+}
+
+.sectors .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sectors .container .card {
+  position: relative;
+  flex: 1;
+  border-radius: 15px;
+  min-width: 200px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+  transition: transform .2s ease-in-out;
+}
+
+.sectors .container .card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.sectors .container .card:hover .red-blend {
+  opacity: 0;
+}
+
+.sectors .container .health .bg-image {
+  background: url(./images/sectors/health-sector-img.jpg) -70px no-repeat;
+}
+
+.sectors .container .security .bg-image {
+  background: url(./images/sectors/security-sector-img.jpg) center no-repeat;
+}
+
+.sectors .container .business .bg-image {
+  background: url(./images/sectors/business-sector-img.jpg) center no-repeat;
+}
+
+.sectors .container .sk .bg-image {
+  background: url(./images/sectors/sk-sector-img.jpg) center no-repeat;
+}
+
+.sectors .container .environment .bg-image {
+  background: url(./images/sectors/environment-sector-img.jpg) center no-repeat;
+}
+
+.sectors .container .card .bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.sectors .container .card .red-blend {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(235, 0, 0, 1);
+  mix-blend-mode: color;
+  opacity: 0.8;
+  transition: opacity .2s ease-in-out;
+}
+
+.sectors .container .card .content {
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  padding: 0px 24px 12px;
+}
+
+.sectors .container .card .content h3 {
+  font-size: var(--headline-small);
+  font-weight: normal;
+}
+
 /* footer */
 footer {
   background-color: #221F1F;
@@ -813,11 +813,6 @@ footer .container .location-group iframe {
     max-width: 50%;
   }
 
-  /* sectors */
-  .sectors {
-    padding: 96px 48px;
-  }
-
   /* map */
   .map {
     display: flex;
@@ -882,6 +877,11 @@ footer .container .location-group iframe {
   .map>.container .map-container .marker p {
     display: block;
     font-size: 10px;
+  }
+
+  /* sectors */
+  .sectors {
+    padding: 96px 48px;
   }
 
   /* footer */
