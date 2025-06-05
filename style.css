@@ -319,6 +319,9 @@ header.sticky {
 }
 
 .map>.container .card .header p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-weight: bold;
 }
 
@@ -387,166 +390,6 @@ header.sticky {
 .map>.container .map-container .marker p {
   display: none;
   transition: fill .4s ease-in-out;
-}
-
-.map>.container .map-container .location-villadeoro {
-  top: 66.36%;
-  left: 6.75%;
-}
-
-.map>.container .map-container .location-florenceville {
-  top: 72.40%;
-  left: 8.50%;
-}
-
-.map>.container .map-container .location-limpo {
-  top: 47.99%;
-  left: 11.96%;
-}
-
-.map>.container .map-container .location-romanville {
-  top: 29.66%;
-  left: 17.85%;
-}
-
-.map>.container .map-container .location-rosaflor {
-  top: 43.50%;
-  left: 16.20%;
-}
-
-.map>.container .map-container .location-rosewood {
-  top: 38.38%;
-  left: 20.52%;
-}
-
-.map>.container .map-container .location-ahas {
-  top: 54.15%;
-  left: 20.72%;
-}
-
-.map>.container .map-container .location-howard {
-  top: 67.63%;
-  left: 21.15%;
-}
-
-.map>.container .map-container .location-metrogate {
-  top: 97.28%;
-  left: 22.96%;
-}
-
-.map>.container .map-container .location-cataquiz {
-  top: 65.42%;
-  left: 24.57%;
-}
-
-.map>.container .map-container .location-fairfield {
-  top: 32.93%;
-  left: 29.52%;
-}
-
-.map>.container .map-container .location-progressive {
-  top: 51.04%;
-  left: 30.69%;
-}
-
-.map>.container .map-container .location-anros {
-  top: 59.97%;
-  left: 28.59%;
-}
-
-.map>.container .map-container .location-buenarosa10 {
-  top: 67.36%;
-  left: 29.52%;
-}
-
-.map>.container .map-container .location-richfield {
-  top: 29.24%;
-  left: 34.02%;
-}
-
-.map>.container .map-container .location-donarosina {
-  top: 57.06%;
-  left: 34.43%;
-}
-
-.map>.container .map-container .location-gruenville {
-  top: 37.22%;
-  left: 41.47%;
-}
-
-.map>.container .map-container .location-amihan {
-  top: 60.04%;
-  left: 38.43%;
-}
-
-.map>.container .map-container .location-tionco {
-  top: 68.43%;
-  left: 37.71%;
-}
-
-.map>.container .map-container .location-celinahomes5 {
-  top: 72.34%;
-  left: 36.16%;
-}
-
-.map>.container .map-container .location-batitis {
-  top: 65.77%;
-  left: 40.68%;
-}
-
-.map>.container .map-container .location-amarante {
-  top: 62.58%;
-  left: 43.49%;
-}
-
-.map>.container .map-container .location-alinsod {
-  top: 69.37%;
-  left: 42.07%;
-}
-
-.map>.container .map-container .location-farmview {
-  top: 26.24%;
-  left: 39.69%;
-}
-
-.map>.container .map-container .location-jb {
-  top: 56.73%;
-  left: 41.62%;
-}
-
-.map>.container .map-container .location-rosada {
-  top: 45.80%;
-  left: 42.84%;
-}
-
-.map>.container .map-container .location-zavalla3 {
-  top: 60.98%;
-  left: 46.08%;
-}
-
-.map>.container .map-container .location-ilemhomes {
-  top: 69.64%;
-  left: 46.04%;
-}
-
-.map>.container .map-container .location-marcopolo {
-  top: 51.63%;
-  left: 49.14%;
-}
-
-.map>.container .map-container .location-donpablo {
-  top: 64.95%;
-  left: 49.28%;
-}
-
-.map>.container .map-container .location-perlas {
-  top: 72.53%;
-  left: 49.52%;
-}
-
-.map>.container .map-container .location-pambuanalley {
-  top: 74.68%;
-  left: 51.89%;
 }
 
 .map>.container .map-container img {
@@ -863,7 +706,7 @@ footer .container .location-group iframe {
   .map>.container .map-container h3 {
     display: block;
     position: absolute;
-    top: 42.26%;
+    top: 37.26%;
     left: 32.67%;
     color: var(--primary-color);
     font-size: var(--headline-small);

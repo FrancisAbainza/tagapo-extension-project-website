@@ -1,3 +1,5 @@
+import { locations } from './data.js';
+
 /* header */
 function initializeHeaderScript() {
   const header = document.querySelector('#header');
@@ -88,41 +90,38 @@ function initializeHistoryScript() {
 }
 
 /* map */
-function initializeMapScript() {
-  const subdivisions = [
-    { id: "#locationMarcopolo", name: "Marco Polo Place Subdivision", purok: "Purok 1" },
-    { id: "#locationZavalla3", name: "Zavalla 3 Compound", purok: "Purok 1" },
-    { id: "#locationDonPablo", name: "Don Pablo Compound", purok: "Purok 1" },
-    { id: "#locationAlinsod", name: "Alinsod Compound", purok: "Purok 2" },
-    { id: "#locationAmarante", name: "Amarante Compound", purok: "Purok 2" },
-    { id: "#locationBatitis", name: "Batitis Compound", purok: "Purok 2" },
-    { id: "#locationAmihan", name: "Amihan Subdivision", purok: "Purok 3" },
-    { id: "#locationFarmview", name: "Farmview Compound", purok: "Purok 3" },
-    { id: "#locationRichfield", name: "Richfield Subdivision", purok: "Purok 3" },
-    { id: "#locationJb", name: "JB Village Compound", purok: "Purok 3" },
-    { id: "#locationFairfield", name: "Fairfield Subdivision", purok: "Purok 3" },
-    { id: "#locationRosada", name: "Rosada Subdivision", purok: "Purok 3" },
-    { id: "#locationDonaRosina", name: "Doña Rosina Compound", purok: "Purok 3" },
-    { id: "#locationProgressive", name: "Progressive Village Compound", purok: "Purok 4" },
-    { id: "#locationBuenaRosa10", name: "Buena Rosa 10 Compound", purok: "Purok 4" },
-    { id: "#locationCataquiz", name: "Cataquiz Compound", purok: "Purok 4" },
-    { id: "#locationAhas", name: "Ahas Compound", purok: "Purok 5" },
-    { id: "#locationFlorenceville", name: "Florenceville Comp", purok: "Purok 6" },
-    { id: "#locationVilladeoro", name: "Villa De Oro Subdivision", purok: "Purok 6" },
-    { id: "#locationRomanville", name: "Romanville Compound", purok: "Purok 6" },
-    { id: "#locationRosewood", name: "Rosewood Compound", purok: "Purok 6" },
-    { id: "#locationRosaflor", name: "Rosaflor Subdivision", purok: "Purok 6" },
-    { id: "#locationHoward", name: "Howard Compound", purok: "Purok 7" },
-    { id: "#locationLimpo", name: "Limpo Compound", purok: "Purok 7" },
-    { id: "#locationMetrogate", name: "Metrogate Compound", purok: "Purok 7" },
-    { id: "#locationGruenvilleII", name: "Gruenville II Compound", purok: "Purok --" },
-    { id: "#locationIlemHomes", name: "Ilem Homes Compound", purok: "Purok --" },
-    { id: "#locationTionco", name: "Tionco Compound", purok: "Purok --" },
-    { id: "#locationCelinaHomes5", name: "Celina Homes 5 Compound", purok: "Purok --" },
-    { id: "#locationAnros", name: "Anros Compound", purok: "Purok --" },
-    { id: "#locationPambuanAlley", name: "Pambuan Alley Compound", purok: "Purok --" },
-    { id: "#locationPerlas", name: "Perlas Compound", purok: "Purok --" },
-  ]
+async function initializeMapScript() {
+  function renderMap() {
+    const mapCarouselContainer = document.querySelector('#mapCarouselContainer');
+    const mapContainer = document.querySelector('#mapContainer');
+    locations.forEach((location) => {
+      /* Render the images in the carousel */
+      mapCarouselContainer.innerHTML += `<img src="${location.image.src}" alt="${location.image.alt}">`
+
+      /* Render the markers in the map */
+      mapContainer.innerHTML += `
+      <button data-marker class="marker ${location.marker.class}" id="${location.marker.id}" style="top: ${location.marker.coordinates.top}; left: ${location.marker.coordinates.left};">
+        <svg viewBox="0 0 26 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_1616_1787" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="26"
+            height="37">
+            <path d="M13 36C13 36 1 22 1 13C1 6.38 6.38 1 13 1C19.62 1 25 6.38 25 13C25 22 13 36 13 36Z" fill="white"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M13 18C15.7614 18 18 15.7614 18 13C18 10.2386 15.7614 8 13 8C10.2386 8 8 10.2386 8 13C8 15.7614 10.2386 18 13 18Z"
+              fill="black" />
+          </mask>
+          <g mask="url(#mask0_1616_1787)">
+            <path d="M37 -5H-11V43H37V-5Z" fill="#EB0000" />
+          </g>
+        </svg>
+        <p>${location.marker.text}</p>
+      </button>
+    `
+    });
+  }
+
+  renderMap();
+
   const mapCarouselLeftBtn = document.querySelector('#mapCarouselLeftBtn');
   const mapCarouselRightBtn = document.querySelector('#mapCarouselRightBtn');
   const mapCarouselContainer = document.querySelector('#mapCarouselContainer');
@@ -132,27 +131,25 @@ function initializeMapScript() {
   let currentPage = 0;
 
   mapCarouselLeftBtn.addEventListener('click', () => {
-    /* Remove active-location class to previous marker  */
-    let currentLocationId = subdivisions[currentPage].id;
-    let currentLocationMarker = document.querySelector(currentLocationId);
-    currentLocationMarker.classList.remove("active-location");
+    /* Remove active-location class from previous marker  */
+    const previousLocationMarker = document.querySelector(`#${locations[currentPage].marker.id}`);
+    previousLocationMarker.classList.remove("active-location");
 
     currentPage--;
 
-    /* Add active-location class to previous marker  */
-    currentLocationId = subdivisions[currentPage].id;
-    currentLocationMarker = document.querySelector(currentLocationId);
+    /* Add active-location class to current marker  */
+    const currentLocationMarker = document.querySelector(`#${locations[currentPage].marker.id}`);
     currentLocationMarker.classList.add("active-location");
-
-    /* Make the right button visible */
-    mapCarouselRightBtn.style.visibility = 'visible';
 
     /* Add translate x to the carousel container to move to the current image */
     mapCarouselContainer.style.transform = `translateX(calc(-${100 * currentPage}% - ${12 * currentPage}px))`;
 
     /* Update card labels */
-    mapCardTitle.textContent = subdivisions[currentPage].name;
-    mapCardPurok.textContent = subdivisions[currentPage].purok;
+    mapCardTitle.textContent = locations[currentPage].name;
+    mapCardPurok.textContent = locations[currentPage].purok;
+
+    /* Make the right button visible */
+    mapCarouselRightBtn.style.visibility = 'visible';
 
     if (currentPage === 0) {
       mapCarouselLeftBtn.style.visibility = 'hidden';
@@ -160,62 +157,59 @@ function initializeMapScript() {
   });
 
   mapCarouselRightBtn.addEventListener('click', () => {
-    /* Remove active-location class to previous marker  */
-    let currentLocationId = subdivisions[currentPage].id;
-    let currentLocationMarker = document.querySelector(currentLocationId);
-    currentLocationMarker.classList.remove("active-location");
+    /* Remove active-location class from previous marker  */
+    const previousLocationMarker = document.querySelector(`#${locations[currentPage].marker.id}`);
+    previousLocationMarker.classList.remove("active-location");
 
     currentPage++;
 
-    /* Add active-location class to previous marker  */
-    currentLocationId = subdivisions[currentPage].id;
-    currentLocationMarker = document.querySelector(currentLocationId);
+    /* Add active-location class to current marker  */
+    const currentLocationMarker = document.querySelector(`#${locations[currentPage].marker.id}`);
     currentLocationMarker.classList.add("active-location");
-
-    /* Make the left button visible */
-    mapCarouselLeftBtn.style.visibility = 'visible';
 
     /* Add translate x to the carousel container to move to the current image */
     mapCarouselContainer.style.transform = `translateX(calc(-${100 * currentPage}% - ${12 * currentPage}px))`;
 
     /* Update card labels */
-    mapCardTitle.textContent = subdivisions[currentPage].name;
-    mapCardPurok.textContent = subdivisions[currentPage].purok;
+    mapCardTitle.textContent = locations[currentPage].name;
+    mapCardPurok.textContent = locations[currentPage].purok;
 
-    if (currentPage === subdivisions.length - 1) {
+    /* Make the left button visible */
+    mapCarouselLeftBtn.style.visibility = 'visible';
+
+    if (currentPage === locations.length - 1) {
       mapCarouselRightBtn.style.visibility = 'hidden';
     }
   });
 
   markers.forEach((marker, index) => {
     marker.addEventListener('click', () => {
-      let currentLocationId = subdivisions[currentPage].id;
-      let currentLocationMarker = document.querySelector(currentLocationId);
-      currentLocationMarker.classList.remove("active-location");
+      let previousLocationMarker = document.querySelector(`#${locations[currentPage].marker.id}`);
+      previousLocationMarker.classList.remove("active-location");
 
+      /* Set current page to the selected marker's index */
       currentPage = index;
 
-      /* Add active-location class to previous marker  */
-      currentLocationId = subdivisions[currentPage].id;
-      currentLocationMarker = document.querySelector(currentLocationId);
-      currentLocationMarker.classList.add("active-location");
-
-      /* Make both left and right buttons visible */
-      mapCarouselLeftBtn.style.visibility = 'visible';
-      mapCarouselRightBtn.style.visibility = 'visible';
+      /* Add active-location class to current marker */
+      marker.classList.add("active-location");
 
       /* Add translate x to the carousel container to move to the current image */
       mapCarouselContainer.style.transform = `translateX(calc(-${100 * currentPage}% - ${12 * currentPage}px))`;
 
       /* Update card labels */
-      mapCardTitle.textContent = subdivisions[currentPage].name;
-      mapCardPurok.textContent = subdivisions[currentPage].purok;
+      mapCardTitle.textContent = locations[currentPage].name;
+      mapCardPurok.textContent = locations[currentPage].purok;
 
+      /* Make both left and right buttons visible */
+      mapCarouselLeftBtn.style.visibility = 'visible';
+      mapCarouselRightBtn.style.visibility = 'visible';
+
+      /* Conditionally set the visibility of the buttons based on the following conditions */
       if (currentPage === 0) {
         mapCarouselLeftBtn.style.visibility = 'hidden';
       }
 
-      if (currentPage === subdivisions.length - 1) {
+      if (currentPage === locations.length - 1) {
         mapCarouselRightBtn.style.visibility = 'hidden';
       }
     })
@@ -268,6 +262,16 @@ function observeElement(element, className) {
   });
 
   observer.observe(element);
+}
+
+async function loadLocations() {
+  try {
+    const response = await fetch('./locations.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error loading JSON:', error);
+  }
 }
 
 /* Run all sections' script */
