@@ -422,6 +422,7 @@ header.sticky {
   align-items: center;
   gap: 48px;
   padding: 0px 24px 120px;
+  text-align: center;
 }
 
 .id-application>h2 {
@@ -445,7 +446,6 @@ header.sticky {
   display: grid;
   justify-items: center;
   gap: 12px;
-  text-align: center;
 }
 
 .id-application>.container>.dots {
@@ -469,6 +469,12 @@ header.sticky {
   font-size: var(--headline-small);
   font-weight: normal;
 }
+
+.active-step {
+  background-color: rgb(235 0 0) !important;
+  transform: scale(1.2, 1.2) !important;
+}
+
 
 /* sectors */
 .sectors {
@@ -827,11 +833,6 @@ footer .container .location-group iframe {
   .id-application>.container>.dots-overlay-2 {
     clip-path: inset(0 100% 0 0);
     transition: clip-path 4s linear;
-  }
-
-  .active-step {
-    background-color: rgb(235 0 0) !important;
-    transform: scale(1.2, 1.2) !important;
   }
 
   @keyframes wipeToRight {
