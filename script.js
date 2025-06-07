@@ -216,6 +216,35 @@ async function initializeMapScript() {
   });
 }
 
+async function initializeIdApplicationScript() {
+  const idApplicationStep1 = document.querySelector('#idApplicationStep1');
+  const idApplicationStep2 = document.querySelector('#idApplicationStep2');
+  const idApplicationStep3 = document.querySelector('#idApplicationStep3');
+  const dotsOverlay1 = document.querySelector('#dotsOverlay1');
+  const dotsOverlay2 = document.querySelector('#dotsOverlay2');
+
+  function delay(seconds) {
+    return new Promise(resolve => setTimeout(resolve, 1000 * seconds));
+  }
+
+  while (true) {
+    dotsOverlay2.style.animation = 'unset';
+    idApplicationStep1.classList.add('active-step');
+    dotsOverlay1.style.animation = 'wipeToRight 4s linear forwards';
+    await delay(4);
+    idApplicationStep1.classList.remove('active-step');
+    idApplicationStep2.classList.add('active-step');
+    dotsOverlay1.style.animation = 'unwipeToRight 4s linear forwards';
+    dotsOverlay2.style.animation = 'wipeToRight 4s linear forwards';
+    await delay(4);
+    idApplicationStep2.classList.remove('active-step');
+    idApplicationStep3.classList.add('active-step');
+    dotsOverlay2.style.animation = 'unwipeToRight 4s linear forwards';
+    await delay(4);
+    idApplicationStep3.classList.remove('active-step');
+  }
+}
+
 /* footer */
 function initializeFooterScript() {
   const currentYearElement = document.querySelector('#currentYearElement');
@@ -235,9 +264,9 @@ function initializeIntersectAnimations() {
   const bannerBtn = document.querySelector('#bannerBtn');
   const historyBg = document.querySelector('#historyBg');
   const historyCard = document.querySelector('#historyCard');
-  const sectors = document.querySelector('#sectors');
   const map = document.querySelector('#map');
-
+  const idApplication = document.querySelector('#idApplication');
+  const sectors = document.querySelector('#sectors');
 
   observeElement(header, "animate-fadein-delayed");
   observeElement(subheader, "animate-fadein-delayed");
@@ -247,8 +276,9 @@ function initializeIntersectAnimations() {
   observeElement(bannerBtn, "animate-fadein-delayed");
   observeElement(historyBg, "animate-fadein");
   observeElement(historyCard, "animate-scaleup");
-  observeElement(sectors, "animate-scaleup");
   observeElement(map, "animate-scaleup");
+  observeElement(idApplication, "animate-scaleup");
+  observeElement(sectors, "animate-scaleup");
 }
 
 /* Reusables */
@@ -264,20 +294,11 @@ function observeElement(element, className) {
   observer.observe(element);
 }
 
-async function loadLocations() {
-  try {
-    const response = await fetch('./locations.json');
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error loading JSON:', error);
-  }
-}
-
 /* Run all sections' script */
 initializeHeaderScript();
 initializeSubheaderScript();
 initializeHistoryScript();
 initializeMapScript();
+initializeIdApplicationScript();
 initializeFooterScript();
 initializeIntersectAnimations();

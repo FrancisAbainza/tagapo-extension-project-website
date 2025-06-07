@@ -27,6 +27,7 @@ header .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
   max-width: 1200px;
   margin: auto;
 }
@@ -279,7 +280,7 @@ header.sticky {
   align-items: center;
   flex-direction: column;
   gap: 12px;
-  padding: 96px 24px;
+  padding: 120px 24px;
 }
 
 .map>h2 {
@@ -414,13 +415,68 @@ header.sticky {
   display: block !important;
 }
 
+/* id-application */
+.id-application {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 0px 24px 120px;
+}
+
+.id-application>h2 {
+  font-size: var(--display-small);
+}
+
+.id-application>h2>span {
+  color: var(--primary-color);
+}
+
+.id-application>.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.id-application>.container>.step {
+  flex: 1;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.id-application>.container>.dots {
+  display: none;
+}
+
+.id-application>.container>.step>h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50vh;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: var(--display-small);
+  transition: background-color .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.id-application>.container>.step>h3 {
+  font-size: var(--headline-small);
+  font-weight: normal;
+}
+
 /* sectors */
 .sectors {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 0px 24px 96px;
+  padding: 0px 24px 120px;
   text-align: center;
 }
 
@@ -663,7 +719,7 @@ footer .container .location-group iframe {
     align-items: center;
     flex-direction: column;
     gap: 12px;
-    padding: 96px 48px;
+    padding: 120px 48px;
   }
 
   .map>.container {
@@ -724,9 +780,83 @@ footer .container .location-group iframe {
     font-size: 10px;
   }
 
+  /* id-application */
+  .id-application {
+    padding: 0 48px 120px;
+  }
+
+  .id-application>.container {
+    position: relative;
+    flex-direction: row;
+    gap: 72px;
+  }
+
+  .id-application>.container>.step {
+    grid-template-rows: auto auto 1fr;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .id-application>.container>.step>h2 {
+    width: 65px;
+    height: 65px;
+  }
+
+  .id-application>.container>.dots {
+    position: absolute;
+    top: 32px;
+    display: block;
+    transform: translateX(-50%);
+  }
+
+  .id-application>.container>.dots-1,
+  .id-application>.container>.dots-overlay-1 {
+    left: 33.3%;
+  }
+
+  .id-application>.container>.dots-2,
+  .id-application>.container>.dots-overlay-2 {
+    left: 66.6%;
+  }
+
+  .id-application>.container>.dots-overlay-1 {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 4s linear;
+  }
+
+  .id-application>.container>.dots-overlay-2 {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 4s linear;
+  }
+
+  .active-step {
+    background-color: rgb(235 0 0) !important;
+    transform: scale(1.2, 1.2) !important;
+  }
+
+  @keyframes wipeToRight {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @keyframes unwipeToRight {
+    0% {
+      clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 100%);
+    }
+  }
+
   /* sectors */
   .sectors {
-    padding: 0px 48px 96px;
+    padding: 0px 48px 120px;
   }
 
   /* footer */

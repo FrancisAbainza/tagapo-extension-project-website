@@ -170,7 +170,7 @@ export const locations = [
     }
   },
   {
-    name: "Fairfield Subdivision",
+    name: "Fairfield Compound",
     purok: "Purok 3",
     image: {
       src: "./images/map/fairfield.png",
