@@ -9,8 +9,9 @@ html {
   box-sizing: border-box;
   --primary-color: #EB0000;
   --primary-color-hover: #c70000;
-  --display-medium: 45px;
-  --display-small: 36px;
+  --header-large: 52px;
+  --header-medium: 47px;
+  --header-small: 40px;
   --headline-small: 24px
 }
 
@@ -162,7 +163,7 @@ header.sticky {
 }
 
 .banner .title {
-  font-size: var(--display-medium);
+  font-size: var(--header-large);
 }
 
 .banner .title span {
@@ -213,7 +214,7 @@ header.sticky {
 }
 
 .history .card .header h2 {
-  font-size: var(--display-small);
+  font-size: var(--header-medium);
   border-left: 3px solid var(--primary-color);
   padding-left: 12px;
   margin-bottom: 12px;
@@ -280,11 +281,11 @@ header.sticky {
   align-items: center;
   flex-direction: column;
   gap: 12px;
-  padding: 120px 24px;
+  padding: 96px 24px 144px;
 }
 
 .map>h2 {
-  font-size: var(--display-small);
+  font-size: var(--header-medium);
   text-align: center;
 }
 
@@ -325,6 +326,7 @@ header.sticky {
   align-items: center;
   gap: 6px;
   font-weight: bold;
+  color: var(--primary-color);
 }
 
 .map>.container .card .header .buttons button {
@@ -353,7 +355,8 @@ header.sticky {
 }
 
 .map>.container .card .title {
-  font-size: var(--headline-small);
+  font-size: var(--header-small);
+  font-weight: normal;
 }
 
 .map>.container .card .carousel {
@@ -421,12 +424,12 @@ header.sticky {
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  padding: 0px 24px 120px;
+  padding: 0px 24px 144px;
   text-align: center;
 }
 
 .id-application>h2 {
-  font-size: var(--display-small);
+  font-size: var(--header-medium);
 }
 
 .id-application>h2>span {
@@ -461,7 +464,7 @@ header.sticky {
   height: 50px;
   background-color: rgb(0, 0, 0);
   color: white;
-  font-size: var(--display-small);
+  font-size: var(--header-small);
   transition: background-color .5s ease-in-out, transform .5s ease-in-out;
 }
 
@@ -482,12 +485,12 @@ header.sticky {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 0px 24px 120px;
+  padding: 0px 24px 144px;
   text-align: center;
 }
 
 .sectors h2 {
-  font-size: var(--display-small);
+  font-size: var(--header-medium);
 }
 
 .sectors h2 span {
@@ -567,6 +570,7 @@ header.sticky {
   left: 0;
   color: white;
   padding: 0px 24px 12px;
+  text-align: left;
 }
 
 .sectors .container .card .content h3 {
@@ -601,6 +605,10 @@ footer .container .logo-text img {
   width: 100px;
 }
 
+footer .container .logo-text p span.name {
+  color: var(--primary-color);
+}
+
 footer .container .location-group {
   display: flex;
   flex-direction: column;
@@ -615,6 +623,10 @@ footer .container .location-group iframe {
 
 /* Reusables */
 .solid-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   border: none;
   border-radius: 50vh;
   padding: 10px 16px;
@@ -683,8 +695,9 @@ footer .container .location-group iframe {
 /* Tablet breakpoint */
 @media only screen and (min-width: 920px) {
   * {
-    --display-medium: 52px;
-    --display-small: 44px;
+    --header-large: 60px;
+    --header-medium: 55px;
+    --header-small: 48px;
   }
 
   /* header */
@@ -699,10 +712,6 @@ footer .container .location-group iframe {
   /* banner */
   .banner {
     padding: 12px 48px;
-  }
-
-  .banner .title {
-    font-size: var(--display-medium);
   }
 
   /* history */
@@ -725,7 +734,7 @@ footer .container .location-group iframe {
     align-items: center;
     flex-direction: column;
     gap: 12px;
-    padding: 120px 48px;
+    padding: 96px 48px 144px;
   }
 
   .map>.container {
@@ -788,7 +797,7 @@ footer .container .location-group iframe {
 
   /* id-application */
   .id-application {
-    padding: 0 48px 120px;
+    padding: 0 48px 144px;
   }
 
   .id-application>.container {
@@ -857,7 +866,7 @@ footer .container .location-group iframe {
 
   /* sectors */
   .sectors {
-    padding: 0px 48px 120px;
+    padding: 0px 48px 144px;
   }
 
   /* footer */
