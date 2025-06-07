@@ -7,6 +7,9 @@ function initializeHeaderScript() {
   const close = document.querySelector('#close');
   const nav = document.querySelector('#nav');
   const body = document.querySelector('body');
+  const headerHeight = header.getBoundingClientRect().height;
+
+  body.style.marginTop = headerHeight + 'px';
 
   menu.addEventListener('click', () => {
     nav.classList.add('open-nav');
@@ -17,13 +20,9 @@ function initializeHeaderScript() {
   })
 
   window.addEventListener('scroll', () => {
-    const headerHeight = header.getBoundingClientRect().height;
-
     if (window.scrollY > headerHeight) {
-      body.style.marginTop = headerHeight + 'px';
       header.classList.add('sticky');
     } else {
-      body.style.marginTop = '0px';
       header.classList.remove('sticky');
       header.classList.remove('animate-fadein-delayed');
       header.classList.remove('hidden');

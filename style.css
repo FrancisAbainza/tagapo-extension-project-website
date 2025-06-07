@@ -17,9 +17,12 @@ html {
 
 /* header */
 header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   background-color: white;
   padding: 12px 24px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
   z-index: 9;
 }
 
@@ -57,11 +60,11 @@ header nav {
   background: white;
   height: 100vh;
   width: 50%;
-  z-index: 10;
   text-transform: uppercase;
   transform: translateX(110%);
   transition: transform .5s ease-in-out;
   box-shadow: -1px 0px 10px rgba(0, 0, 0, .5);
+  z-index: 10;
 }
 
 header nav .close {
@@ -109,6 +112,7 @@ header.sticky {
   top: 0;
   right: 0;
   left: 0;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
   animation: reveal .5s ease-in-out forwards;
 }
 
@@ -127,7 +131,6 @@ header.sticky {
 .subheader {
   background-color: var(--primary-color);
   padding: 12px 24px;
-  z-index: 10;
 }
 
 .subheader p {
