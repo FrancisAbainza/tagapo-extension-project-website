@@ -1,0 +1,97 @@
+/* header */
+header {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.feature-article {
+  padding: 24px;
+}
+
+.feature-article>.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.feature-article>.container>button {
+  align-self: flex-start;
+}
+
+.feature-article>.container>h1 {
+  font-size: var(--header-small);
+}
+
+.feature-article>.container>h1>span {
+  color: var(--primary-color);
+}
+
+.feature-article>.container>.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+}
+
+.feature-article>.container>.content>.side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-article>.container>.content>.side-1 {
+  order: 2;
+}
+
+.feature-article>.container>.content>.side-2 {
+  order: 1;
+}
+
+.feature-article>.container>.content>.side>img {
+  display: block;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.feature-article>.container>.content>.side>p {
+  text-align: justify;
+}
+
+.feature-article>.container>.content>.side-1>p {
+  order: 1;
+}
+
+.feature-article>.container>.content>.side-1>img {
+  order: 2;
+}
+
+/* ================================================================== */
+/* Tablet breakpoint */
+@media only screen and (min-width: 920px) {
+  .feature-article {
+    padding: 24px 48px;
+  }
+
+  .feature-article>.container>.content {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .feature-article>.container>.content>.side-1 {
+    order: 1;
+  }
+
+  .feature-article>.container>.content>.side-2 {
+    order: 2;
+  }
+
+  .feature-article>.container>.content>.side-1>p {
+    order: 2;
+  }
+
+  .feature-article>.container>.content>.side-1>img {
+    order: 1;
+  }
+}

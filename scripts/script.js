@@ -1,35 +1,5 @@
 import { locations } from './data.js';
 
-/* header */
-function initializeHeaderScript() {
-  const header = document.querySelector('#header');
-  const menu = document.querySelector('#menu');
-  const close = document.querySelector('#close');
-  const nav = document.querySelector('#nav');
-  const body = document.querySelector('body');
-  const headerHeight = header.getBoundingClientRect().height;
-
-  body.style.marginTop = headerHeight + 'px';
-
-  menu.addEventListener('click', () => {
-    nav.classList.add('open-nav');
-  })
-
-  close.addEventListener('click', () => {
-    nav.classList.remove('open-nav');
-  })
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > headerHeight) {
-      header.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-      header.classList.remove('animate-fadein-delayed');
-      header.classList.remove('hidden');
-    }
-  });
-}
-
 /* subheader */
 function initializeSubheaderScript() {
   function updateDateTime() {
@@ -244,18 +214,9 @@ async function initializeIdApplicationScript() {
   }
 }
 
-/* footer */
-function initializeFooterScript() {
-  const currentYearElement = document.querySelector('#currentYearElement');
-  const date = new Date();
-  const currentYear = date.getFullYear();
-
-  currentYearElement.textContent = currentYear;
-}
 
 /* General */
 function initializeIntersectAnimations() {
-  const header = document.querySelector('#header');
   const subheader = document.querySelector('#subheader');
   const bannerBg = document.querySelector('#bannerBg');
   const bannerTitle = document.querySelector('#bannerTitle');
@@ -265,9 +226,9 @@ function initializeIntersectAnimations() {
   const historyCard = document.querySelector('#historyCard');
   const map = document.querySelector('#map');
   const idApplication = document.querySelector('#idApplication');
+  const articles = document.querySelector('#articles');
   const sectors = document.querySelector('#sectors');
 
-  observeElement(header, "animate-fadein-delayed");
   observeElement(subheader, "animate-fadein-delayed");
   observeElement(bannerBg, "animate-movedown-delayed");
   observeElement(bannerTitle, "animate-movedown");
@@ -277,6 +238,7 @@ function initializeIntersectAnimations() {
   observeElement(historyCard, "animate-scaleup");
   observeElement(map, "animate-scaleup");
   observeElement(idApplication, "animate-scaleup");
+  observeElement(articles, "animate-scaleup");
   observeElement(sectors, "animate-scaleup");
 }
 
@@ -294,10 +256,8 @@ function observeElement(element, className) {
 }
 
 /* Run all sections' script */
-initializeHeaderScript();
 initializeSubheaderScript();
 initializeHistoryScript();
 initializeMapScript();
 initializeIdApplicationScript();
-initializeFooterScript();
 initializeIntersectAnimations();

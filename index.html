@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width">
   <title>Barangay Tagapo Website</title>
   <link rel="icon" href="./images/tagapo-logo.png" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="./styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="./styles/global.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <script type="module" src="script.js" defer></script>
+  <script type="module" src="./scripts/script.js" defer></script>
+  <script type="module" src="./scripts/global.js" defer></script>
 </head>
 
 <body>
@@ -251,6 +253,75 @@
           fill="white" />
       </svg>
     </a>
+  </section>
+
+  <!-- articles -->
+  <section class="articles hidden" id="articles">
+    <div class="container">
+      <div class="header">
+        <h2>FEATURED <span>ARTICLES</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Eu pellentesque lorem consectetur enim nisl diam. Mattis mi viverra
+          sit
+          amet. Lorem ipsum dolor sit amet consectetur. Eu pellentesque lorem consectetur enim nisl diam. Mattis mi
+          viverra sit amet.</p>
+      </div>
+      <div class="article article-1">
+        <img src="./images/history/history-img-1.jpg" alt="">
+        <div>
+          <p>Barangay Tagapo Tops Road Clearing Ops for Q3 2024</p>
+          <a href="./feature-articles/article1.html" target="_self" class="solid-button">
+            Read More
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.47 0.470011C10.6106 0.329561 10.8012 0.250671 11 0.250671C11.1988 0.250671 11.3894 0.329561 11.53 0.470011L17.53 6.47001C17.6705 6.61064 17.7493 6.80126 17.7493 7.00001C17.7493 7.19876 17.6705 7.38939 17.53 7.53001L11.53 13.53C11.4613 13.6037 11.3785 13.6628 11.2865 13.7038C11.1945 13.7448 11.0952 13.7668 10.9945 13.7686C10.8938 13.7704 10.7938 13.7519 10.7004 13.7141C10.607 13.6764 10.5222 13.6203 10.451 13.549C10.3797 13.4778 10.3236 13.393 10.2859 13.2996C10.2482 13.2062 10.2296 13.1062 10.2314 13.0055C10.2332 12.9048 10.2552 12.8055 10.2962 12.7135C10.3372 12.6215 10.3963 12.5387 10.47 12.47L15.19 7.75001H1C0.801088 7.75001 0.610322 7.67099 0.46967 7.53034C0.329018 7.38969 0.25 7.19892 0.25 7.00001C0.25 6.8011 0.329018 6.61033 0.46967 6.46968C0.610322 6.32903 0.801088 6.25001 1 6.25001H15.19L10.47 1.53001C10.3295 1.38939 10.2507 1.19876 10.2507 1.00001C10.2507 0.801261 10.3295 0.610637 10.47 0.470011Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="article">
+        <img src="./images/history/history-img-2.jpg" alt="">
+        <div>
+          <p>Free Medical Services Now Available at Tagapo Clinical Laboratory</p>
+          <a href="./feature-articles/article2.html" target="_self" class="solid-button">
+            Read More
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.47 0.470011C10.6106 0.329561 10.8012 0.250671 11 0.250671C11.1988 0.250671 11.3894 0.329561 11.53 0.470011L17.53 6.47001C17.6705 6.61064 17.7493 6.80126 17.7493 7.00001C17.7493 7.19876 17.6705 7.38939 17.53 7.53001L11.53 13.53C11.4613 13.6037 11.3785 13.6628 11.2865 13.7038C11.1945 13.7448 11.0952 13.7668 10.9945 13.7686C10.8938 13.7704 10.7938 13.7519 10.7004 13.7141C10.607 13.6764 10.5222 13.6203 10.451 13.549C10.3797 13.4778 10.3236 13.393 10.2859 13.2996C10.2482 13.2062 10.2296 13.1062 10.2314 13.0055C10.2332 12.9048 10.2552 12.8055 10.2962 12.7135C10.3372 12.6215 10.3963 12.5387 10.47 12.47L15.19 7.75001H1C0.801088 7.75001 0.610322 7.67099 0.46967 7.53034C0.329018 7.38969 0.25 7.19892 0.25 7.00001C0.25 6.8011 0.329018 6.61033 0.46967 6.46968C0.610322 6.32903 0.801088 6.25001 1 6.25001H15.19L10.47 1.53001C10.3295 1.38939 10.2507 1.19876 10.2507 1.00001C10.2507 0.801261 10.3295 0.610637 10.47 0.470011Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="article">
+        <img src="./images/history/history-img-3.jpg" alt="">
+        <div>
+          <p>Bagong Tagapo Fiesta 2025 Draws Cheers and Community Spirit</p>
+          <a href="./feature-articles/article3.html" target="_self" class="solid-button">
+            Read More
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.47 0.470011C10.6106 0.329561 10.8012 0.250671 11 0.250671C11.1988 0.250671 11.3894 0.329561 11.53 0.470011L17.53 6.47001C17.6705 6.61064 17.7493 6.80126 17.7493 7.00001C17.7493 7.19876 17.6705 7.38939 17.53 7.53001L11.53 13.53C11.4613 13.6037 11.3785 13.6628 11.2865 13.7038C11.1945 13.7448 11.0952 13.7668 10.9945 13.7686C10.8938 13.7704 10.7938 13.7519 10.7004 13.7141C10.607 13.6764 10.5222 13.6203 10.451 13.549C10.3797 13.4778 10.3236 13.393 10.2859 13.2996C10.2482 13.2062 10.2296 13.1062 10.2314 13.0055C10.2332 12.9048 10.2552 12.8055 10.2962 12.7135C10.3372 12.6215 10.3963 12.5387 10.47 12.47L15.19 7.75001H1C0.801088 7.75001 0.610322 7.67099 0.46967 7.53034C0.329018 7.38969 0.25 7.19892 0.25 7.00001C0.25 6.8011 0.329018 6.61033 0.46967 6.46968C0.610322 6.32903 0.801088 6.25001 1 6.25001H15.19L10.47 1.53001C10.3295 1.38939 10.2507 1.19876 10.2507 1.00001C10.2507 0.801261 10.3295 0.610637 10.47 0.470011Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="article">
+        <img src="./images/history/history-img-4.jpg" alt="">
+        <div>
+          <p>Senior Citizens and PWDs Receive Holiday Cheer in Bagong Tagapo</p>
+          <a href="./feature-articles/article4.html" target="_self" class="solid-button">
+            Read More
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.47 0.470011C10.6106 0.329561 10.8012 0.250671 11 0.250671C11.1988 0.250671 11.3894 0.329561 11.53 0.470011L17.53 6.47001C17.6705 6.61064 17.7493 6.80126 17.7493 7.00001C17.7493 7.19876 17.6705 7.38939 17.53 7.53001L11.53 13.53C11.4613 13.6037 11.3785 13.6628 11.2865 13.7038C11.1945 13.7448 11.0952 13.7668 10.9945 13.7686C10.8938 13.7704 10.7938 13.7519 10.7004 13.7141C10.607 13.6764 10.5222 13.6203 10.451 13.549C10.3797 13.4778 10.3236 13.393 10.2859 13.2996C10.2482 13.2062 10.2296 13.1062 10.2314 13.0055C10.2332 12.9048 10.2552 12.8055 10.2962 12.7135C10.3372 12.6215 10.3963 12.5387 10.47 12.47L15.19 7.75001H1C0.801088 7.75001 0.610322 7.67099 0.46967 7.53034C0.329018 7.38969 0.25 7.19892 0.25 7.00001C0.25 6.8011 0.329018 6.61033 0.46967 6.46968C0.610322 6.32903 0.801088 6.25001 1 6.25001H15.19L10.47 1.53001C10.3295 1.38939 10.2507 1.19876 10.2507 1.00001C10.2507 0.801261 10.3295 0.610637 10.47 0.470011Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- sectors -->

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Barangay Tagapo Website</title>
+  <link rel="icon" href="../images/tagapo-logo.png" />
+  <link href="../styles/global.css" rel="stylesheet" type="text/css" />
+  <link href="./article.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script type="module" src="./script.js" defer></script>
+  <script type="module" src="../scripts/global.js" defer></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="hidden" id="header">
+    <div class="container" id="headerContainer">
+      <div class="logo-text">
+        <a href="/"><img src="../images/tagapo-logo.png" alt="barangay tagapo logo image" class="logo-image">
+          <div>
+            <p>City of Sta. Rosa</p>
+            <h2>BARANGAY TAGAPO</h2>
+          </div>
+        </a>
+      </div>
+
+      <nav id="nav">
+        <svg class="close" id="close" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.5 0.25C13.2861 0.25 10.1443 1.20305 7.47199 2.98862C4.79969 4.77419 2.71689 7.31209 1.48697 10.2814C0.257041 13.2507 -0.0647633 16.518 0.562247 19.6702C1.18926 22.8224 2.73692 25.7179 5.00952 27.9905C7.28213 30.2631 10.1776 31.8108 13.3298 32.4378C16.482 33.0648 19.7493 32.743 22.7186 31.513C25.6879 30.2831 28.2258 28.2003 30.0114 25.528C31.797 22.8557 32.75 19.7139 32.75 16.5C32.75 14.366 32.3297 12.2529 31.5131 10.2814C30.6964 8.30985 29.4994 6.51847 27.9905 5.00952C26.4815 3.50056 24.6902 2.3036 22.7186 1.48696C20.7471 0.670319 18.634 0.25 16.5 0.25ZM20.9038 18.5963C21.0561 18.7473 21.177 18.927 21.2595 19.1251C21.342 19.3231 21.3844 19.5355 21.3844 19.75C21.3844 19.9645 21.342 20.1769 21.2595 20.3749C21.177 20.573 21.0561 20.7527 20.9038 20.9038C20.7527 21.0561 20.573 21.177 20.3749 21.2594C20.1769 21.3419 19.9645 21.3844 19.75 21.3844C19.5355 21.3844 19.3231 21.3419 19.1251 21.2594C18.927 21.177 18.7473 21.0561 18.5963 20.9038L16.5 18.7913L14.4038 20.9038C14.2527 21.0561 14.073 21.177 13.8749 21.2594C13.6769 21.3419 13.4645 21.3844 13.25 21.3844C13.0355 21.3844 12.8231 21.3419 12.6251 21.2594C12.427 21.177 12.2473 21.0561 12.0963 20.9038C11.9439 20.7527 11.8231 20.573 11.7406 20.3749C11.6581 20.1769 11.6156 19.9645 11.6156 19.75C11.6156 19.5355 11.6581 19.3231 11.7406 19.1251C11.8231 18.927 11.9439 18.7473 12.0963 18.5963L14.2088 16.5L12.0963 14.4038C11.7903 14.0978 11.6184 13.6827 11.6184 13.25C11.6184 12.8173 11.7903 12.4022 12.0963 12.0963C12.4023 11.7903 12.8173 11.6184 13.25 11.6184C13.6827 11.6184 14.0978 11.7903 14.4038 12.0963L16.5 14.2088L18.5963 12.0963C18.9023 11.7903 19.3173 11.6184 19.75 11.6184C20.1827 11.6184 20.5978 11.7903 20.9038 12.0963C21.2098 12.4022 21.3817 12.8173 21.3817 13.25C21.3817 13.6827 21.2098 14.0978 20.9038 14.4038L18.7913 16.5L20.9038 18.5963Z"
+            fill="black" />
+        </svg>
+
+        <ul>
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="health.html">HEALTH</a></li>
+          <li><a href="security.html">SECURITY</a></li>
+          <li><a href="business.html">BUSINESS</a></li>
+          <li><a href="sk.html">SK</a></li>
+          <li><a href="environment.html">ENVIRONMENT</a></li>
+        </ul>
+      </nav>
+
+      <svg class="menu" id="menu" width="50" height="50" viewBox="0 0 50 50" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_314_333)">
+          <path
+            d="M8.33333 37.5H41.6667C42.8125 37.5 43.75 36.5625 43.75 35.4167C43.75 34.2708 42.8125 33.3333 41.6667 33.3333H8.33333C7.1875 33.3333 6.25 34.2708 6.25 35.4167C6.25 36.5625 7.1875 37.5 8.33333 37.5ZM8.33333 27.0833H41.6667C42.8125 27.0833 43.75 26.1458 43.75 25C43.75 23.8542 42.8125 22.9167 41.6667 22.9167H8.33333C7.1875 22.9167 6.25 23.8542 6.25 25C6.25 26.1458 7.1875 27.0833 8.33333 27.0833ZM6.25 14.5833C6.25 15.7292 7.1875 16.6667 8.33333 16.6667H41.6667C42.8125 16.6667 43.75 15.7292 43.75 14.5833C43.75 13.4375 42.8125 12.5 41.6667 12.5H8.33333C7.1875 12.5 6.25 13.4375 6.25 14.5833Z"
+            fill="black" />
+        </g>
+        <defs>
+          <clipPath id="clip0_314_333">
+            <rect width="50" height="50" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </header>
+
+  <!-- article -->
+  <section class="feature-article hidden" id="featureArticle">
+    <div class="container">
+      <button class="solid-button" id="backBtn">
+        <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.53032 0.469828C4.67077 0.610454 4.74966 0.801078 4.74966 0.999828C4.74966 1.19858 4.67077 1.3892 4.53032 1.52983L2.81032 3.24983H12.0363C12.9403 3.24983 13.6693 3.24983 14.2583 3.30283C14.8643 3.35783 15.3943 3.47483 15.8753 3.75283C16.4455 4.08174 16.919 4.55492 17.2483 5.12483C17.5253 5.60583 17.6423 6.13583 17.6973 6.74183C17.7503 7.33083 17.7503 8.05983 17.7503 8.96383V9.03583C17.7503 9.93983 17.7503 10.6688 17.6973 11.2578C17.6423 11.8638 17.5263 12.3938 17.2473 12.8748C16.9184 13.445 16.4452 13.9185 15.8753 14.2478C15.3943 14.5248 14.8643 14.6418 14.2583 14.6968C13.6693 14.7498 12.9403 14.7498 12.0363 14.7498H5.00032C4.8014 14.7498 4.61064 14.6708 4.46999 14.5302C4.32933 14.3895 4.25032 14.1987 4.25032 13.9998C4.25032 13.8009 4.32933 13.6102 4.46999 13.4695C4.61064 13.3288 4.8014 13.2498 5.00032 13.2498H12.0003C12.9483 13.2498 13.6103 13.2498 14.1223 13.2028C14.6253 13.1568 14.9103 13.0728 15.1253 12.9488C15.4676 12.7513 15.7518 12.4671 15.9493 12.1248C16.0733 11.9098 16.1573 11.6248 16.2033 11.1218C16.2493 10.6098 16.2503 9.94783 16.2503 8.99983C16.2503 8.05183 16.2503 7.38983 16.2033 6.87783C16.1573 6.37483 16.0733 6.08983 15.9493 5.87483C15.7518 5.53257 15.4676 5.24837 15.1253 5.05083C14.9103 4.92683 14.6253 4.84283 14.1223 4.79683C13.6103 4.75083 12.9483 4.74983 12.0003 4.74983H2.81032L4.53032 6.46983C4.604 6.53849 4.66311 6.62129 4.7041 6.71329C4.74509 6.80529 4.76713 6.9046 4.76891 7.00531C4.77068 7.10601 4.75216 7.20604 4.71444 7.29943C4.67672 7.39281 4.62057 7.47765 4.54936 7.54887C4.47814 7.62009 4.3933 7.67623 4.29991 7.71395C4.20653 7.75167 4.1065 7.7702 4.00579 7.76842C3.90509 7.76664 3.80578 7.7446 3.71378 7.70361C3.62178 7.66262 3.53898 7.60351 3.47032 7.52983L0.470317 4.52983C0.329866 4.3892 0.250977 4.19858 0.250977 3.99983C0.250977 3.80108 0.329866 3.61045 0.470317 3.46983L3.47032 0.469828C3.61094 0.329378 3.80157 0.250488 4.00032 0.250488C4.19907 0.250488 4.38969 0.329378 4.53032 0.469828Z"
+            fill="white" />
+        </svg>
+      </button>
+      <h1><span>Senior Citizens</span> and <span>PWDs</span>
+        Receive <span>Holiday Cheer</span> in Bagong Tagapo</h1>
+      <div class="content">
+        <div class="side side-1">
+          <img src="../images/history/history-img-1.jpg" alt="">
+          <p>
+            Residents were asked to secure their Barangay Resident ID before December 5 to be included in the official
+            list of beneficiaries.
+
+            This initiative highlighted the barangay’s commitment to recognizing and supporting the needs of its elderly
+            and PWD constituents, especially during the festive season.
+          </p>
+        </div>
+        <div class="side side-2">
+          <p>
+            In the spirit of the holidays, Barangay Tagapo successfully held its Christmas Gift Distribution for Senior
+            Citizens and Persons with Disabilities (PWDs) from December 7 to 14, 2024.
+
+            The week-long event was organized per purok to ensure a smooth and orderly distribution across different
+            locations in the barangay. Senior citizens were scheduled on separate days, while PWDs had their dedicated
+            day at the Barangay Tagapo Court.
+          </p>
+          <img src="../images/history/history-img-2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="logo-text">
+        <img src="../images/tagapo-logo.png" alt="barangay tagapo logo image">
+        <p>© <span id="currentYearElement"></span> All rights reserved. <span class="name">Barangay Tagapo, Sta. Rosa,
+            Laguna</span>
+        </p>
+      </div>
+      <div class="location-group">
+        <div class="address">
+          <p>MAP AND LOCATION</p>
+          <p>
+            <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
+                fill="white" />
+            </svg>
+            129 Rizal Blvd, Brgy. Tagapo, Santa Rosa, 4026 Laguna
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9251.821258417178!2d121.09870411089376!3d14.321204752693305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9ced32d9719%3A0x45e7aab820391865!2sTagapo%2C%20City%20of%20Santa%20Rosa%2C%20Laguna!5e1!3m2!1sen!2sph!4v1748681749375!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
