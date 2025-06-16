@@ -20,7 +20,7 @@ header {
 }
 
 .feature-article>.container>h1 {
-  font-size: var(--header-small);
+  font-size: var(--header-medium);
 }
 
 .feature-article>.container>h1>span {
@@ -59,12 +59,16 @@ header {
   text-align: justify;
 }
 
-.feature-article>.container>.content>.side-1>p {
-  order: 1;
+.feature-article>.container>.content>.side>p span {
+  color: var(--primary-color);
 }
 
-.feature-article>.container>.content>.side-1>img {
+.feature-article>.container>.content>.side-2>p {
   order: 2;
+}
+
+.feature-article>.container>.content>.side-2>img {
+  order: 1;
 }
 
 /* ================================================================== */
@@ -87,11 +91,11 @@ header {
     order: 2;
   }
 
-  .feature-article>.container>.content>.side-1>p {
-    order: 2;
+  .feature-article>.container>.content>.side-2>p {
+    order: 1;
   }
 
-  .feature-article>.container>.content>.side-1>img {
-    order: 1;
+  .feature-article>.container>.content>.side-2>img {
+    order: 2;
   }
 }
