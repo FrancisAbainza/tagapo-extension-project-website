@@ -1,4 +1,4 @@
-import { locations } from './data.js';
+import { locations, officials } from './data.js';
 
 /* subheader */
 function initializeSubheaderScript() {
@@ -185,6 +185,89 @@ async function initializeMapScript() {
   });
 }
 
+/* officials */
+function initializeOfficialsScript() {
+  const officialsCarouselContainer = document.querySelector('#officialsCarouselContainer');
+  const officialsCarouselLeftBtn = document.querySelector('#officialsCarouselLeftBtn');
+  const officialsCarouselRightBtn = document.querySelector('#officialsCarouselRightBtn');
+  let currentPage = 0;
+
+  function renderOfficialCards() {
+    officials.forEach((official) => {
+      officialsCarouselContainer.innerHTML += `
+      <article class="official-card">
+        <img src="${official.image.src}" alt="${official.image.alt}">
+        <div class="content">
+          <div class="border"></div>
+          <div class="text">
+            <h3>${official.firstName} <br />${official.lastName}</h3>
+            <p>${official.position}</p>
+          </div>
+          <div class="border"></div>
+        </div>
+      </article>
+    `
+    });
+  }
+
+  function initializeCarouselButtonsScript() {
+    const officialsCards = document.getElementsByClassName('official-card');
+
+
+    officialsCarouselLeftBtn.addEventListener('click', () => {
+      const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
+
+      currentPage--;
+      officialsCarouselRightBtn.style.visibility = 'visible';
+
+      if (currentPage === 0) {
+        officialsCarouselLeftBtn.style.visibility = 'hidden';
+      }
+
+      officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * currentPage) + (24 * currentPage)}px)`
+    });
+
+    officialsCarouselRightBtn.addEventListener('click', () => {
+      const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
+      const viewportWidth = window.innerWidth;
+      let maxPage;
+
+      if (viewportWidth >= 1400) {
+        maxPage = officials.length - 4;
+      } else if (viewportWidth >= 920) {
+        maxPage = officials.length - 3;
+      } else if (viewportWidth >= 700) {
+        maxPage = officials.length - 2;
+      } else {
+        maxPage = officials.length - 1;
+      }
+
+      currentPage++;
+      officialsCarouselLeftBtn.style.visibility = 'visible';
+
+      if (currentPage === maxPage) {
+        officialsCarouselRightBtn.style.visibility = 'hidden';
+      }
+
+      officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * currentPage) + (24 * currentPage)}px)`
+    });
+  }
+
+  function initializeWindowSizeChangeListener() {
+    window.addEventListener('resize', () => {
+      currentPage = 0;
+      officialsCarouselLeftBtn.style.visibility = 'hidden';
+      officialsCarouselRightBtn.style.visibility = 'visible';
+      officialsCarouselContainer.style.transform = 'translateX(0)';
+    });
+  }
+
+  renderOfficialCards();
+  initializeCarouselButtonsScript();
+  initializeWindowSizeChangeListener();
+}
+
+/* id application */
 async function initializeIdApplicationScript() {
   const idApplicationStep1 = document.querySelector('#idApplicationStep1');
   const idApplicationStep2 = document.querySelector('#idApplicationStep2');
@@ -213,6 +296,7 @@ async function initializeIdApplicationScript() {
     idApplicationStep3.classList.remove('active-step');
   }
 }
+
 
 
 /* General */
@@ -259,5 +343,6 @@ function observeElement(element, className) {
 initializeSubheaderScript();
 initializeHistoryScript();
 initializeMapScript();
+initializeOfficialsScript();
 initializeIdApplicationScript();
 initializeIntersectAnimations();

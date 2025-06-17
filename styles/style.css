@@ -330,6 +330,7 @@
 
 .officials>main>.left-btn {
   left: 0;
+  visibility: hidden;
 }
 
 .officials>main>.right-btn {
@@ -345,6 +346,7 @@
 .officials>main>.carousel>.container {
   display: flex;
   gap: 24px;
+  transition: transform .8s ease-in-out;
 }
 
 .officials>main>.carousel>.container>.official-card {
@@ -383,38 +385,6 @@
 @media only screen and (min-width: 700px) {
   .officials>main>.carousel>.container>.official-card {
     width: calc(50% - 12px);
-  }
-}
-
-@media only screen and (min-width: 920px) {
-  .officials {
-    padding: 0px 48px 144px;
-  }
-
-  .officials>main>.carousel>.container>.official-card {
-    width: calc(33.3% - 16px);
-  }
-
-  .officials>main>.left-btn {
-    left: -25px;
-  }
-
-  .officials>main>.right-btn {
-    right: -25px;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .officials>main>.carousel>.container>.official-card {
-    width: calc(25% - 18px);
-  }
-
-  .officials>main>.left-btn {
-    left: -65px;
-  }
-
-  .officials>main>.right-btn {
-    right: -65px;
   }
 }
 
@@ -727,6 +697,23 @@
     font-size: 10px;
   }
 
+  /* officials */
+  .officials {
+    padding: 0px 48px 144px;
+  }
+
+  .officials>main>.carousel>.container>.official-card {
+    width: calc(33.3% - 16px);
+  }
+
+  .officials>main>.left-btn {
+    left: -25px;
+  }
+
+  .officials>main>.right-btn {
+    right: -25px;
+  }
+
   /* id-application */
   .id-application {
     padding: 0 48px 144px;
@@ -829,5 +816,21 @@
 
   .sectors .container .card .content {
     text-align: left;
+  }
+}
+
+/* ================================================================== */
+/* Desktop breakpoint */
+@media only screen and (min-width: 1400px) {
+  .officials>main>.carousel>.container>.official-card {
+    width: calc(25% - 18px);
+  }
+
+  .officials>main>.left-btn {
+    left: -65px;
+  }
+
+  .officials>main>.right-btn {
+    right: -65px;
   }
 }

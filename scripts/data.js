@@ -544,3 +544,96 @@ export const locations = [
     }
   },
 ];
+
+export const officials = [
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "HON. Edison Caravana picture"
+    },
+    firstName: "HON. EDISON “ETAW”",
+    lastName: "CARAVANA",
+    position: "PUNONG BARANGAY"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Charina Sarah C. Jauregui picture"
+    },
+    firstName: "Charina Sarah C.",
+    lastName: "Jauregui",
+    position: "Barangay Secretary"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Emerson E. Velasco Jr. picture"
+    },
+    firstName: "Emerson E.",
+    lastName: "Velasco Jr.",
+    position: "Treasurer"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Carlo C. Alojado picture"
+    },
+    firstName: "Carlo C.",
+    lastName: "Alojado",
+    position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Marvin B. Ambas picture"
+    },
+    firstName: "Marvin B.",
+    lastName: "Ambas",
+    position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Adjar M. Lumague picture"
+    },
+    firstName: "Adjar M.",
+    lastName: "Lumague",
+    position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Leonard Bryan L. Lianza picture"
+    },
+    firstName: "Leonard Bryan L.",
+    lastName: "Lianza",
+    position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Robert Aldrich B. Lumague picture"
+    },
+    firstName: "Robert Aldrich B.",
+    lastName: "Lumague",
+    position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Duncan S. Amarante picture"
+    },
+    firstName: "Duncan S.",
+    lastName: "Amarante",
+    position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/temporary.png",
+      alt: "Manuel G. Alon picture"
+    },
+    firstName: "Manuel G.",
+    lastName: "Alon",
+    position: "Kagawad"
+  }
+]
