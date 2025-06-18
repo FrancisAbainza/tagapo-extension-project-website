@@ -548,7 +548,7 @@ export const locations = [
 export const officials = [
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/edison_caravana.jpg",
       alt: "HON. Edison Caravana picture"
     },
     firstName: "HON. EDISON “ETAW”",
@@ -557,7 +557,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/charina_jauregui.jpg",
       alt: "Charina Sarah C. Jauregui picture"
     },
     firstName: "Charina Sarah C.",
@@ -566,7 +566,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/emerson_velasco.jpg",
       alt: "Emerson E. Velasco Jr. picture"
     },
     firstName: "Emerson E.",
@@ -575,7 +575,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/carlo_alojado.jpg",
       alt: "Carlo C. Alojado picture"
     },
     firstName: "Carlo C.",
@@ -584,7 +584,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/marvin_ambas.jpg",
       alt: "Marvin B. Ambas picture"
     },
     firstName: "Marvin B.",
@@ -593,7 +593,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/adjar_lumague.jpg",
       alt: "Adjar M. Lumague picture"
     },
     firstName: "Adjar M.",
@@ -602,7 +602,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/leonard_lianza.jpg",
       alt: "Leonard Bryan L. Lianza picture"
     },
     firstName: "Leonard Bryan L.",
@@ -611,7 +611,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/robert_lumague.jpg",
       alt: "Robert Aldrich B. Lumague picture"
     },
     firstName: "Robert Aldrich B.",
@@ -620,7 +620,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/duncan_amarante.jpg",
       alt: "Duncan S. Amarante picture"
     },
     firstName: "Duncan S.",
@@ -629,7 +629,7 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/temporary.png",
+      src: "./images/officials/manuel_alon.jpg",
       alt: "Manuel G. Alon picture"
     },
     firstName: "Manuel G.",

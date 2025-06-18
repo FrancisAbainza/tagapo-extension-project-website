@@ -188,83 +188,159 @@ async function initializeMapScript() {
 /* officials */
 function initializeOfficialsScript() {
   const officialsCarouselContainer = document.querySelector('#officialsCarouselContainer');
-  const officialsCarouselLeftBtn = document.querySelector('#officialsCarouselLeftBtn');
-  const officialsCarouselRightBtn = document.querySelector('#officialsCarouselRightBtn');
-  let currentPage = 0;
+  const navigateButtons = document.querySelector('#navigateButtons');
 
   function renderOfficialCards() {
     officials.forEach((official) => {
       officialsCarouselContainer.innerHTML += `
-      <article class="official-card">
-        <img src="${official.image.src}" alt="${official.image.alt}">
-        <div class="content">
-          <div class="border"></div>
-          <div class="text">
-            <h3>${official.firstName} <br />${official.lastName}</h3>
-            <p>${official.position}</p>
+        <article class="official-card">
+          <img src="${official.image.src}" alt="${official.image.alt}">
+          <div class="content">
+            <div class="border"></div>
+            <div class="text">
+              <h3>${official.firstName} <br />${official.lastName}</h3>
+              <p>${official.position}</p>
+            </div>
+            <div class="border"></div>
           </div>
-          <div class="border"></div>
-        </div>
-      </article>
-    `
+        </article>
+      `
     });
+  }
+
+  function renderCarouselNavButtons() {
+    const viewportWidth = window.innerWidth;
+    let numOfCardsPerPage;
+    let lastPage;
+
+    /* Determine the number of cards per page base on window width */
+    if (viewportWidth >= 1400) {
+      numOfCardsPerPage = 4;
+    } else if (viewportWidth >= 920) {
+      numOfCardsPerPage = 3;
+    } else if (viewportWidth >= 700) {
+      numOfCardsPerPage = 2;
+    } else {
+      numOfCardsPerPage = 1;
+    }
+
+    /* Determine the maximum amount of page using this formula: 
+    Math.ceil(o / c) - 1 
+    o = number of officials
+    c = number of cards
+    */
+    lastPage = Math.ceil(officials.length / numOfCardsPerPage);
+
+    navigateButtons.innerHTML = "";
+    for (let i = 0; i < lastPage; i++) {
+      navigateButtons.innerHTML += `
+        <button data-official-carousel-nav-btn></button>
+      `
+    }
   }
 
   function initializeCarouselButtonsScript() {
     const officialsCards = document.getElementsByClassName('official-card');
-
+    const officialsCarouselLeftBtn = document.querySelector('#officialsCarouselLeftBtn');
+    const officialsCarouselRightBtn = document.querySelector('#officialsCarouselRightBtn');
+    let currentPage = 0;
 
     officialsCarouselLeftBtn.addEventListener('click', () => {
-      const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
-
       currentPage--;
+      handleButtonClick();
+    });
+
+    officialsCarouselRightBtn.addEventListener('click', () => {
+      currentPage++;
+      handleButtonClick();
+    });
+
+    function initializeCarouselNavButtonsScript() {
+      const carouselNavButtons = document.querySelectorAll('[data-official-carousel-nav-btn]');
+      carouselNavButtons[currentPage].classList.add("active");
+
+      carouselNavButtons.forEach((carouselNavButton, index) => {
+        carouselNavButton.addEventListener("click", () => {
+          const prevActiveButton = carouselNavButtons[currentPage];
+          prevActiveButton.classList.remove('active');
+          carouselNavButton.classList.add('active');
+
+          currentPage = index;
+          handleButtonClick();
+        })
+      });
+    }
+
+    function handleButtonClick() {
+      const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
+      const viewportWidth = window.innerWidth;
+      let numOfCardsPerPage;
+      let cardsPassed;
+      let lastPage;
+
+      /* Set both button's visibility to visible */
+      officialsCarouselLeftBtn.style.visibility = 'visible';
       officialsCarouselRightBtn.style.visibility = 'visible';
 
+      /* Determine the number of cards per page base on window width */
+      if (viewportWidth >= 1400) {
+        numOfCardsPerPage = 4;
+      } else if (viewportWidth >= 920) {
+        numOfCardsPerPage = 3;
+      } else if (viewportWidth >= 700) {
+        numOfCardsPerPage = 2;
+      } else {
+        numOfCardsPerPage = 1;
+      }
+
+      /* Determine the number of cards the carousel have passed base on the current page */
+      cardsPassed = numOfCardsPerPage * currentPage;
+
+      /* Determine the maximum amount of page using this formula: 
+      Math.ceil(o / c) - 1 
+      o = number of officials
+      c = number of cards
+      */
+      lastPage = Math.ceil(officials.length / numOfCardsPerPage) - 1;
+
+      /* Prevent the cardsPassed from exceeding (number of officials - number of cards per page) */
+      if (cardsPassed > officials.length - numOfCardsPerPage) {
+        cardsPassed = officials.length - numOfCardsPerPage;
+      }
+
+      /* Remove the right button when the carousel reaches the last page */
+      if (currentPage === lastPage) {
+        officialsCarouselRightBtn.style.visibility = 'hidden';
+      }
+
+      /* Remove the left button when the carousel reaches the first page */
       if (currentPage === 0) {
         officialsCarouselLeftBtn.style.visibility = 'hidden';
       }
 
-      officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * currentPage) + (24 * currentPage)}px)`
-    });
+      /* Apply the carousel container transform value by adding
+      1. Total width of all cards passed
+      2. total width of all the gaps passed
+      */
+      officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * cardsPassed) + (24 * cardsPassed)}px)`
+    }
 
-    officialsCarouselRightBtn.addEventListener('click', () => {
-      const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
-      const viewportWidth = window.innerWidth;
-      let maxPage;
-
-      if (viewportWidth >= 1400) {
-        maxPage = officials.length - 4;
-      } else if (viewportWidth >= 920) {
-        maxPage = officials.length - 3;
-      } else if (viewportWidth >= 700) {
-        maxPage = officials.length - 2;
-      } else {
-        maxPage = officials.length - 1;
-      }
-
-      currentPage++;
-      officialsCarouselLeftBtn.style.visibility = 'visible';
-
-      if (currentPage === maxPage) {
-        officialsCarouselRightBtn.style.visibility = 'hidden';
-      }
-
-      officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * currentPage) + (24 * currentPage)}px)`
-    });
-  }
-
-  function initializeWindowSizeChangeListener() {
+    // Reset the carousel transfor when the screen resizes to prevent unorganized transform state
     window.addEventListener('resize', () => {
       currentPage = 0;
       officialsCarouselLeftBtn.style.visibility = 'hidden';
       officialsCarouselRightBtn.style.visibility = 'visible';
       officialsCarouselContainer.style.transform = 'translateX(0)';
+      renderCarouselNavButtons();
+      initializeCarouselNavButtonsScript();
     });
+
+    initializeCarouselNavButtonsScript();
   }
 
   renderOfficialCards();
+  renderCarouselNavButtons()
   initializeCarouselButtonsScript();
-  initializeWindowSizeChangeListener();
 }
 
 /* id application */
@@ -297,8 +373,6 @@ async function initializeIdApplicationScript() {
   }
 }
 
-
-
 /* General */
 function initializeIntersectAnimations() {
   const subheader = document.querySelector('#subheader');
@@ -309,6 +383,7 @@ function initializeIntersectAnimations() {
   const historyBg = document.querySelector('#historyBg');
   const historyCard = document.querySelector('#historyCard');
   const map = document.querySelector('#map');
+  const officials = document.querySelector('#officials');
   const idApplication = document.querySelector('#idApplication');
   const articles = document.querySelector('#articles');
   const sectors = document.querySelector('#sectors');
@@ -321,6 +396,7 @@ function initializeIntersectAnimations() {
   observeElement(historyBg, "animate-fadein");
   observeElement(historyCard, "animate-scaleup");
   observeElement(map, "animate-scaleup");
+  observeElement(officials, "animate-scaleup");
   observeElement(idApplication, "animate-scaleup");
   observeElement(articles, "animate-scaleup");
   observeElement(sectors, "animate-scaleup");

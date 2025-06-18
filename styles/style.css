@@ -315,6 +315,8 @@
 .officials>main {
   position: relative;
   display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin: auto;
   max-width: 1200px;
 }
@@ -329,12 +331,12 @@
 }
 
 .officials>main>.left-btn {
-  left: 0;
+  left: -12px;
   visibility: hidden;
 }
 
 .officials>main>.right-btn {
-  right: 0;
+  right: -12px;
 }
 
 .officials>main>.carousel {
@@ -380,6 +382,24 @@
   padding: 6px 12px;
   color: white;
   text-align: center;
+}
+
+.officials>main>.navigate-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.officials>main>.navigate-buttons>button {
+  border: none;
+  width: 10%;
+  height: 6px;
+  background-color: #D9D9D9;
+  cursor: pointer;
+}
+
+.officials>main>.navigate-buttons>button.active {
+  background-color: var(--primary-color);
 }
 
 @media only screen and (min-width: 700px) {
