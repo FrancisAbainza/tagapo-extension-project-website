@@ -243,20 +243,21 @@ function initializeOfficialsScript() {
     const officialsCards = document.getElementsByClassName('official-card');
     const officialsCarouselLeftBtn = document.querySelector('#officialsCarouselLeftBtn');
     const officialsCarouselRightBtn = document.querySelector('#officialsCarouselRightBtn');
+    let carouselNavButtons;
     let currentPage = 0;
 
     officialsCarouselLeftBtn.addEventListener('click', () => {
-      currentPage--;
+      setActiveNavButton(currentPage, --currentPage)
       handleButtonClick();
     });
 
     officialsCarouselRightBtn.addEventListener('click', () => {
-      currentPage++;
+      setActiveNavButton(currentPage, ++currentPage)
       handleButtonClick();
     });
 
     function initializeCarouselNavButtonsScript() {
-      const carouselNavButtons = document.querySelectorAll('[data-official-carousel-nav-btn]');
+      carouselNavButtons = document.querySelectorAll('[data-official-carousel-nav-btn]');
       carouselNavButtons[currentPage].classList.add("active");
 
       carouselNavButtons.forEach((carouselNavButton, index) => {
@@ -269,6 +270,13 @@ function initializeOfficialsScript() {
           handleButtonClick();
         })
       });
+    }
+
+    function setActiveNavButton(prevPage, currentPage) {
+      const prevActiveButton = carouselNavButtons[prevPage];
+      const currentActiveButton = carouselNavButtons[currentPage];
+      prevActiveButton.classList.remove('active');
+      currentActiveButton.classList.add('active');
     }
 
     function handleButtonClick() {
@@ -339,7 +347,7 @@ function initializeOfficialsScript() {
   }
 
   renderOfficialCards();
-  renderCarouselNavButtons()
+  renderCarouselNavButtons();
   initializeCarouselButtonsScript();
 }
 
