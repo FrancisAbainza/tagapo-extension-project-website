@@ -1,0 +1,188 @@
+.business-permit-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.business-permit-steps h2 {
+  font-size: 48px;
+  text-align: center;
+  position: relative;
+  padding-top: 0.5vw;
+}
+
+.red-highlight {
+  color: #eb0000;
+}
+
+/* Horizontal Line above Heading (Need a Business Permit?) */
+.business-permit-steps h2::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 0.2vw;
+  background-color: #eb0000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+/* Reset steps counter */
+.steps-wrapper {
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  align-items: center;
+}
+
+/* Wrapper for each step */
+.step-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Step Circle */
+.step-circle {
+  counter-increment: step;
+  content: counter(step);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 5vw;
+  min-width: 5vw;
+  min-height: 5vw;
+  background-color: #eb0000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 48px;
+  border-radius: 50%;
+  margin-right: 3vw;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-circle::before {
+  content: counter(step);
+  font-size: 48px;
+  font-weight: 600;
+}
+
+/* Hovering Effect for Circle */
+.step-item:hover .step-circle {
+  background-color: #f10000;
+  box-shadow: rgba(235, 0, 0, 0.5) 0px 0px 16px 0px, rgba(255, 255, 255, 0.8) 0px 0px 16px 0px;
+  transform: scale(1.1);
+}
+
+/* Step Content Block */
+.steps {
+  background-color: #f5f5f5;
+  padding: 3vw;
+  width: 995px;
+  border-radius: 0.8vw;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.steps h3 {
+  font-size: 32px;
+  margin-top: 0vw;
+  margin-bottom: 2vw;
+}
+
+.steps p {
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.steps ul {
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.steps b {
+  font-weight: 600;
+}
+
+.steps acronym {
+  text-decoration: none;
+}
+
+/* Hovering Effect for Step Box */
+.step-item:hover .steps {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transform: scale(1.03);
+}
+
+.step-item:hover .steps h3{
+  color: #f10000;
+}
+
+/* Connector lines for Step Circles */
+.connector-line-top,
+.connector-line-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: calc(2.5vw - 2.5px);
+  width: 5px;
+  background-color: #f0f0f0;
+  z-index: -1;
+}
+
+.connector-line-top {
+  top: -8vw;
+  height: 14vw;
+}
+
+.connector-line-bottom {
+  top: 270px;
+  height: 12.5vw;
+}
+
+/* Hovering Effect for Steps */
+.steps:hover {
+  box-shadow: 0px 10px 30px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Hovering Effect for Step Circles */
+.steps:hover::before {
+  box-shadow: 0 0 15px rgba(235, 0, 0, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.permit-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 240px;
+  width: 575px;
+  max-width: 100%;
+}
+
+.permit-note p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Media Query for Connector Lines */
+@media (max-width: 1366px) {
+  .connector-line-top {
+    top: -8vw;
+    height: 15vw;
+  }
+
+  .connector-line-bottom {
+    top: 250px;
+    height: 14vw;
+  }
+}

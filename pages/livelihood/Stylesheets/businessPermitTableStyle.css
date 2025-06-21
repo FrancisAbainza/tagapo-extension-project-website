@@ -1,0 +1,171 @@
+table {
+  width: 80%;
+  margin: 2rem auto;
+  margin-top: 10px;
+  padding: 0px; 
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  table-layout: fixed;
+}
+
+#permitTable th:first-child,
+#permitTable td:first-child {
+  width: 75%; /* Business column */
+}
+
+#permitTable th:nth-child(2),
+#permitTable td:nth-child(2) {
+  width: 25%; /* Price column */
+}
+
+#tableBody tr:hover {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(136, 165, 191, 0.48) -6px -2px 16px 0px;
+  transform: scale(1);
+}
+
+#tableBody tr:hover {
+  color: #eb0000;
+}
+
+th {
+  font-size: 24px;
+  background-color: #eb0000;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+td {
+  font-size: 18px;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fff;
+  text-align: left;
+}
+
+tr:nth-child(even) td {
+  background-color: #EAEAEA;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.container {
+  background-color: #ffffff;
+  height: 1350px;
+  padding: 0px;
+  max-width: 60%;
+  margin: 15% auto 12% auto;
+  display: block;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: rgb(0 0 0 / .4) 0 2px 4px, rgb(0 0 0 / .3) 0 7px 13px -3px, rgb(0 0 0 / .2) 0 -3px 0 inset;
+  position: relative;
+  overflow-y: auto;
+}
+
+.container h1{
+  font-size: 32px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.container h2{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image img {
+  margin: 0px;
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.business-permit-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.business-permit-table h1, h2{
+  text-align: center;
+}
+.green {
+  color: #04AA6D;
+}
+
+.paginationTable {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+
+.pageTable {
+  background-color: #ffffff;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ccc;
+  margin: 2px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pageTable:hover {
+  background-color: #D9D9D9;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.pageTable.active {
+  background-color: #eb0000;
+  color: white;
+  border-color: #eb0000;
+  font-weight: bold;
+}
+
+#count {
+  font-size: 16px;
+}
+
+@media (max-width:1366px) {
+  .container {
+    background-color: #ffffff;
+    height: 1350px;
+    padding: 0px;
+    max-width: 75%;
+    margin: 15% auto 12% auto;
+    display: block;
+    box-shadow: rgb(0 0 0 / .4) 0 2px 4px, rgb(0 0 0 / .3) 0 7px 13px -3px, rgb(0 0 0 / .2) 0 -3px 0 inset;
+    position: relative;
+    overflow-y: auto;
+  }
+}

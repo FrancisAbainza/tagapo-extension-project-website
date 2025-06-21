@@ -1,0 +1,155 @@
+.jobs-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.job-title-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1%;
+  margin-bottom: 0;
+  border-bottom: 3px solid #eb0000;
+  width: 1135px;
+  max-width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.job-title-row h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 0px;
+  align-items: flex-start;
+}
+
+.job-title-row .red-highlight {
+  color: #eb0000;
+}
+
+.job-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.job-panel {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: min(5em, 5%);
+  width: 100%;
+}
+
+.job-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  background-color: white;
+  width: 448px;
+  height: 359px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.job-container .job-logo {
+  display: flex;
+  align-items: center;
+  border-radius: 30px 30px 0 0;
+  background-color: white;
+  width: auto;
+  height: 100px;
+  overflow: hidden;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.job-container .job-logo img {
+  width: 100%;
+  max-height: 60px;
+  object-fit: scale-down;
+}
+
+.job-container .job-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.job-container h2 {
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.job-container p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+  color: #6e6462;
+  line-height: 1.4;
+}
+
+.job-container .button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.job-container .button .read-btn {
+  background-color: #eb0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.job-container .button .read-btn:hover {
+  background-color: #c70000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.iframe-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  max-width: 60%;
+}
+
+/* For Job Button Animation */
+.job-page {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.job-page.active {
+  display: block;
+  opacity: 1;
+}
+
+.page-button .active {
+  background-color: #eb0000;
+  color: white;
+}
