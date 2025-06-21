@@ -72,4 +72,8 @@ if (scrollContainer5 && backBtn5 && nextBtn5) {
     backBtn5.addEventListener("click", () => {
         scrollContainer5.scrollBy({ left: -430, behavior: "smooth" });
     });
+
+
 }
+
+

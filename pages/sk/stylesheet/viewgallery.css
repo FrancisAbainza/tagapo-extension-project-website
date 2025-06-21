@@ -16,6 +16,7 @@
       margin: 0;
   }
 
+  
   .red-texts-big {
       color: #eb0000;
       font-size: clamp(40px, 6vw, 75px);
@@ -59,7 +60,8 @@
 
 
   .container,
-  .container2 {
+  .container2,
+  .container3 {
       display: flex;
       gap: 15px;
       padding: 0 20px;
@@ -72,6 +74,10 @@
 
   .container2 {
       justify-content: flex-start;
+  }
+
+  .container3 {
+    justify-content: flex-end;
   }
 
   .vertical-line,
@@ -443,3 +449,50 @@
       border-style: solid;
       border-color: #eb0000;
   }
+
+  @media (min-width: 2000px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bodycontainer {
+    width: 100%;
+    max-width: 2000px;
+    position: relative;
+    top: 55%;
+    right: 65%;
+  }
+
+  .container{
+    position: relative;
+    right:-270px;
+  }
+
+  .event2{
+    left: -200px;
+  }
+
+  .event4{
+    left: -200px;
+  }
+
+  .gallery-section2{
+    margin-left: 550px;
+    
+    
+  }
+
+  .container3{
+    position: relative;
+    right: -300px;
+  }
+
+  .gallery-banner{
+    width: 4000px;
+  }
+  
+ 
+  
+
+}
