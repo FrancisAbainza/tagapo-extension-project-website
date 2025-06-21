@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* For Header and Footer Section */
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  background-color: white;
+  padding: 12px 24px;
+  z-index: 9;
+}
+
+header .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header .logo-text a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+header .logo-text a:hover {
+  color: #eb0000;
+}
+
+header .logo-image {
+  width: 90px;
+}
+
+header nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  text-transform: uppercase;
+  transform: translateX(110%);
+  transition: transform 0.5s ease-in-out;
+  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+header nav .close {
+  width: 50px;
+  margin: 24px;
+  cursor: pointer;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 24px;
+  color: black;
+}
+
+header nav ul li a.active {
+  color: #eb0000;
+  background-color: rgb(235, 235, 235);
+}
+
+header nav ul li a:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+header .menu {
+  cursor: pointer;
+}
+
+header .open-nav {
+  transform: translateX(0px);
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subheader {
+  background-color: #eb0000;
+  padding: 12px 24px;
+}
+
+.subheader p {
+  max-width: 1200px;
+  margin: auto;
+  color: white;
+}
+
+/* Footer */
+footer {
+  margin: 0;
+  background-color: #221f1f;
+  color: white;
+  padding: 24px;
+}
+
+footer .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+footer .wrapper .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+footer .wrapper .logo-text img {
+  width: 100px;
+}
+
+footer .wrapper .logo-text p span.name {
+  color: #eb0000;
+}
+
+footer .wrapper .location-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+footer .wrapper .location-group iframe {
+  width: 100%;
+  height: 300px;
+}
+
+@media only screen and (min-width: 920px) {
+  /* footer */
+  footer {
+    padding: 24px 48px;
+  }
+
+  footer .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer .wrapper .logo-text {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  footer .wrapper .location-group {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  footer .wrapper .location-group iframe {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/* Desktop breakpoint */
+@media only screen and (min-width: 1400px) {
+  /* header */
+  .header {
+    padding: 12px 0;
+  }
+
+  header nav {
+    position: unset;
+    width: unset;
+    height: unset;
+    background-color: transparent;
+    box-shadow: unset;
+    transform: translateX(0);
+  }
+
+  header nav .close {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  header nav ul li a {
+    padding: 0;
+  }
+
+  header nav ul li a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+
+  header nav ul li a.active {
+    background-color: transparent;
+  }
+
+  header nav ul li a.active:hover {
+    text-decoration: none;
+  }
+
+  header .menu {
+    display: none;
+  }
+}

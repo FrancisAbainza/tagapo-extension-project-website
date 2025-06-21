@@ -1,0 +1,60 @@
+.web-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(to bottom, transparent 60%, white 80%),
+    url(../Images/banner-img.jpg) center -50px no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 85vh;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+.web-banner .title {
+  font-size: 65px;
+  margin: 0px;
+}
+
+.web-banner .title span {
+  color: #eb0000;
+  /*
+  text-shadow: 0 0 6px rgba(25, 0, 255, .7);
+  animation: blueYellowGlow 2s ease-in-out infinite alternate;
+  */
+}
+
+.web-banner > * {
+  max-width: 1200px;
+}
+
+.web-banner .desc {
+  font-size: 16px;
+}
+
+.solid-button {
+  font-size: 16px;
+  border: none;
+  border-radius: 50vh;
+  padding: 10px 16px;
+  background-color: #eb0000;
+  color: white;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.solid-button:hover {
+  background-color: #c70000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+/*
+@keyframes blueYellowGlow {
+  100% {
+    text-shadow: 0 0 6px rgba(234, 245, 39, .7);
+  }
+}
+*/

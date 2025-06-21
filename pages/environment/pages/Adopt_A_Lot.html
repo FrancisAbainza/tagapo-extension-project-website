@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adopt-A-Lot Page</title>
+  <link rel="stylesheet" href="../stylesheets/fontStyle.css" />
+  <link rel="stylesheet" href="../stylesheets/Adopt_A_Lot.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+  <script src="../scripts/Adopt_A_Lot.js"></script>
+  <link rel="stylesheet" href="../stylesheets/webStyle.css" />
+  <script src="../scripts/webScript.js" defer></script>
+</head>
+
+<body>
+  <!--Final Header-->
+  <header class="hidden" id="header">
+    <div class="wrapper" id="headerContainer">
+      <div class="logo-text">
+        <a href="/"><img src="../env_images/FrontPagePhoto/Tagapo Logo.png" alt="barangay tagapo logo image"
+            class="logo-image" />
+          <div class="info-header">
+            <p>City of Sta. Rosa</p>
+            <h2>BARANGAY TAGAPO</h2>
+          </div>
+        </a>
+      </div>
+
+      <nav id="nav">
+        <svg class="close" id="close" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.5 0.25C13.2861 0.25 10.1443 1.20305 7.47199 2.98862C4.79969 4.77419 2.71689 7.31209 1.48697 10.2814C0.257041 13.2507 -0.0647633 16.518 0.562247 19.6702C1.18926 22.8224 2.73692 25.7179 5.00952 27.9905C7.28213 30.2631 10.1776 31.8108 13.3298 32.4378C16.482 33.0648 19.7493 32.743 22.7186 31.513C25.6879 30.2831 28.2258 28.2003 30.0114 25.528C31.797 22.8557 32.75 19.7139 32.75 16.5C32.75 14.366 32.3297 12.2529 31.5131 10.2814C30.6964 8.30985 29.4994 6.51847 27.9905 5.00952C26.4815 3.50056 24.6902 2.3036 22.7186 1.48696C20.7471 0.670319 18.634 0.25 16.5 0.25ZM20.9038 18.5963C21.0561 18.7473 21.177 18.927 21.2595 19.1251C21.342 19.3231 21.3844 19.5355 21.3844 19.75C21.3844 19.9645 21.342 20.1769 21.2595 20.3749C21.177 20.573 21.0561 20.7527 20.9038 20.9038C20.7527 21.0561 20.573 21.177 20.3749 21.2594C20.1769 21.3419 19.9645 21.3844 19.75 21.3844C19.5355 21.3844 19.3231 21.3419 19.1251 21.2594C18.927 21.177 18.7473 21.0561 18.5963 20.9038L16.5 18.7913L14.4038 20.9038C14.2527 21.0561 14.073 21.177 13.8749 21.2594C13.6769 21.3419 13.4645 21.3844 13.25 21.3844C13.0355 21.3844 12.8231 21.3419 12.6251 21.2594C12.427 21.177 12.2473 21.0561 12.0963 20.9038C11.9439 20.7527 11.8231 20.573 11.7406 20.3749C11.6581 20.1769 11.6156 19.9645 11.6156 19.75C11.6156 19.5355 11.6581 19.3231 11.7406 19.1251C11.8231 18.927 11.9439 18.7473 12.0963 18.5963L14.2088 16.5L12.0963 14.4038C11.7903 14.0978 11.6184 13.6827 11.6184 13.25C11.6184 12.8173 11.7903 12.4022 12.0963 12.0963C12.4023 11.7903 12.8173 11.6184 13.25 11.6184C13.6827 11.6184 14.0978 11.7903 14.4038 12.0963L16.5 14.2088L18.5963 12.0963C18.9023 11.7903 19.3173 11.6184 19.75 11.6184C20.1827 11.6184 20.5978 11.7903 20.9038 12.0963C21.2098 12.4022 21.3817 12.8173 21.3817 13.25C21.3817 13.6827 21.2098 14.0978 20.9038 14.4038L18.7913 16.5L20.9038 18.5963Z"
+            fill="black" />
+        </svg>
+
+        <ul>
+          <li><a href="../../landing/index.html">HOME</a></li>
+          <li><a href="../../health/index.html">HEALTH</a></li>
+          <li><a href="../../security/securityDashboard.HTML">SECURITY</a></li>
+          <li><a href="../../livelihood/livelihoodDashboard.html">LIVELIHOOD</a></li>
+          <li><a href="../../sk/SKTagapo.html">SK</a></li>
+          <li><a href="../../environment/Environment.html" class="active">ENVIRONMENT</a></li>
+        </ul>
+      </nav>
+
+      <svg class="menu" id="menu" width="50" height="50" viewBox="0 0 50 50" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_314_333)">
+          <path
+            d="M8.33333 37.5H41.6667C42.8125 37.5 43.75 36.5625 43.75 35.4167C43.75 34.2708 42.8125 33.3333 41.6667 33.3333H8.33333C7.1875 33.3333 6.25 34.2708 6.25 35.4167C6.25 36.5625 7.1875 37.5 8.33333 37.5ZM8.33333 27.0833H41.6667C42.8125 27.0833 43.75 26.1458 43.75 25C43.75 23.8542 42.8125 22.9167 41.6667 22.9167H8.33333C7.1875 22.9167 6.25 23.8542 6.25 25C6.25 26.1458 7.1875 27.0833 8.33333 27.0833ZM6.25 14.5833C6.25 15.7292 7.1875 16.6667 8.33333 16.6667H41.6667C42.8125 16.6667 43.75 15.7292 43.75 14.5833C43.75 13.4375 42.8125 12.5 41.6667 12.5H8.33333C7.1875 12.5 6.25 13.4375 6.25 14.5833Z"
+            fill="black" />
+        </g>
+        <defs>
+          <clipPath id="clip0_314_333">
+            <rect width="50" height="50" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </header>
+
+  <!--Header section-->
+  <section class="header">
+    <a href="../Environment.html" title="Back to Home" target="_self" class="home-icon">
+      <i class="fas fa-home"></i>
+    </a>
+    <div class="outer-grid">
+      <img src="../env_images/AdoptALotPhoto/banner1.png" alt="Tree Area Banner 1" />
+      <h1>
+        Greening Spaces:<br />
+        <span>Adopt-A-Lot</span>
+        <div class="inner-grid">
+          <img src="../env_images/AdoptALotPhoto/banner2.png" alt="Tree Area Banner 2" />
+          <img src="../env_images/AdoptALotPhoto/banner3.png" alt="Tree Area Banner 3" />
+        </div>
+      </h1>
+      <img src="../env_images/AdoptALotPhoto/banner4.png" alt="Tree Area Banner4" />
+    </div>
+  </section>
+
+  <!--Additional Info Boxes-->
+  <section class="boxes">
+    <div class="box-1">
+      <p class="text-content">
+        The Adopt-A-Lot project encourages the community to
+        <span class="span">build green spaces and plant trees</span>. This
+        program also involves the removal or trimming of potentially dangerous
+        trees as part of the services they offer in the barangay.
+      </p>
+    </div>
+
+    <div class="box-2">
+      <p class="text-content">
+        Particularly during storms or high winds, overgrown or insecure trees
+        can threaten lives, damage houses and cars, and more. By this
+        initiative, the barangay
+        <span class="span">promotes responsible tree care</span> in addition
+        to initiatives to
+        <span class="span">expand urban greenery</span>
+        ,ensuring a balance between environmental sustainability and public
+        safety.
+      </p>
+    </div>
+  </section>
+
+  <!--Adopt-A-Lot Content-->
+  <section class="content">
+    <p class="content-title">
+      Para sa <span class="span">Bagong Tagapo</span>
+    </p>
+
+    <!--Slide 1 (HAPAG Project)-->
+    <div class="slide-front-1">
+      <div class="overlap-design">
+        <div class="slide">
+          <div class="rectangle"></div>
+          <div class="circle-red"></div>
+          <div class="circle-white"></div>
+          <img class="img" src="../env_images/AdoptALotPhoto/Hapag.jpg"
+            alt="vegetables and fruits planted in Echo Park" />
+          <img id="slide-button1" src="../env_images/icons/right_slide_arrow.png" alt="Slide button" />
+        </div>
+
+        <div class="title">
+          HAPAG Project<br />
+          (Halina’t Magtanim ng Prutas at Gulay)
+        </div>
+        <p class="text">
+          This project is where the team plants various vegetables and fruits
+          at the place called Echo Park in Amihan, Tagapo.
+        </p>
+        <button id="viewMoreBtn1">View More</button>
+      </div>
+    </div>
+
+    <div class="slide-back-1">
+      <div class="overlap-design">
+        <div class="rectangle"></div>
+        <div class="circle-red"></div>
+        <div class="circle-white"></div>
+        <img class="img" src="../env_images/AdoptALotPhoto/Hapag.jpg"
+          alt="vegetables and fruits planted in Echo Park" />
+        <img id="previous-button1" src="../env_images/icons/left_slide_arrow.png" alt="view previous button" />
+        <div class="title">
+          "HAPAG Project<br />
+          (Halina’t Magtanim ng Prutas at Gulay)"
+        </div>
+        <p class="text">
+          The HAPAG Project is where the Barangay Tagapo cleaning team grow
+          fruits and vegetables in Echo Park, Amihan, Tagapo. They support the
+          initiative by preparing planting areas, maintaining garden
+          cleanliness, and assisting in crop care.
+        </p>
+        <p class="text-1">
+          This project <b>promotes healthy eating, food sustainability</b>,
+          and the productive use of idle spaces. It also strengthens community
+          involvement by encouraging residents to work together toward a
+          <b>greener environment.</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="more-content-1">
+      <div class="line"></div>
+      <p class="quote">
+        <span class="red">"</span>A small seed today grows into a harvest for
+        the whole community. <span class="red">"</span>
+      </p>
+      <img class="firstPicture" src="../env_images/AdoptALotPhoto/slide1/first.jpg" alt="HAPAG Project photo 1" />
+      <img class="secondPicture" src="../env_images/AdoptALotPhoto/slide1/second.jpg"
+        alt="HAPAG Project project photo 2" />
+      <img class="thirdPicture" src="../env_images/AdoptALotPhoto/slide1/third.jpg"
+        alt="HAPAG Project project photo 3" />
+      <img class="fourthPicture" src="../env_images/AdoptALotPhoto/slide1/fourth.jpg"
+        alt="HAPAG Project project photo 4" />
+      <img class="fifthPicture" src="../env_images/AdoptALotPhoto/slide1/fifth.jpg"
+        alt="HAPAG Project project photo 5" />
+      <img id="collapse1" src="../env_images/icons/up_slide_arrow.png" alt="collapse button" />
+    </div>
+
+    <!--Slide 2 (AGF)-->
+    <div class="slide-front-2">
+      <div class="overlap-design">
+        <div class="slide">
+          <div class="rectangle"></div>
+          <div class="circle-red"></div>
+          <div class="circle-white"></div>
+          <img class="img" src="../env_images/AdoptALotPhoto/Adopt-A-Lot.jpg" alt="Aquaponics Garden Facility" />
+          <img id="slide-button2" src="../env_images/icons/left_slide_arrow.png" alt="Slide button" />
+        </div>
+
+        <div class="title">AGF (Aquaponics Garden Facility)</div>
+        <p class="text">
+          Aside from vegetables and fruits, they are also taking care of
+          fishes in their facility assuring that they maintain them.
+        </p>
+        <button id="viewMoreBtn2">View More</button>
+      </div>
+    </div>
+
+    <div class="slide-back-2">
+      <div class="overlap-design">
+        <div class="rectangle"></div>
+        <div class="circle-red"></div>
+        <div class="circle-white"></div>
+        <img class="img" src="../env_images/AdoptALotPhoto/Adopt-A-Lot.jpg" />
+        <img id="previous-button2" src="../env_images/icons/right_slide_arrow.png" alt="view previous button" />
+
+        <div class="title">AGF (Aquaponics Garden Facility)</div>
+        <p class="text">
+          AGF is a modern, sustainable system that combines fish-raising and
+          plant-growing in one setup. The cleaning team ensures proper
+          maintenance by checking water quality, feeding the fish, and keeping
+          the tanks clean and balanced.
+        </p>
+        <p class="text-1">
+          It provides a <b>steady source of healthy food</b> while
+          <b>promoting eco-friendly, water-efficient</b> farming. The facility
+          also serves as an educational tool, introducing the community to
+          innovative <b>urban agriculture techniques.</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="more-content-2">
+      <div class="line"></div>
+      <p class="quote">
+        <span class="red">"</span>Sustainable farming starts in clean hands
+        and clear water.<span class="red">"</span>
+      </p>
+      <img class="firstPicture" src="../env_images/AdoptALotPhoto/slide2/first.jpg" alt="AGF photo 1" />
+      <img class="secondPicture" src="../env_images/AdoptALotPhoto/slide2/first.jpg" alt="AGF photo 2" />
+      <img class="thirdPicture" src="../env_images/AdoptALotPhoto/slide2/fourth.jpg" alt="AGF photo 3" />
+      <img class="fourthPicture" src="../env_images/AdoptALotPhoto/AGF.jpg" alt="AGF photo 4" />
+      <img class="fifthPicture" src="../env_images/AdoptALotPhoto/slide2/fifth.jpg" alt="AGF photo 5" />
+      <img id="collapse2" src="../env_images/icons/up_slide_arrow.png" alt="collapse button" />
+    </div>
+
+    <!--Slide 3 (Material Recovery Facility)-->
+    <div class="slide-front-3">
+      <div class="overlap-design">
+        <div class="slide">
+          <div class="rectangle"></div>
+          <div class="circle-red"></div>
+          <div class="circle-white"></div>
+          <img class="img" src="../env_images/AdoptALotPhoto/slide3/cover.jpg" />
+          <img id="slide-button3" src="../env_images/icons/right_slide_arrow.png" alt="Slide button" />
+        </div>
+
+        <div class="title">Material Recovery Facility</div>
+        <p class="text">
+          This project is about how our team segregate wastes in places at
+          Tagapo like Anros, Buena Rosa, and Cataquiz where wastes that are
+          still useful are set aside.
+        </p>
+        <button id="viewMoreBtn3">View More</button>
+      </div>
+    </div>
+
+    <div class="slide-back-3">
+      <div class="overlap-design">
+        <div class="rectangle"></div>
+        <div class="circle-red"></div>
+        <div class="circle-white"></div>
+        <img class="img" src="../env_images/AdoptALotPhoto/slide3/cover.jpg" alt="waste segregation sites" />
+        <img id="previous-button3" src="../env_images/icons/left_slide_arrow.png" alt="view previous button" />
+        <div class="title">
+          Material Recovery<br />
+          Facility
+        </div>
+        <p class="text">
+          Barangay Tagapo operates waste segregation sites in Anros, Buena
+          Rosa, and Cataquiz. The cleaning team oversees the sorting of
+          recyclable and reusable materials to reduce environmental waste.
+        </p>
+
+        <p class="text-1">
+          The MRF helps <b>reduce pollution</b>, supports
+          <b>proper waste management</b>, and <b>promotes recycling</b> as a
+          potential livelihood opportunity. It also serves as a model for
+          other communities aiming for cleaner and more sustainable waste
+          practices.
+        </p>
+      </div>
+    </div>
+
+    <div class="more-content-3">
+      <div class="line"></div>
+      <p class="quote">
+        <span class="red">"</span>Clean communities start with mindful
+        segregation.<span class="red">"</span>
+      </p>
+
+      <img class="firstPicture" src="../env_images/AdoptALotPhoto/slide3/first.jpg"
+        alt=" Material Recovery Facility photo 1" />
+      <img class="secondPicture" src="../env_images/AdoptALotPhoto/slide3/second.jpg"
+        alt=" Material Recovery Facility photo 2" />
+      <img class="thirdPicture" src="../env_images/AdoptALotPhoto/slide3/third.jpg"
+        alt=" Material Recovery Facility photo 3" />
+      <img class="fourthPicture" src="../env_images/AdoptALotPhoto/slide3/fourth.jpg"
+        alt=" Material Recovery Facility photo 4" />
+      <img class="fifthPicture" src="../env_images/AdoptALotPhoto/slide3/fifth.jpg"
+        alt=" Material Recovery Facility photo 5" />
+      <img id="collapse3" src="../env_images/icons/up_slide_arrow.png" alt="collapse button" />
+    </div>
+  </section>
+
+  <!--End Part-->
+  <div class="horizontal-line"></div>
+
+  <!--Buttons-->
+  <section class="end-buttons">
+    <div class="container">
+      <div class="nav-button">
+        <a href="../Environment.html" title="Back to Home" target="_self" class="home-icon">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="#" title="Back To Top" class="back-to-top"> Back to Top </a>
+      </div>
+    </div>
+  </section>
+
+  <!--Final Footer-->
+  <footer>
+    <div class="wrapper">
+      <div class="logo-text">
+        <img src="../env_images/FrontPagePhoto/Tagapo logo.png" alt="barangay tagapo logo image" />
+        <p>
+          © <span id="currentYearElement"></span> All rights reserved.
+          <span class="name">Barangay Tagapo, Sta. Rosa, Laguna</span>
+        </p>
+      </div>
+      <div class="location-group">
+        <div class="address">
+          <p>MAP AND LOCATION</p>
+          <p>
+            <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
+                fill="white" />
+            </svg>
+            129 Rizal Blvd, Brgy. Tagapo, Santa Rosa, 4026 Laguna
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9251.821258417178!2d121.09870411089376!3d14.321204752693305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9ced32d9719%3A0x45e7aab820391865!2sTagapo%2C%20City%20of%20Santa%20Rosa%2C%20Laguna!5e1!3m2!1sen!2sph!4v1748681749375!5m2!1sen!2sph"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
