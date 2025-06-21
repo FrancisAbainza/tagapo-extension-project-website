@@ -50,15 +50,38 @@ function initializeSubheaderScript() {
   updateDateTime();
 }
 
-/* footer */
-function initializeFooterScript() {
-  const currentYearElement = document.querySelector('#currentYearElement');
-  const date = new Date();
-  const currentYear = date.getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  initializeIntersectAnimations();
+});
 
-  currentYearElement.textContent = currentYear;
+function initializeIntersectAnimations() {
+  const header = document.querySelector('header')
+  const bannerBg = document.querySelector('#bannerBg');
+  const bannerTitle = document.querySelector('#bannerTitle');
+  const bannerDesc = document.querySelector('#bannerDesc');
+  const bannerBtn = document.querySelector('#bannerBtn');
+
+  observeElement(header, "animate-movedown-delayed")
+  observeElement(bannerBg, "animate-movedown-delayed");
+  observeElement(bannerTitle, "animate-movedown");
+  observeElement(bannerDesc, "animate-fadein-delayed");
+  observeElement(bannerBtn, "animate-fadein-delayed");
+  /*observeElement(medCheckups, "animate-scaleup");*/
+}
+
+/* Reusables */
+function observeElement(element, className) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(className);
+      }
+    });
+  });
+
+  observer.observe(element);
 }
 
 initializeHeaderScript();
 initializeFooterScript();
-initializeFooterScript();
+initializeIntersectAnimations();

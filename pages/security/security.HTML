@@ -11,7 +11,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./Stylesheets/securityDashboardStyle.css" />
   <link rel="stylesheet" href="./Stylesheets/securityWebsiteBannerStyle.css" />
-  <script src="./Javascript/webScript.js" defer></script>
+  <script type="module" src="./Javascript/webScript.js" defer></script>
 </head>
 
 <body>
@@ -62,12 +62,13 @@
 
   <!-- Website Banner Section -->
   <div class="web-banner">
-    <h1 class="title">
+    <div class="background hidden" id="bannerBg"></div>
+    <h1 class="title hidden" id="bannerTitle">
       Barangay Tagapo<br />
       <span>Security</span> Page
     </h1>
-    <p class="desc">Security Page Description</p>
-    <a href="#" class="solid-button">Contact Us</a>
+    <p class="desc hidden" id="bannerDesc">Security Page Description</p>
+    <a href="#" class="solid-button hidden" id="bannerBtn">Contact Us</a>
   </div>
 
   <!-- Footer -->
