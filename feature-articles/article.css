@@ -4,6 +4,7 @@ header {
 }
 
 .feature-article {
+  min-height: 80vh;
   padding: 24px;
 }
 

@@ -188,7 +188,24 @@ async function initializeMapScript() {
 /* officials */
 function initializeOfficialsScript() {
   const officialsCarouselContainer = document.querySelector('#officialsCarouselContainer');
-  const navigateButtons = document.querySelector('#navigateButtons');
+  const navigateButtonsContainer = document.querySelector('#navigateButtonsContainer');
+
+  function getNumberOfCardsPerPage() {
+    const viewportWidth = window.innerWidth;
+    let numOfCardsPerPage;
+
+    if (viewportWidth >= 1400) {
+      numOfCardsPerPage = 4;
+    } else if (viewportWidth >= 920) {
+      numOfCardsPerPage = 3;
+    } else if (viewportWidth >= 700) {
+      numOfCardsPerPage = 2;
+    } else {
+      numOfCardsPerPage = 1;
+    }
+
+    return numOfCardsPerPage;
+  }
 
   function renderOfficialCards() {
     officials.forEach((official) => {
@@ -209,20 +226,8 @@ function initializeOfficialsScript() {
   }
 
   function renderCarouselNavButtons() {
-    const viewportWidth = window.innerWidth;
-    let numOfCardsPerPage;
+    const numOfCardsPerPage = getNumberOfCardsPerPage();
     let lastPage;
-
-    /* Determine the number of cards per page base on window width */
-    if (viewportWidth >= 1400) {
-      numOfCardsPerPage = 4;
-    } else if (viewportWidth >= 920) {
-      numOfCardsPerPage = 3;
-    } else if (viewportWidth >= 700) {
-      numOfCardsPerPage = 2;
-    } else {
-      numOfCardsPerPage = 1;
-    }
 
     /* Determine the maximum amount of page using this formula: 
     Math.ceil(o / c) - 1 
@@ -231,9 +236,9 @@ function initializeOfficialsScript() {
     */
     lastPage = Math.ceil(officials.length / numOfCardsPerPage);
 
-    navigateButtons.innerHTML = "";
+    navigateButtonsContainer.innerHTML = "";
     for (let i = 0; i < lastPage; i++) {
-      navigateButtons.innerHTML += `
+      navigateButtonsContainer.innerHTML += `
         <button data-official-carousel-nav-btn></button>
       `
     }
@@ -247,59 +252,48 @@ function initializeOfficialsScript() {
     let currentPage = 0;
 
     officialsCarouselLeftBtn.addEventListener('click', () => {
-      setActiveNavButton(currentPage, --currentPage)
-      handleButtonClick();
+      changePage(currentPage - 1);
+      updateUI();
     });
 
     officialsCarouselRightBtn.addEventListener('click', () => {
-      setActiveNavButton(currentPage, ++currentPage)
-      handleButtonClick();
+      changePage(currentPage + 1);
+      updateUI();
     });
 
+    // Adds event listener to carousel navigation buttons
     function initializeCarouselNavButtonsScript() {
       carouselNavButtons = document.querySelectorAll('[data-official-carousel-nav-btn]');
-      carouselNavButtons[currentPage].classList.add("active");
+      carouselNavButtons[0].classList.add('active');
 
       carouselNavButtons.forEach((carouselNavButton, index) => {
         carouselNavButton.addEventListener("click", () => {
-          const prevActiveButton = carouselNavButtons[currentPage];
-          prevActiveButton.classList.remove('active');
-          carouselNavButton.classList.add('active');
-
-          currentPage = index;
-          handleButtonClick();
+          changePage(index);
+          updateUI();
         })
       });
     }
 
-    function setActiveNavButton(prevPage, currentPage) {
-      const prevActiveButton = carouselNavButtons[prevPage];
-      const currentActiveButton = carouselNavButtons[currentPage];
-      prevActiveButton.classList.remove('active');
-      currentActiveButton.classList.add('active');
+    // Changes current page
+    function changePage(newPage) {
+      const prevActiveNavButton = carouselNavButtons[currentPage];
+      const currentActiveNavButton = carouselNavButtons[newPage];
+      prevActiveNavButton.classList.remove('active');
+      currentActiveNavButton.classList.add('active');
+
+      currentPage = newPage;
     }
 
-    function handleButtonClick() {
+    // Updates carousel container transform
+    function updateUI() {
       const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
-      const viewportWidth = window.innerWidth;
-      let numOfCardsPerPage;
+      const numOfCardsPerPage = getNumberOfCardsPerPage();
       let cardsPassed;
       let lastPage;
 
       /* Set both button's visibility to visible */
       officialsCarouselLeftBtn.style.visibility = 'visible';
       officialsCarouselRightBtn.style.visibility = 'visible';
-
-      /* Determine the number of cards per page base on window width */
-      if (viewportWidth >= 1400) {
-        numOfCardsPerPage = 4;
-      } else if (viewportWidth >= 920) {
-        numOfCardsPerPage = 3;
-      } else if (viewportWidth >= 700) {
-        numOfCardsPerPage = 2;
-      } else {
-        numOfCardsPerPage = 1;
-      }
 
       /* Determine the number of cards the carousel have passed base on the current page */
       cardsPassed = numOfCardsPerPage * currentPage;
@@ -333,17 +327,25 @@ function initializeOfficialsScript() {
       officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * cardsPassed) + (24 * cardsPassed)}px)`
     }
 
-    // Reset the carousel transfor when the screen resizes to prevent unorganized transform state
-    window.addEventListener('resize', () => {
-      currentPage = 0;
-      officialsCarouselLeftBtn.style.visibility = 'hidden';
-      officialsCarouselRightBtn.style.visibility = 'visible';
-      officialsCarouselContainer.style.transform = 'translateX(0)';
-      renderCarouselNavButtons();
-      initializeCarouselNavButtonsScript();
-    });
+    // Reset the carousel transform when the screen resizes to prevent unorganized transform state and rerender navigation buttons and their script
+    function initializeWindowResizeEventScript() {
+      let lastWidth = window.innerWidth;
+
+      window.addEventListener('resize', () => {
+        const currentWidth = window.innerWidth;
+
+        if (currentWidth !== lastWidth) {
+          lastWidth = currentWidth;
+          renderCarouselNavButtons();
+          initializeCarouselNavButtonsScript();
+          changePage(0);
+          updateUI();
+        }
+      });
+    }
 
     initializeCarouselNavButtonsScript();
+    initializeWindowResizeEventScript();
   }
 
   renderOfficialCards();
