@@ -635,5 +635,5 @@ export const officials = [
     firstName: "Manuel G.",
     lastName: "Alon",
     position: "Kagawad"
-  }
+  },
 ]
