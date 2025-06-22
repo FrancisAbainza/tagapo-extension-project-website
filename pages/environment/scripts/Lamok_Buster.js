@@ -1,21 +1,30 @@
-document.querySelectorAll('.photo-set').forEach((photoSet) => {
-    const collection = photoSet.querySelector('.photos-collection') || photoSet.querySelector('.photos-collection-two');
-    const arrows = photoSet.querySelectorAll('.arrow');
-    let index = 0;
-    const total = collection.children.length;
+const carouselIndexes = [];
 
-    arrows.forEach((arrow) => {
-        arrow.addEventListener('click', () => {
-            const imageWidth = collection.children[0].offsetWidth;
-            if (arrow.classList.contains('left')) {
-                index = Math.max(index - 1, 0);
-            } else {
-                index = Math.min(index + 1, total - 1);
-            }
-            collection.style.transform = `translateX(-${index * imageWidth}px)`;
-        });
-    });
-});
+function scrollPhotoWraps(button, direction) {
+    const container = button.closest('.photos-one, .photos-two')?.querySelector('.photos-container, .photos-container-two');
+    if (!container) return;
+
+    const wraps = container.querySelectorAll('.photo-wrap');
+    if (!wraps.length) return;
+
+    const wrapWidth = wraps[0].offsetWidth;
+    const totalWraps = wraps.length;
+
+    // Use container as unique identifier for index
+    const containerId = Array.from(document.querySelectorAll('.photos-container, .photos-container-two')).indexOf(container);
+    if (typeof carouselIndexes[containerId] !== 'number') {
+        carouselIndexes[containerId] = 0;
+    }
+
+    // Loop index
+    carouselIndexes[containerId] = (carouselIndexes[containerId] + direction + totalWraps) % totalWraps;
+
+    // Scroll to calculated position
+    const scrollTo = carouselIndexes[containerId] * wrapWidth;
+    container.scrollTo({ left: scrollTo, behavior: 'smooth' });
+}
+
+
 
 // Toggle overlay expansion
 document.querySelectorAll(".photo-expand-overlay").forEach((overlay) => {
@@ -37,16 +46,4 @@ function changeSlide(button, direction) {
     slideIndexes[carouselIndex] = (slideIndexes[carouselIndex] + direction + slides.length) % slides.length;
     const offset = slideIndexes[carouselIndex] * -100;
     slidesContainer.style.transform = `translateX(${offset}%)`;
-}
-
-function scrollPhotoWraps(direction) {
-    const containers = document.querySelectorAll('.photos-container-two, .photos-container');
-
-    containers.forEach(container => {
-        const wrap = container.querySelector('.photo-wrap');
-        if (!wrap) return;
-
-        const scrollAmount = wrap.offsetWidth;
-        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-    });
 }

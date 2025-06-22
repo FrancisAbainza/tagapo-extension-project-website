@@ -28,29 +28,22 @@ html {
   padding: 0 20px;
 }
 
-.navbar {
-  display: flex;
-  color: var(--light-color);
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 60px;
-  background-color: var(--primary-color);
-}
-
 
 .header {
-  position: relative;
   width: 100%;
-  height: auto;
+  max-width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .header img {
   width: 100%;
   height: auto;
+  max-width: 100%;
   display: block;
   opacity: 0.90;
 }
+
 
 .header::after {
   content: "";
@@ -71,7 +64,6 @@ html {
   color: var(--dark-color);
   padding: 20px;
   z-index: 2;
-
 }
 
 .header-text h1 {
@@ -106,6 +98,7 @@ html {
   background-color: var(--light-color);
   color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(235, 0, 0, 0.3);
+  text-decoration: none;
 }
 
 .title-highlight {
@@ -116,13 +109,6 @@ html {
   background-size: 100% 12px;
   background-position: 0 100%;
   padding-bottom: 5px;
-}
-
-a:focus,
-button:focus,
-input:focus {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
 }
 
 .info .container {
@@ -190,6 +176,9 @@ input:focus {
   position: relative;
   width: 100%;
   border-radius: 20px;
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .photos-collection,
@@ -358,7 +347,7 @@ input:focus {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 10px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 5;
   user-select: none;
   border-radius: 50%;
 }
@@ -473,7 +462,7 @@ input:focus {
   right: 30px;
   display: flex;
   gap: 12px;
-  z-index: 10;
+  z-index: 5; /* Changed from 10 t0 5. */
   transform: translateY(-10%);
 }
 
@@ -488,7 +477,7 @@ input:focus {
   transition: background 0.3s, color 0.3s;
   display: inline-block;
   position: relative;
-  z-index: 10;
+  z-index: 10; /* Changed from 10 t0 6. */
 }
 
 .arrow:hover {
