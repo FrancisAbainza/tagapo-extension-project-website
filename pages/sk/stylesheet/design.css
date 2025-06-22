@@ -79,7 +79,7 @@
 }
 
 .sk-gallery {
-    width: 2000px;
+    width: 1200px;
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;

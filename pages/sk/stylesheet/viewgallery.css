@@ -458,10 +458,58 @@
 
   .bodycontainer {
     width: 100%;
-    max-width: 2000px;
+    max-width: 3000px;
     position: relative;
     top: 55%;
-    right: 65%;
+    right: 80%;
+  }
+
+  .container{
+    position: relative;
+    right:-270px;
+  }
+
+  .event2{
+    left: -200px;
+  }
+
+  .event4{
+    left: -200px;
+  }
+
+  .gallery-section2{
+    margin-left: 550px;
+    
+    
+  }
+
+  .container3{
+    position: relative;
+    right: -300px;
+  }
+
+  .gallery-banner{
+    width: 3500px;
+  }
+  
+ 
+  
+
+}
+
+
+@media (min-width: 2500px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bodycontainer {
+    width: 100%;
+    max-width: 3000px;
+    position: relative;
+    top: 55%;
+    right: 70%;
   }
 
   .container{
@@ -496,3 +544,16 @@
   
 
 }
+
+ 
+ 
+  
+
+
+
+
+ 
+  
+ 
+  
+

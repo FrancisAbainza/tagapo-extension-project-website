@@ -7,12 +7,12 @@ let nexbtn = document.getElementById("nextbtn");
 
 nextbtn.addEventListener("click", () => {
     scrollContainer.style, scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += 2000;
+    scrollContainer.scrollLeft += 1200;
 });
 
 backbtn.addEventListener("click", () => {
     scrollContainer.style, scrollBehavior = "smooth";
-    scrollContainer.scrollLeft -= 2000;
+    scrollContainer.scrollLeft -= 1200;
 });
 
 document.addEventListener('DOMContentLoaded', function () {
