@@ -5,7 +5,7 @@
   align-items: center;
   gap: 12px;
   background: linear-gradient(to bottom, transparent 60%, white 80%),
-      url(../Images/banner-img.jpg) center -50px no-repeat;
+      url(../images/banner-img.jpg) center -50px no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 85vh;
