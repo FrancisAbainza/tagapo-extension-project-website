@@ -1,3 +1,28 @@
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  --primary-color: #EB0000;
+  --primary-color-hover: #c70000;
+  --header-large: 52px;
+  --header-medium: 47px;
+  --header-small: 40px;
+  --headline-small: 24px
+}
+
+header {
+  box-shadow: unset !important;
+}
+
+header.sticky {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5) !important;
+}
+
 .subheader {
   background-color: var(--primary-color);
   padding: 12px 24px;
@@ -617,6 +642,21 @@
 .sectors .container .card .content h3 {
   font-size: var(--headline-small);
   font-weight: normal;
+}
+
+/* reusables */
+.solid-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 50vh;
+  padding: 10px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* ================================================================== */
