@@ -39,8 +39,10 @@ function initializeFooterScript() {
 
 function initializeIntersectAnimations() {
   const header = document.querySelector('#header');
+  const footer = document.querySelector('#footer');
 
   observeElement(header, "animate-fadein-delayed");
+  observeElement(footer, "animate-fadein");
 }
 
 function observeElement(element, className) {

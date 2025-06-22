@@ -548,24 +548,6 @@ export const locations = [
 export const officials = [
   {
     image: {
-      src: "./images/officials/edison_caravana.jpg",
-      alt: "HON. Edison Caravana picture"
-    },
-    firstName: "HON. EDISON “ETAW”",
-    lastName: "CARAVANA",
-    position: "PUNONG BARANGAY"
-  },
-  {
-    image: {
-      src: "./images/officials/charina_jauregui.jpg",
-      alt: "Charina Sarah C. Jauregui picture"
-    },
-    firstName: "Charina Sarah C.",
-    lastName: "Jauregui",
-    position: "Barangay Secretary"
-  },
-  {
-    image: {
       src: "./images/officials/emerson_velasco.jpg",
       alt: "Emerson E. Velasco Jr. picture"
     },
@@ -635,5 +617,23 @@ export const officials = [
     firstName: "Manuel G.",
     lastName: "Alon",
     position: "Kagawad"
+  },
+  {
+    image: {
+      src: "./images/officials/charina_jauregui.jpg",
+      alt: "Charina Sarah C. Jauregui picture"
+    },
+    firstName: "Charina Sarah C.",
+    lastName: "Jauregui",
+    position: "Barangay Secretary"
+  },
+  {
+    image: {
+      src: "./images/officials/edison_caravana.jpg",
+      alt: "HON. Edison Caravana picture"
+    },
+    firstName: "HON. EDISON “ETAW”",
+    lastName: "CARAVANA",
+    position: "PUNONG BARANGAY"
   },
 ]
