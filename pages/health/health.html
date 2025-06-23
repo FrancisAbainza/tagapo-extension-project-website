@@ -5,25 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/styles/header-footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="script.js" defer></script>
+    <script src="../assets/scripts/headerFooter.js" defer></script>
 </head>
 
 <body>
-
+    <!-- header -->
     <header id="header">
-        <div class="container" id="mainHeader">
+        <div class="header-container" id="headerContainer">
             <div class="logo-text">
-                <a href="/"><img src="./images/tagapo-logo.png" alt="tagapo logo image" class="logo-image"></a>
-                <div>
-                    <p>City of Sta. Rosa</p>
-                    <h2>BARANGAY TAGAPO</h2>
-                </div>
+                <a href="../../index.html"><img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image"
+                        class="logo-image">
+                    <div>
+                        <p>City of Sta. Rosa</p>
+                        <h2>BARANGAY TAGAPO</h2>
+                    </div>
+                </a>
             </div>
 
             <nav id="nav">
@@ -36,14 +40,15 @@
                 <ul>
                     <li><a href="../../index.html">HOME</a></li>
                     <li><a href="../health/health.html" class="active">HEALTH</a></li>
-                    <li><a href="../security/security.HTML">SECURITY</a></li>
+                    <li><a href="../security/security.html">SECURITY</a></li>
                     <li><a href="../livelihood/livelihood.html">LIVELIHOOD</a></li>
                     <li><a href="../sk/sk.html">SK</a></li>
                     <li><a href="../environment/Environment.html">ENVIRONMENT</a></li>
                 </ul>
             </nav>
 
-            <svg class="menu" id="menu" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="">
+            <svg class="menu" id="menu" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_314_333)">
                     <path
                         d="M8.33333 37.5H41.6667C42.8125 37.5 43.75 36.5625 43.75 35.4167C43.75 34.2708 42.8125 33.3333 41.6667 33.3333H8.33333C7.1875 33.3333 6.25 34.2708 6.25 35.4167C6.25 36.5625 7.1875 37.5 8.33333 37.5ZM8.33333 27.0833H41.6667C42.8125 27.0833 43.75 26.1458 43.75 25C43.75 23.8542 42.8125 22.9167 41.6667 22.9167H8.33333C7.1875 22.9167 6.25 23.8542 6.25 25C6.25 26.1458 7.1875 27.0833 8.33333 27.0833ZM6.25 14.5833C6.25 15.7292 7.1875 16.6667 8.33333 16.6667H41.6667C42.8125 16.6667 43.75 15.7292 43.75 14.5833C43.75 13.4375 42.8125 12.5 41.6667 12.5H8.33333C7.1875 12.5 6.25 13.4375 6.25 14.5833Z"
@@ -620,10 +625,11 @@
         </div>
     </section>
 
-    <footer>
-        <div class="wrapper">
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-container">
             <div class="logo-text">
-                <img src="./images/tagapo-logo.png" alt="barangay tagapo logo image">
+                <img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image">
                 <p>© <span id="currentYearElement"></span> All rights reserved. <span class="name">Barangay Tagapo, Sta.
                         Rosa,
                         Laguna</span>
@@ -648,7 +654,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

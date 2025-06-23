@@ -1,3 +1,5 @@
+@import url('./global.css');
+
 /* header */
 header {
   position: absolute;
@@ -6,11 +8,10 @@ header {
   left: 0;
   background-color: white;
   padding: 12px 24px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
   z-index: 9;
 }
 
-header .container {
+header .header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,6 +32,14 @@ header .logo-text a {
 
 header .logo-text a:hover {
   color: var(--primary-color);
+}
+
+header .logo-text a div p {
+  font-size: 16px;
+}
+
+header .logo-text a div h2 {
+  font-size: 24px;
 }
 
 header .logo-image {
@@ -72,6 +81,8 @@ header nav ul li a {
   text-decoration: none;
   padding: 24px;
   color: black;
+  font-size: 16px;
+  line-height: normal
 }
 
 header nav ul li a.active {
@@ -96,6 +107,7 @@ header.sticky {
   top: 0;
   right: 0;
   left: 0;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
   animation: reveal .5s ease-in-out forwards;
 }
 
@@ -118,7 +130,7 @@ footer {
   padding: 24px;
 }
 
-footer .container {
+footer .footer-container {
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -126,7 +138,7 @@ footer .container {
   max-width: 1200px;
 }
 
-footer .container .logo-text {
+footer .footer-container .logo-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,22 +146,22 @@ footer .container .logo-text {
   text-align: center;
 }
 
-footer .container .logo-text img {
+footer .footer-container .logo-text img {
   width: 100px;
 }
 
-footer .container .logo-text p span.name {
+footer .footer-container .logo-text p span.name {
   color: var(--primary-color);
 }
 
-footer .container .location-group {
+footer .footer-container .location-group {
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: center;
 }
 
-footer .container .location-group iframe {
+footer .footer-container .location-group iframe {
   width: 100%;
   height: 300px;
 }
@@ -170,23 +182,23 @@ footer .container .location-group iframe {
     padding: 24px 48px;
   }
 
-  footer .container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  footer .container .logo-text {
+  footer .footer-container .logo-text {
     flex-direction: row;
     text-align: left;
   }
 
-  footer .container .location-group {
+  footer .footer-container .location-group {
     flex-direction: row;
     align-items: center;
     text-align: left;
   }
 
-  footer .container .location-group iframe {
+  footer .footer-container .location-group iframe {
     width: 300px;
     height: 200px;
   }
@@ -197,7 +209,7 @@ footer .container .location-group iframe {
 @media only screen and (min-width: 1400px) {
 
   /* header */
-  .header {
+  header {
     padding: 12px 0;
   }
 

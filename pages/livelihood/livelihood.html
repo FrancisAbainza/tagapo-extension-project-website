@@ -9,25 +9,26 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./Stylesheets/livelihoodDashboardStyle.css" />
     <link rel="stylesheet" href="./Stylesheets/livelihoodWebsiteBannerStyle.css" />
     <link rel="stylesheet" href="./Stylesheets/businessPermitStepsStyle.css" />
     <link rel="stylesheet" href="./Stylesheets/businessPermitTableStyle.css" />
     <link rel="stylesheet" href="./Stylesheets/jobOpportunitiesStyle.css" />
     <link rel="stylesheet" href="./Stylesheets/jobDetailsStyle.css" />
     <link rel="stylesheet" href="./Stylesheets/buttonPagination.css" />
+    <link rel="stylesheet" href="../assets/styles/header-footer.css">
     <script src="./Javascript/jobIframe.js" defer></script>
     <script src="./Javascript/tablePagination.js" defer></script>
-    <script src="./Javascript/webScript.js" defer></script>
+    <script src="../assets/scripts/headerFooter.js" defer></script>
 </head>
 
 <body>
 
     <!-- header -->
-    <header class="hidden" id="header">
-        <div class="wrapper" id="headerContainer">
+    <header id="header">
+        <div class="header-container" id="headerContainer">
             <div class="logo-text">
-                <a href="/"><img src="./Images/tagapo-logo.png" alt="barangay tagapo logo image" class="logo-image" />
+                <a href="../../index.html"><img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image"
+                        class="logo-image">
                     <div>
                         <p>City of Sta. Rosa</p>
                         <h2>BARANGAY TAGAPO</h2>
@@ -45,7 +46,7 @@
                 <ul>
                     <li><a href="../../index.html">HOME</a></li>
                     <li><a href="../health/health.html">HEALTH</a></li>
-                    <li><a href="../security/security.HTML">SECURITY</a></li>
+                    <li><a href="../security/security.html">SECURITY</a></li>
                     <li><a href="../livelihood/livelihood.html" class="active">LIVELIHOOD</a></li>
                     <li><a href="../sk/sk.html">SK</a></li>
                     <li><a href="../environment/Environment.html">ENVIRONMENT</a></li>
@@ -462,10 +463,11 @@
         </div>
     </div>
 
-    <footer>
-        <div class="wrapper">
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-container">
             <div class="logo-text">
-                <img src="./images/tagapo-logo.png" alt="barangay tagapo logo image">
+                <img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image">
                 <p>© <span id="currentYearElement"></span> All rights reserved. <span class="name">Barangay Tagapo, Sta.
                         Rosa,
                         Laguna</span>
@@ -480,8 +482,7 @@
                                 d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
                                 fill="white" />
                         </svg>
-                        129 Rizal Blvd, Brgy. Tagapo, Santa Rosa
-                        , 4026 Laguna
+                        129 Rizal Blvd, Brgy. Tagapo, Santa Rosa, 4026 Laguna
                     </p>
                 </div>
                 <iframe

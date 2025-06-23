@@ -8,18 +8,18 @@
   <link rel="icon" href="./env_images/FrontPagePhoto/Tagapo logo.png" />
   <link rel="stylesheet" href="./stylesheets/fontStyle.css" />
   <link rel="stylesheet" href="./stylesheets/Environment.css" />
-  <link rel="stylesheet" href="./stylesheets/webStyle.css" />
-  <script src="./scripts/webScript.js" defer></script>
+  <link rel="stylesheet" href="../assets/styles/header-footer.css">
+  <script src="../assets/scripts/headerFooter.js" defer></script>
 </head>
 
 <body>
-  <!--Final Header-->
-  <header class="hidden" id="header">
-    <div class="wrapper" id="headerContainer">
+  <!-- header -->
+  <header id="header">
+    <div class="header-container" id="headerContainer">
       <div class="logo-text">
-        <a href="/"><img src="./env_images/FrontPagePhoto/Tagapo logo.png" alt="barangay tagapo logo image"
-            class="logo-image" />
-          <div class="info-header">
+        <a href="../../index.html"><img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image"
+            class="logo-image">
+          <div>
             <p>City of Sta. Rosa</p>
             <h2>BARANGAY TAGAPO</h2>
           </div>
@@ -36,7 +36,7 @@
         <ul>
           <li><a href="../../index.html">HOME</a></li>
           <li><a href="../health/health.html">HEALTH</a></li>
-          <li><a href="../security/security.HTML">SECURITY</a></li>
+          <li><a href="../security/security.html">SECURITY</a></li>
           <li><a href="../livelihood/livelihood.html">LIVELIHOOD</a></li>
           <li><a href="../sk/sk.html">SK</a></li>
           <li><a href="../environment/Environment.html" class="active">ENVIRONMENT</a></li>
@@ -59,316 +59,318 @@
     </div>
   </header>
 
-  <!--Header Photo and text in Environment-->
-  <section class="header">
-    <img src="./env_images/FrontPagePhoto/backgroundMain.jpg" alt="Environment header picture" />
+  <div class="wrapper">
+    <!--Header Photo and text in Environment-->
+    <section class="header">
+      <img src="./env_images/FrontPagePhoto/backgroundMain.jpg" alt="Environment header picture" />
 
-    <div class="header-text">
-      <h1>
-        Barangay Tagapo <br />
-        <span>Environment</span> Team
-      </h1>
+      <div class="header-text">
+        <h1>
+          Barangay Tagapo <br />
+          <span>Environment</span> Team
+        </h1>
+        <p>
+          The Barangay Tagapo Environment Team promotes environmental
+          sustainability in Tagapo, Santa Rosa, Laguna
+        </p>
+        <a href="#contact-us" class="header-btn">
+          Contact Us<i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!--Services Offred Part-->
+    <div class="services">
+      <h2><span class="highlight">Services</span> Offered</h2>
       <p>
-        The Barangay Tagapo Environment Team promotes environmental
-        sustainability in Tagapo, Santa Rosa, Laguna
+        Since its establishment in 2023, the Barangay Tagapo Environment Team has been providing
+        the following services to the community.
       </p>
-      <a href="#contact-us" class="header-btn">
-        Contact Us<i class="fas fa-arrow-right"></i>
+    </div>
+
+    <section class="cards-container">
+      <!-- Lamok Buster Card-->
+      <a class="card" href="./pages/Lamok_Buster.html" target="_self">
+        <img src="./env_images/FrontPagePhoto/Lamok Buster Photo.jpg" alt="Lamok Buster" />
+        <!--img class="next-button" src="/photos/icons/next_button.png" alt="Next Button Icon" /-->
+        <i class="fa-solid fa-arrow-right"></i>
+        <div class="card-content">
+          <h2>Lamok Buster</h2>
+          <p>
+            Lamok Buster is a community-driven and responsive project that aims
+            to protect public health.
+          </p>
+        </div>
       </a>
-    </div>
-  </section>
 
-  <!--Services Offred Part-->
-  <div class="services">
-    <h2><span class="highlight">Services</span> Offered</h2>
-    <p>
-      Since its establishment in 2023, the Barangay Tagapo Environment Team has been providing
-      the following services to the community.
+      <!-- Clean-Up Drive Card-->
+      <a class="card" href="./pages/Kaminero_Ni_Etaw.html" target="_self">
+        <img src="./env_images/FrontPagePhoto/Services_Clean-Up.jpg" alt="Clean-Up Drive" />
+        <i class="fa-solid fa-arrow-right"></i>
+        <div class="card-content">
+          <h2>Kaminero ni Etaw</h2>
+          <p>
+            Clean-Up Drives are regularly organized by Kaminero ni Etaw to keep
+            the neighborhood clean and address common problems like flooding and
+            waste buildup.
+          </p>
+        </div>
+      </a>
+
+      <!-- Adopt A Lot Card -->
+      <a class="card" href="./pages/Adopt_A_Lot.html" target="_self">
+        <!--img src="./env_images/FrontPagePhoto/Adopt_A_Lot_Card.jpg" alt="Adopt A Lot"-->
+        <img src="./env_images/FrontPagePhoto/Adopt-A-Lot.jpg" alt="Adopt A Lot" />
+        <i class="fa-solid fa-arrow-right"></i>
+        <div class="card-content">
+          <h2>Adopt A Lot</h2>
+          <p>
+            The Adopt-A-Lot project encourages the community to build green
+            spaces and plant trees.
+          </p>
+        </div>
+      </a>
+    </section>
+
+    <!--About Us Part-->
+    <div class="aboutUsHeader">
+      <h2><span class="highlight">About</span> Us</h2>
+      <div class="HorizontalLine"></div>
+    </div>
+
+    <div class="aboutUsContainer">
+      <div class="aboutUsContent">
+        <div class="text-column">
+          <p>
+            The <span class="highlight">Barangay Tagapo Cleaning Team</span> in
+            the City of Santa Rosa, Laguna, since its establishment in 2023, the
+            team has been committed to improving the local environment,
+            specifically by helping to control flooding and reduce mosquito
+            populations.
+          </p>
+          <p>
+            This initiative was launched by Barangay Captain Etaw Caravana and
+            their ongoing services include Lamok Busters, Clean-Up Drives, and
+            Adopt-A-Lot.
+          </p>
+          <a href="#volunteer" class="get-involve-btn">Get Involve <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="image-column">
+          <img src="./env_images/FrontPagePhoto/AboutU_Us_Pic.jpg" alt="Barangay Cleaning Team Pictures" />
+        </div>
+      </div>
+    </div>
+
+    <div class="aboutStats">
+      <div class="stat">
+        <img src="./env_images/icons/Subdivision.png" alt="Subdivisions Icon" />
+        <div class="label">39<br /><span>Subdivisions</span></div>
+      </div>
+
+      <div class="stat">
+        <img src="./env_images/icons/Compounds.png" alt="Compounds Icon" />
+        <div class="label">9<br /><span>Compounds</span></div>
+      </div>
+
+      <div class="stat">
+        <img src="./env_images/icons/Projects.png" alt="Projects Icon" />
+        <div class="label">100+<br /><span>Project Completed</span></div>
+      </div>
+
+      <div class="stat">
+        <img src="./env_images/icons/Services.png" alt="Services Icon" />
+        <div class="label">3<br /><span>Services</span></div>
+      </div>
+    </div>
+
+    <!--Our Impact Part-->
+    <div class="ourImpactHeader">
+      <h2><span class="highlight">Our</span> Impact</h2>
+      <div class="HorizontalLine"></div>
+    </div>
+
+    <div class="impacts-section">
+      <div class="impact-content">
+        <div class="left-column">
+          <img src="./env_images/FrontPagePhoto/Our_Impact_Photo.jpg" alt="Community Cleaning in Action" />
+        </div>
+
+        <div class="right-column">
+          <div class="impact-box">
+            <img src="./env_images/icons/Impact.png" alt="Impact Icon" class="impact-icon" />
+            <p>
+              Through community efforts and dedication, we are shaping a
+              greener, more sustainable future for all.
+            </p>
+          </div>
+        </div>
+
+        <div class="impact-list">
+          <div class="impact-item">
+            <div class="number-title">
+              <span class="number">01</span>
+              <span class="impact-title">Urban Greening</span>
+            </div>
+            <p>
+              Actively preserve green spaces, reduces the risk of falling trees
+              during storms, and help build climate resilience through planting
+              initiatives.
+            </p>
+          </div>
+
+          <div class="impact-item">
+            <div class="number-title">
+              <span class="number">02</span>
+              <span class="impact-title">Biodiversity Care</span>
+            </div>
+            <p>
+              By cultivating both plants and fish, the barangay is supporting
+              biodiversity in a controlled environment.
+            </p>
+          </div>
+
+          <div class="impact-item">
+            <div class="number-title">
+              <span class="number">03</span>
+              <span class="impact-title">Sustainable Living</span>
+            </div>
+            <p>
+              Reduces disease, improve sanitation, and encourage community
+              participation promoting healthier community.
+            </p>
+          </div>
+
+          <div class="impact-item">
+            <div class="number-title">
+              <span class="number">04</span>
+              <span class="impact-title">Smart Waste Disposal</span>
+            </div>
+            <p>
+              By sorting and salvaging reusable materials, the team minimizes
+              landfill contributions, indirectly supporting energy efficiency
+              and resource conservation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Para sa Tagapo Part-->
+
+    <div class="bagongTagapoHeader">
+      <div class="verticalLine"></div>
+      <h2>Para sa <span class="highlight">Bagong Tagapo</span></h2>
+    </div>
+
+    <div class="case-container">
+      <!-- HAPAG Project(Halina’t Magtanim ng Prutas at Gulay) -->
+      <div class="case">
+        <img src="./env_images/FrontPagePhoto/HapagProject.jpg" alt="HAPAG Project" />
+        <div class="case-content">
+          <h2 class="red">
+            HAPAG Project(Halina’t Magtanim ng Prutas at Gulay)
+          </h2>
+          <p>
+            This project is where the team plants various vegetables and fruits
+            at the place called Echo Park in Amihan, Tagapo.
+          </p>
+        </div>
+      </div>
+
+      <!-- AGF (Aquaponics Garden Facility)-->
+      <div class="case">
+        <img src="./env_images/FrontPagePhoto/AGF.jpg" alt="Aquaponics Garden Facility" />
+        <div class="case-content">
+          <h2 class="red">AGF (Aquaponics Garden Facility)</h2>
+          <p>
+            Aside from vegetables and fruits, they are also taking care of
+            fishes in their facility assuring that they maintain them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Material Recovery Facility -->
+      <div class="case">
+        <img src="./env_images/FrontPagePhoto/MaterialRecovery.jpg" alt="Material Recovery Facility" />
+        <div class="case-content">
+          <h2 class="red">Material Recovery Facility</h2>
+          <p>
+            This project is where the team plants various vegetables and fruits
+            at the place called Echo Park in Amihan, Tagapo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <a href="./pages/Adopt_A_Lot.html" class="red-btn">
+      Explore More<i class="fas fa-arrow-right"></i>
+    </a>
+
+    <!--Volunteer With Us Part-->
+    <div id="volunteer" class="volunteerHeader">
+      <div class="verticalLine"></div>
+      <h2><span class="highlight">Volunteer</span> With Us</h2>
+    </div>
+
+    <p class="volunteer-description">
+      Join our environmental efforts by volunteering in clean-up drives, tree
+      planting, and waste management projects to make a positive impact on the
+      environment.
     </p>
-  </div>
 
-  <section class="cards-container">
-    <!-- Lamok Buster Card-->
-    <a class="card" href="./pages/Lamok_Buster.html" target="_self">
-      <img src="./env_images/FrontPagePhoto/Lamok Buster Photo.jpg" alt="Lamok Buster" />
-      <!--img class="next-button" src="/photos/icons/next_button.png" alt="Next Button Icon" /-->
-      <i class="fa-solid fa-arrow-right"></i>
-      <div class="card-content">
-        <h2>Lamok Buster</h2>
-        <p>
-          Lamok Buster is a community-driven and responsive project that aims
-          to protect public health.
-        </p>
+    <div class="box">
+      <img src="./env_images/icons/Bookmark.png" class="bookmark" alt="Bookmark icon" />
+      <div class="heading-row">
+        <img class="box-icon" src="./env_images/icons/Join.png" alt="Join Icon" />
+        <div class="box-heading">How to Join?</div>
       </div>
-    </a>
-
-    <!-- Clean-Up Drive Card-->
-    <a class="card" href="./pages/Kaminero_Ni_Etaw.html" target="_self">
-      <img src="./env_images/FrontPagePhoto/Services_Clean-Up.jpg" alt="Clean-Up Drive" />
-      <i class="fa-solid fa-arrow-right"></i>
-      <div class="card-content">
-        <h2>Kaminero ni Etaw</h2>
-        <p>
-          Clean-Up Drives are regularly organized by Kaminero ni Etaw to keep
-          the neighborhood clean and address common problems like flooding and
-          waste buildup.
-        </p>
-      </div>
-    </a>
-
-    <!-- Adopt A Lot Card -->
-    <a class="card" href="./pages/Adopt_A_Lot.html" target="_self">
-      <!--img src="./env_images/FrontPagePhoto/Adopt_A_Lot_Card.jpg" alt="Adopt A Lot"-->
-      <img src="./env_images/FrontPagePhoto/Adopt-A-Lot.jpg" alt="Adopt A Lot" />
-      <i class="fa-solid fa-arrow-right"></i>
-      <div class="card-content">
-        <h2>Adopt A Lot</h2>
-        <p>
-          The Adopt-A-Lot project encourages the community to build green
-          spaces and plant trees.
-        </p>
-      </div>
-    </a>
-  </section>
-
-  <!--About Us Part-->
-  <div class="aboutUsHeader">
-    <h2><span class="highlight">About</span> Us</h2>
-    <div class="HorizontalLine"></div>
-  </div>
-
-  <div class="aboutUsContainer">
-    <div class="aboutUsContent">
-      <div class="text-column">
-        <p>
-          The <span class="highlight">Barangay Tagapo Cleaning Team</span> in
-          the City of Santa Rosa, Laguna, since its establishment in 2023, the
-          team has been committed to improving the local environment,
-          specifically by helping to control flooding and reduce mosquito
-          populations.
-        </p>
-        <p>
-          This initiative was launched by Barangay Captain Etaw Caravana and
-          their ongoing services include Lamok Busters, Clean-Up Drives, and
-          Adopt-A-Lot.
-        </p>
-        <a href="#volunteer" class="get-involve-btn">Get Involve <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="image-column">
-        <img src="./env_images/FrontPagePhoto/AboutU_Us_Pic.jpg" alt="Barangay Cleaning Team Pictures" />
-      </div>
-    </div>
-  </div>
-
-  <div class="aboutStats">
-    <div class="stat">
-      <img src="./env_images/icons/Subdivision.png" alt="Subdivisions Icon" />
-      <div class="label">39<br /><span>Subdivisions</span></div>
-    </div>
-
-    <div class="stat">
-      <img src="./env_images/icons/Compounds.png" alt="Compounds Icon" />
-      <div class="label">9<br /><span>Compounds</span></div>
-    </div>
-
-    <div class="stat">
-      <img src="./env_images/icons/Projects.png" alt="Projects Icon" />
-      <div class="label">100+<br /><span>Project Completed</span></div>
-    </div>
-
-    <div class="stat">
-      <img src="./env_images/icons/Services.png" alt="Services Icon" />
-      <div class="label">3<br /><span>Services</span></div>
-    </div>
-  </div>
-
-  <!--Our Impact Part-->
-  <div class="ourImpactHeader">
-    <h2><span class="highlight">Our</span> Impact</h2>
-    <div class="HorizontalLine"></div>
-  </div>
-
-  <div class="impacts-section">
-    <div class="impact-content">
-      <div class="left-column">
-        <img src="./env_images/FrontPagePhoto/Our_Impact_Photo.jpg" alt="Community Cleaning in Action" />
-      </div>
-
-      <div class="right-column">
-        <div class="impact-box">
-          <img src="./env_images/icons/Impact.png" alt="Impact Icon" class="impact-icon" />
-          <p>
-            Through community efforts and dedication, we are shaping a
-            greener, more sustainable future for all.
-          </p>
-        </div>
-      </div>
-
-      <div class="impact-list">
-        <div class="impact-item">
-          <div class="number-title">
-            <span class="number">01</span>
-            <span class="impact-title">Urban Greening</span>
-          </div>
-          <p>
-            Actively preserve green spaces, reduces the risk of falling trees
-            during storms, and help build climate resilience through planting
-            initiatives.
-          </p>
-        </div>
-
-        <div class="impact-item">
-          <div class="number-title">
-            <span class="number">02</span>
-            <span class="impact-title">Biodiversity Care</span>
-          </div>
-          <p>
-            By cultivating both plants and fish, the barangay is supporting
-            biodiversity in a controlled environment.
-          </p>
-        </div>
-
-        <div class="impact-item">
-          <div class="number-title">
-            <span class="number">03</span>
-            <span class="impact-title">Sustainable Living</span>
-          </div>
-          <p>
-            Reduces disease, improve sanitation, and encourage community
-            participation promoting healthier community.
-          </p>
-        </div>
-
-        <div class="impact-item">
-          <div class="number-title">
-            <span class="number">04</span>
-            <span class="impact-title">Smart Waste Disposal</span>
-          </div>
-          <p>
-            By sorting and salvaging reusable materials, the team minimizes
-            landfill contributions, indirectly supporting energy efficiency
-            and resource conservation.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Para sa Tagapo Part-->
-
-  <div class="bagongTagapoHeader">
-    <div class="verticalLine"></div>
-    <h2>Para sa <span class="highlight">Bagong Tagapo</span></h2>
-  </div>
-
-  <div class="case-container">
-    <!-- HAPAG Project(Halina’t Magtanim ng Prutas at Gulay) -->
-    <div class="case">
-      <img src="./env_images/FrontPagePhoto/HapagProject.jpg" alt="HAPAG Project" />
-      <div class="case-content">
-        <h2 class="red">
-          HAPAG Project(Halina’t Magtanim ng Prutas at Gulay)
-        </h2>
-        <p>
-          This project is where the team plants various vegetables and fruits
-          at the place called Echo Park in Amihan, Tagapo.
+      <div>
+        <p class="box-text">
+          Simply visit the Barangay Hall of Tagapo, Santa Rosa Laguna and take
+          part in making lasting impact on our community and planet.
         </p>
       </div>
     </div>
 
-    <!-- AGF (Aquaponics Garden Facility)-->
-    <div class="case">
-      <img src="./env_images/FrontPagePhoto/AGF.jpg" alt="Aquaponics Garden Facility" />
-      <div class="case-content">
-        <h2 class="red">AGF (Aquaponics Garden Facility)</h2>
-        <p>
-          Aside from vegetables and fruits, they are also taking care of
-          fishes in their facility assuring that they maintain them.
-        </p>
+    <div id="contact-us" class="box-2">
+      <img src="./env_images/icons/Bookmark.png" class="bookmark" alt="Bookmark icon" />
+      <div class="heading-row">
+        <img class="box-icon" src="./env_images/icons/Contact.png" alt="Contact icon" />
+        <div class="box-heading">Contact Us</div>
       </div>
-    </div>
 
-    <!-- Material Recovery Facility -->
-    <div class="case">
-      <img src="./env_images/FrontPagePhoto/MaterialRecovery.jpg" alt="Material Recovery Facility" />
-      <div class="case-content">
-        <h2 class="red">Material Recovery Facility</h2>
-        <p>
-          This project is where the team plants various vegetables and fruits
-          at the place called Echo Park in Amihan, Tagapo.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <a href="./pages/Adopt_A_Lot.html" class="red-btn">
-    Explore More<i class="fas fa-arrow-right"></i>
-  </a>
-
-  <!--Volunteer With Us Part-->
-  <div id="volunteer" class="volunteerHeader">
-    <div class="verticalLine"></div>
-    <h2><span class="highlight">Volunteer</span> With Us</h2>
-  </div>
-
-  <p class="volunteer-description">
-    Join our environmental efforts by volunteering in clean-up drives, tree
-    planting, and waste management projects to make a positive impact on the
-    environment.
-  </p>
-
-  <div class="box">
-    <img src="./env_images/icons/Bookmark.png" class="bookmark" alt="Bookmark icon" />
-    <div class="heading-row">
-      <img class="box-icon" src="./env_images/icons/Join.png" alt="Join Icon" />
-      <div class="box-heading">How to Join?</div>
-    </div>
-    <div>
       <p class="box-text">
-        Simply visit the Barangay Hall of Tagapo, Santa Rosa Laguna and take
-        part in making lasting impact on our community and planet.
+        Below are our active email and phone number for any inquiries:
       </p>
+
+      <div class="contact-row">
+        <img class="email-icon" src="./env_images/icons/Email.png" alt="Email Icon" />
+        <div class="email-info">bagongtagapo@gmail.com</div>
+      </div>
+
+      <div class="contact-row">
+        <img class="call-icon" src="./env_images/icons/Phone.png" alt="Phone Icon" />
+        <div class="number-info">+63 926 917 0197</div>
+      </div>
+    </div>
+
+    <!--Ending Part-->
+    <div class="Horizontal-line-ending"></div>
+
+    <div class="back-to-top-container">
+      <a href="#" class="back-to-top">Back to Top</a>
     </div>
   </div>
 
-  <div id="contact-us" class="box-2">
-    <img src="./env_images/icons/Bookmark.png" class="bookmark" alt="Bookmark icon" />
-    <div class="heading-row">
-      <img class="box-icon" src="./env_images/icons/Contact.png" alt="Contact icon" />
-      <div class="box-heading">Contact Us</div>
-    </div>
-
-    <p class="box-text">
-      Below are our active email and phone number for any inquiries:
-    </p>
-
-    <div class="contact-row">
-      <img class="email-icon" src="./env_images/icons/Email.png" alt="Email Icon" />
-      <div class="email-info">bagongtagapo@gmail.com</div>
-    </div>
-
-    <div class="contact-row">
-      <img class="call-icon" src="./env_images/icons/Phone.png" alt="Phone Icon" />
-      <div class="number-info">+63 926 917 0197</div>
-    </div>
-  </div>
-
-  <!--Ending Part-->
-  <div class="Horizontal-line-ending"></div>
-
-  <div class="back-to-top-container">
-    <a href="#" class="back-to-top">Back to Top</a>
-  </div>
-
-  <!--Final Footer-->
-  <footer>
-    <div class="wrapper">
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer-container">
       <div class="logo-text">
-        <img src="./env_images/FrontPagePhoto/Tagapo logo.png" alt="barangay tagapo logo image" />
-        <p>
-          © <span id="currentYearElement"></span> All rights reserved.
-          <span class="name">Barangay Tagapo, Sta. Rosa, Laguna</span>
+        <img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image">
+        <p>© <span id="currentYearElement"></span> All rights reserved. <span class="name">Barangay Tagapo, Sta.
+            Rosa,
+            Laguna</span>
         </p>
       </div>
       <div class="location-group">
@@ -385,7 +387,7 @@
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9251.821258417178!2d121.09870411089376!3d14.321204752693305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9ced32d9719%3A0x45e7aab820391865!2sTagapo%2C%20City%20of%20Santa%20Rosa%2C%20Laguna!5e1!3m2!1sen!2sph!4v1748681749375!5m2!1sen!2sph"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>

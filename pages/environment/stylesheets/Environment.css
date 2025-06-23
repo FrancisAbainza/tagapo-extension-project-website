@@ -7,9 +7,12 @@
 
 body {
     margin: 0;
+    background-color: #fff;
+}
+
+.wrapper {
     margin-left: 2.34vw;
     margin-right: 2.34vw;
-    background-color: #fff;
 }
 
 a {

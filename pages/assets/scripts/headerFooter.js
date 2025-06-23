@@ -22,32 +22,9 @@ function initializeHeaderScript() {
       header.classList.add('sticky');
     } else {
       header.classList.remove('sticky');
-      header.classList.remove('animate-fadein-delayed');
       header.classList.remove('hidden');
     }
   });
-}
-
-/* subheader */
-function initializeSubheaderScript() {
-  function updateDateTime() {
-    const now = new Date();
-    const options = {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true,
-    };
-    const formatted = now.toLocaleString('en-US', options);
-    document.getElementById('datetime').textContent = "Philippine Standard Time: " + formatted;
-  }
-
-  setInterval(updateDateTime, 1000);
-  updateDateTime();
 }
 
 /* footer */
@@ -60,5 +37,4 @@ function initializeFooterScript() {
 }
 
 initializeHeaderScript();
-initializeFooterScript();
 initializeFooterScript();

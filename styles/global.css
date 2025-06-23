@@ -3,16 +3,19 @@ html {
   min-width: 100%;
 }
 
-* {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  box-sizing: border-box;
+:root {
   --primary-color: #EB0000;
   --primary-color-hover: #c70000;
   --header-large: 52px;
   --header-medium: 47px;
   --header-small: 40px;
-  --headline-small: 24px
+  --headline-small: 24px;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .solid-button {
@@ -88,7 +91,7 @@ html {
 /* ================================================================== */
 /* Tablet breakpoint */
 @media only screen and (min-width: 920px) {
-  * {
+  :root {
     --header-large: 60px;
     --header-medium: 55px;
     --header-small: 48px;
