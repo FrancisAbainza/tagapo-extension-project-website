@@ -916,15 +916,12 @@
 header p,
 header h2 {
     margin: 0;
-    line-height: 1.4;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+    line-height: 35px;
 }
 
 header p {
     font-size: 1em;
+    line-height: 25px;
 }
 
 header h2 {
@@ -932,20 +929,21 @@ header h2 {
     font-weight: 700;
 }
 
+header ul li a {
+    line-height: 25px;
+}
+
 /* Footer Override */
 
 footer p,
 footer h2 {
     margin: 0;
-    line-height: 1.4;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+    line-height: 35px;
 }
 
 footer p {
     font-size: 1em;
+    line-height: 25px;
 }
 
 footer h2 {
