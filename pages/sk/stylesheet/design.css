@@ -21,7 +21,16 @@
     text-align: center;
     font-weight: bold;
     margin-bottom: 25px;
+    text-shadow: 0 0 6px rgba(25, 0, 255, .7);
+    animation: blueYellowGlow 2s ease-in-out infinite alternate;
 }
+
+@keyframes blueYellowGlow {
+    100% {
+        text-shadow: 0 0 6px rgba(234, 245, 39, .7);
+    }
+}
+
 
 .sk-logo {
     display: block;
