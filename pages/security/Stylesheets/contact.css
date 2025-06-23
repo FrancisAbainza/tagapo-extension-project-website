@@ -1,0 +1,222 @@
+section.contact-us {
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-height: 60vh;
+    max-width: 1200px;
+}
+
+.contact-us .solid-btn {
+    border: none;
+    border-radius: 50vh;
+    padding: 5px 9px;
+    background-color: #eb0000;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+    transform: 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-us .solid-btn:hover {
+    background-color: #c70000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.contact-us .container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-us .container .grid-1 .card .logo img {
+    height: 58px;
+    width: 58px;
+}
+
+.contact-us .container .grid-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 69px;
+}
+
+.contact-us .container .grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 69px;
+}
+
+.contact-us .container .grid-1 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    height: 250px;
+    width: 240px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    transition: background-color 0.3s ease;
+}
+
+.contact-us .container .grid-1 .card h2 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #eb0000;
+    margin: 0;
+}
+
+.contact-us .container .grid-1 .card h1 {
+    font-weight: 800;
+    color: #000;
+}
+
+.contact-us .container .grid-1 .card .circ {
+    background-color: #eb0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 51px;
+    width: 51px;
+}
+
+.contact-us .container .grid-1 .card a {
+    margin: 0 auto;
+    font-size: 10px;
+}
+
+.contact-us .container .grid-1 .card:hover {
+    background-color: #eb0000;
+}
+
+.contact-us .container .grid-1 .card:hover h1 {
+    color: #fff;
+}
+
+.contact-us .container .grid-1 .card:hover h2 {
+    color: #fff;
+}
+
+.contact-us .container .grid-1 .card:hover .solid-btn {
+    background-color: #fff;
+    color: #eb0000;
+}
+
+.contact-us .container .grid-1 .card:hover .disc {
+    background-color: #ffff;
+}
+
+.contact-us .container .grid-1 .card:hover .disc svg path {
+    color: #eb0000;
+}
+
+.contact-us .container .grid-2 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    height: 250px;
+    width: 240px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    transition: background-color 0.3s ease;
+}
+
+.contact-us .container .grid-2 .card h2 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #eb0000;
+    margin: 0;
+}
+
+.contact-us .container .grid-2 .card h1 {
+    font-weight: 700;
+    color: #000;
+}
+
+.contact-us .container .grid-2 .card .circ {
+    background-color: #eb0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 51px;
+    width: 51px;
+}
+
+.contact-us .container .grid-2 .card a {
+    margin: 0 auto;
+    font-size: 10px;
+}
+
+.contact-us .container .grid-2 .card:hover {
+    background-color: #eb0000;
+}
+
+.contact-us .container .grid-2 .card:hover h1 {
+    color: #fff;
+}
+
+.contact-us .container .grid-2 .card:hover h2 {
+    color: #fff;
+}
+
+.contact-us .container .grid-2 .card:hover .solid-btn {
+    background-color: #fff;
+    color: #eb0000;
+}
+
+.contact-us .container .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+    width: 400px;
+    font-weight: 800;
+}
+
+.contact-us .container .info .header #red {
+    color: #eb0000;
+}
+
+.contact-us .container .info .header h1 {
+    font-weight: 800;
+    font-size: 42px;
+}
+
+.contact-us .container .info .content {
+    font-weight: 400;
+    font-size: 18;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.contact-us .container .info .content a {
+    font-size: 12px;
+}

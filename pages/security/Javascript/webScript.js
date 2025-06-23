@@ -67,6 +67,7 @@ function initializeIntersectAnimations() {
   observeElement(bannerDesc, "animate-fadein-delayed");
   observeElement(bannerBtn, "animate-fadein-delayed");
   /*observeElement(medCheckups, "animate-scaleup");*/
+  /* Add animate scaleup for other sections*/
 }
 
 /* Reusables */

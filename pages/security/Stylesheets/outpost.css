@@ -1,0 +1,34 @@
+section.outpost {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-image:     linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.3) 30%,
+      rgba(0, 0, 0, 0.1) 50%
+    ),
+        url(../Images/artboard/rosada.png);
+    background-repeat: repeat;
+    background-position: center top;
+    position: relative;
+}
+
+section.outpost .container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 4rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+section.outpost .container h1 {
+    font-size: 62px;
+    color: #fff;
+}
