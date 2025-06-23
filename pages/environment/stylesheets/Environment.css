@@ -10,6 +10,63 @@ body {
     background-color: #fff;
 }
 
+:root {
+    --primary-color: #eb0000;
+    --primary-color-hover: #c70000;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-height: 85vh;
+    padding: 12px 24px;
+    text-align: center;
+}
+
+.banner * {
+    margin: 0;
+}
+
+.banner .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 35%, #ffffff 95%),
+        url(../env_images/FrontPagePhoto/backgroundMain.jpg) center -50px no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.banner .title {
+    font-size: 60px;
+}
+
+.banner .title span {
+    color: var(--primary-color);
+    text-shadow: 0 0 6px rgba(25, 0, 255, .7);
+    animation: blueYellowGlow 2s ease-in-out infinite alternate;
+}
+
+.banner .desc {
+    font-size: 1.32vw;
+}
+
+@keyframes blueYellowGlow {
+    100% {
+        text-shadow: 0 0 6px rgba(234, 245, 39, .7);
+    }
+}
+
 .wrapper {
     margin-left: 2.34vw;
     margin-right: 2.34vw;
@@ -24,16 +81,16 @@ html {
 }
 
 .container {
-    max-width: 87.86vw; 
+    max-width: 87.86vw;
     margin: 0 auto;
-    padding: 0 1.46vw; 
+    padding: 0 1.46vw;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.93vw 3.66vw; 
+    padding: 2.93vw 3.66vw;
     margin-left: -2.34vw;
     margin-right: -2.34vw;
     background-color: #d9d9d9;
@@ -47,7 +104,7 @@ html {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    height: 43.93vw; 
+    height: 43.93vw;
     overflow: hidden;
     text-align: center;
     padding-left: 0;
@@ -56,7 +113,7 @@ html {
 
 .header img {
     width: 100%;
-    height: 43.93vw; 
+    height: 43.93vw;
     display: block;
     opacity: 0.4;
 }
@@ -67,7 +124,7 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 21.96vw; 
+    height: 21.96vw;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 35%, #ffffff 85%);
     pointer-events: none;
     z-index: 1;
@@ -83,7 +140,7 @@ html {
 }
 
 .header-text h1 {
-    font-size: 4.39vw; 
+    font-size: 4.39vw;
     margin: 0;
     line-height: 1.2;
     max-width: 90vw;
@@ -99,7 +156,7 @@ html {
     margin-right: auto;
     word-break: break-word;
     text-align: center;
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     font-weight: 400;
 }
 
@@ -111,7 +168,7 @@ html {
 .services {
     margin: auto;
     text-align: center;
-    width: 63vw; 
+    width: 63vw;
     margin: 0 auto;
 }
 
@@ -120,11 +177,11 @@ html {
     display: flex;
     font-size: 1.32vw;
     margin-top: -1vw;
-   
+
 }
 
 .services h2 {
-    font-size: 2.93vw; 
+    font-size: 2.93vw;
 }
 
 .highlight {
@@ -136,8 +193,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.46vw; 
-    max-width: 87.86vw; 
+    gap: 1.46vw;
+    max-width: 87.86vw;
     margin: auto;
     position: relative;
     z-index: 1;
@@ -155,7 +212,7 @@ html {
     opacity: 1 !important;
     transform: scale(1.05);
     z-index: 2;
-    box-shadow: 0 0.73vw 1.83vw rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0.73vw 1.83vw rgba(0, 0, 0, 0.2);
 }
 
 .card {
@@ -163,7 +220,7 @@ html {
     background-color: #ffffff;
     border-radius: 1vw;
     overflow: hidden;
-    width: 21.96vw; 
+    width: 21.96vw;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -173,31 +230,31 @@ html {
 
 .card img {
     width: 100%;
-    height: 14.65vw; 
+    height: 14.65vw;
     object-fit: cover;
 }
 
 .card-content {
-    padding: 1.1vw; 
+    padding: 1.1vw;
 }
 
 .card h2 {
-    font-size: 1.49vw; 
-    margin: 0 0 0.73vw; 
+    font-size: 1.49vw;
+    margin: 0 0 0.73vw;
 }
 
 .card p {
-    font-size: 1.18vw; 
+    font-size: 1.18vw;
 }
 
 .card i.fa-arrow-right {
     position: absolute;
-    width: 2.2vw; 
+    width: 2.2vw;
     height: 2.2vw;
     top: 1.1vw;
     right: 1.1vw;
-    padding: 0.37vw; 
-    font-size: 0.95vw; 
+    padding: 0.37vw;
+    font-size: 0.95vw;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -219,7 +276,7 @@ html {
     justify-content: center;
     background-color: #ffffff;
     color: #eb0000;
-    box-shadow: 0 0.29vw 0.88vw rgba(235, 0, 0, 0.3); 
+    box-shadow: 0 0.29vw 0.88vw rgba(235, 0, 0, 0.3);
     border-radius: 50%;
 }
 
@@ -234,7 +291,7 @@ html {
     width: fit-content;
     color: white;
     padding: 0.6vw 1.6vw;
-    border-radius: 1.83vw; 
+    border-radius: 1.83vw;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.17vw;
@@ -255,10 +312,10 @@ html {
     padding-bottom: 0.6vw;
     padding-left: 0.6vw;
     padding-right: 0.6vw;
-    border-radius: 1.46vw; 
+    border-radius: 1.46vw;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.17vw; 
+    font-size: 1.17vw;
     gap: 0.5vw;
     cursor: pointer;
     margin-top: 2vw;
@@ -287,13 +344,13 @@ html {
 .ourImpactHeader h2,
 .volunteerHeader h2,
 .bagongTagapoHeader h2 {
-    font-size: 2.93vw; 
+    font-size: 2.93vw;
     margin: 0;
 }
 
 .HorizontalLine {
     flex-grow: 1;
-    height: 0.29vw; 
+    height: 0.29vw;
     background-color: #eb0000;
     border: none;
 }
@@ -312,13 +369,13 @@ html {
 .aboutUsContainer .element-subdivisions,
 .aboutUsContainer .element-compounds,
 .aboutUsContainer .project-completed {
-    flex: 1 1 20.63vw; 
+    flex: 1 1 20.63vw;
     text-align: center;
 }
 
 .aboutUsContainer .text-wrapper,
 .aboutUsContainer .div {
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     color: #eb0000;
     line-height: 1.4;
 }
@@ -327,16 +384,16 @@ html {
 .aboutUsContainer .subdivision,
 .aboutUsContainer .compounds,
 .aboutUsContainer .projects {
-    width: 6.6vw; 
+    width: 6.6vw;
     height: 5.86vw;
     object-fit: contain;
-    margin-bottom: 0.37vw; 
+    margin-bottom: 0.37vw;
 }
 
 .aboutUsContainer .overlap-group {
     position: relative;
-    height: 12.45vw; 
-    top: 0.66vw; 
+    height: 12.45vw;
+    top: 0.66vw;
 }
 
 .aboutStats {
@@ -351,7 +408,7 @@ html {
 }
 
 .stat {
-    flex: 1 1 7.32vw; 
+    flex: 1 1 7.32vw;
 }
 
 .stat img {
@@ -403,6 +460,7 @@ html {
     width: 30vw;
     text-align: justify;
 }
+
 .text-column a {
     font-size: 1.32vw;
     line-height: 1.6;
@@ -434,7 +492,7 @@ html {
 }
 
 .impact-section h2 {
-    font-size: 2.93vw; 
+    font-size: 2.93vw;
     border-top: 0.29vw solid #eb0000;
     padding-top: 0.73vw;
     margin-bottom: 0.73vw;
@@ -492,14 +550,14 @@ html {
 }
 
 .impact-box p {
-    font-size: 1.18vw; 
+    font-size: 1.18vw;
 }
 
 .impact-list {
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
-    width: fit-content; 
+    width: fit-content;
     margin: 0 auto;
 
 }
@@ -524,18 +582,18 @@ html {
     display: inline-block;
     background-image: linear-gradient(to bottom, #b8aea7, #ffffff);
     background-repeat: no-repeat;
-    background-size: 100% 1.61vw; 
+    background-size: 100% 1.61vw;
     background-position: 0 100%;
-    padding-bottom: 0.73vw; 
+    padding-bottom: 0.73vw;
     color: #e50000;
     font-weight: bold;
-    font-size: 2.93vw; 
+    font-size: 2.93vw;
 }
 
 .impact-title {
     color: #e50000;
     font-weight: bold;
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     margin-bottom: 0;
     display: block;
     margin-left: 1.17vw;
@@ -543,7 +601,7 @@ html {
 
 .impact-item p {
     color: #000;
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     line-height: 1.5;
     max-width: 46vw;
     margin-right: 5vw;
@@ -559,8 +617,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.93vw; 
-    max-width: 87.86vw; 
+    gap: 2.93vw;
+    max-width: 87.86vw;
     margin: auto;
     position: relative;
     z-index: 1;
@@ -582,7 +640,7 @@ html {
     border-radius: 1vw;
     overflow: hidden;
     box-shadow: 0.073vw 0.29vw 0.44vw rgba(41, 40, 40, 0.1);
-    width: 21.96vw; 
+    width: 21.96vw;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -593,22 +651,22 @@ html {
 
 .case img {
     width: 100%;
-    height: 16.1vw; 
+    height: 16.1vw;
     object-fit: cover;
     border-radius: 0.66vw;
 }
 
 .case-content {
-    padding: 0.44vw 1.1vw; 
+    padding: 0.44vw 1.1vw;
 }
 
 .case h2 {
-    font-size: 1.47vw; 
+    font-size: 1.47vw;
     margin: 0 0 0.73vw;
 }
 
 .case p {
-    font-size: 1.18vw; 
+    font-size: 1.18vw;
     color: #333;
 }
 
@@ -621,9 +679,9 @@ html {
 }
 
 .volunteer-description {
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     line-height: 1.5;
-    flex: 1 1 14.65vw; 
+    flex: 1 1 14.65vw;
     min-width: 0;
     width: auto;
     word-break: break-word;
@@ -633,8 +691,8 @@ html {
 
 .verticalLine {
     left: 50%;
-    height: 3.66vw; 
-    border-left: 0.37vw solid #eb0000; 
+    height: 3.66vw;
+    border-left: 0.37vw solid #eb0000;
 }
 
 .box {
@@ -697,14 +755,14 @@ html {
 
 .box .box-heading,
 .box-2 .box-heading {
-    font-size: 2.93vw; 
+    font-size: 2.93vw;
     font-weight: 700;
     color: #eb0000;
     margin: 0;
 }
 
 .box .box-text {
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     text-align: justify;
     line-height: 1.5;
     padding-left: 6.68vw;
@@ -741,7 +799,7 @@ html {
     position: relative;
     overflow: hidden;
     gap: 1.5vw;
- 
+
 }
 
 .contact-row {
@@ -773,12 +831,12 @@ html {
 }
 
 .contact-row .email-info {
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
     padding-left: 1.2vw;
 }
 
 .contact-row .number-info {
-    font-size: 1.32vw; 
+    font-size: 1.32vw;
 }
 
 /*ending part*/
@@ -800,10 +858,10 @@ html {
 
 .back-to-top {
     align-items: center;
-    gap: 0.73vw; 
+    gap: 0.73vw;
     padding: 0.37vw 1.1vw;
     background-color: #eb0000;
-    border-radius: 1.46vw; 
+    border-radius: 1.46vw;
     justify-content: flex-end;
     color: white;
     font-weight: 600;
