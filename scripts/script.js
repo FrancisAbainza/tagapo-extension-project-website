@@ -389,7 +389,6 @@ function initializeIntersectAnimations() {
   const bannerBg = document.querySelector('#bannerBg');
   const bannerTitle = document.querySelector('#bannerTitle');
   const bannerDesc = document.querySelector('#bannerDesc');
-  const bannerBtn = document.querySelector('#bannerBtn');
   const historyBg = document.querySelector('#historyBg');
   const historyCard = document.querySelector('#historyCard');
   const map = document.querySelector('#map');
@@ -402,7 +401,6 @@ function initializeIntersectAnimations() {
   observeElement(bannerBg, "animate-movedown-delayed");
   observeElement(bannerTitle, "animate-movedown");
   observeElement(bannerDesc, "animate-fadein-delayed");
-  observeElement(bannerBtn, "animate-fadein-delayed");
   observeElement(historyBg, "animate-fadein");
   observeElement(historyCard, "animate-scaleup");
   observeElement(map, "animate-scaleup");
