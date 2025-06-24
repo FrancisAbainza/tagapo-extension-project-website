@@ -1,0 +1,164 @@
+/* officials */
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 24px 168px;
+}
+
+.locations>h2 {
+  font-size: 63px;
+  text-align: center;
+}
+
+.locations>h2>span {
+  color: var(--primary-color);
+}
+
+.locations>main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.locations>main>button {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 7;
+  transform: translateY(-50%);
+}
+
+.locations>main>.left-btn {
+  left: -12px;
+  visibility: hidden;
+}
+
+.locations>main>.right-btn {
+  right: -12px;
+}
+
+.locations>main>.carousel {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.locations>main>.carousel>.container {
+  display: flex;
+  gap: 24px;
+  transition: transform .8s ease-in-out;
+}
+
+.locations>main>.carousel>.container>.official-card {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.locations>main>.carousel>.container>.official-card>img {
+  display: block;
+  width: 100%;
+}
+
+.locations>main>.carousel>.container>.official-card>.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #c93334;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, .5);
+}
+
+.locations>main>.carousel>.container>.official-card>.content>.border {
+  background: linear-gradient(to right, #f0f0f0, #616161, #f0f0f0, #616161, #f0f0f0);
+  height: 8px;
+}
+
+.locations>main>.carousel>.container>.official-card>.content>.text {
+  padding: 6px 12px;
+  color: white;
+  text-align: center;
+}
+
+.locations>main>.navigate-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.locations>main>.navigate-buttons>button {
+  border: none;
+  width: 10%;
+  height: 6px;
+  background-color: #D9D9D9;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+}
+
+.locations>main>.navigate-buttons>button.active {
+  background-color: var(--primary-color);
+}
+
+.solid-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 50vh;
+  padding: 10px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.solid-button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+@media only screen and (min-width: 700px) {
+  .locations>main>.carousel>.container>.official-card {
+    width: calc(50% - 12px);
+  }
+}
+
+/* ================================================================== */
+/* Tablet breakpoint */
+@media only screen and (min-width: 920px) {
+  /* officials */
+  .locations {
+    padding: 0px 48px 168px;
+  }
+
+  .locations>main>.carousel>.container>.official-card {
+    width: calc(33.3% - 16px);
+  }
+
+  .locations>main>.left-btn {
+    left: -25px;
+  }
+
+  .locations>main>.right-btn {
+    right: -25px;
+  }
+}
+
+/* ================================================================== */
+/* Desktop breakpoint */
+@media only screen and (min-width: 1400px) {
+  .locations>main>.left-btn {
+    left: -65px;
+  }
+
+  .locations>main>.right-btn {
+    right: -65px;
+  }
+}

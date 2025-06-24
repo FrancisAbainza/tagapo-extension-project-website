@@ -15,16 +15,18 @@
   <link rel="stylesheet" href="./Stylesheets/outpost.css" />
   <link rel="stylesheet" href="./Stylesheets/report.css" />
   <link rel="stylesheet" href="./Stylesheets/locations.css" />
-  <link rel="stylesheet" href="./Stylesheets/officials.css" />
-  <script type="module" src="./Javascript/webScript.js" defer></script>
+  <link rel="stylesheet" href="../assets/styles/header-footer.css">
+  <script src="../assets/scripts/headerFooter.js" defer></script>
+  <script type="module" src="./Javascript/script.js" defer></script>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="hidden" id="header">
-    <div class="wrapper" id="headerContainer">
+  <!-- header -->
+  <header id="header">
+    <div class="header-container" id="headerContainer">
       <div class="logo-text">
-        <a href="/"><img src="./images/tagapo-logo.png" alt="barangay tagapo logo image" class="logo-image" />
+        <a href="../../index.html"><img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image"
+            class="logo-image">
           <div>
             <p>City of Sta. Rosa</p>
             <h2>BARANGAY TAGAPO</h2>
@@ -42,8 +44,8 @@
         <ul>
           <li><a href="../../index.html">HOME</a></li>
           <li><a href="../health/health.html">HEALTH</a></li>
-          <li><a href="../security/security.HTML" class="active">SECURITY</a></li>
-          <li><a href="../livelihood/livelihood.html">LIVELIHOOD</a></li>
+          <li><a href="../security/security.html">SECURITY</a></li>
+          <li><a href="../livelihood/livelihood.html" class="active">LIVELIHOOD</a></li>
           <li><a href="../sk/sk.html">SK</a></li>
           <li><a href="../environment/Environment.html">ENVIRONMENT</a></li>
         </ul>
@@ -65,17 +67,17 @@
     </div>
   </header>
 
-  <!-- Website Banner Section -->
-  <div class="web-banner">
+  <!-- banner -->
+  <section class="banner">
     <div class="background hidden" id="bannerBg"></div>
     <h1 class="title hidden" id="bannerTitle">
       Barangay Tagapo<br />
       <span>Security</span> Page
     </h1>
-    <p class="desc hidden" id="bannerDesc">Provides a list of emergency hotlines and important contact numbers that
-      residents can easily access.</p>
-    <a href="#" class="solid-button hidden" id="bannerBtn">Contact Us</a>
-  </div>
+    <p class="desc hidden" id="bannerDesc">Provides a list of emergency hotlines and important contact numbers
+      <br />that residents can easily access.
+    </p>
+  </section>
 
   <!-- PUT YOUR CODE HERE -->
   <section class="contact-us" id="contact">
@@ -222,25 +224,39 @@
     </div>
   </section>
 
+  <!-- locations -->
   <section class="locations" id="locations">
-    <!-- Barangay Outpost Location -->
+    <h2>Barangay <span>Outpost</span> <br />Locations</h2>
+    <main>
+      <button class="solid-button left-btn" id="locationsCarouselLeftBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="white" />
+        </svg>
+      </button>
+      <button class="solid-button right-btn" id="locationsCarouselRightBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white" />
+        </svg>
+      </button>
+      <div class="carousel">
+        <div class="container" id="locationsCarouselContainer">
+        </div>
+      </div>
+      <div class="navigate-buttons" id="navigateButtonsContainer">
+      </div>
+    </main>
   </section>
 
-  <section class="officials">
-    <!-- Barangay Peacekeeping Action Team -->
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="wrapper">
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer-container">
       <div class="logo-text">
-        <img src="./images/tagapo-logo.png" alt="barangay tagapo logo image">
+        <img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image">
         <p>© <span id="currentYearElement"></span> All rights reserved. <span class="name">Barangay Tagapo, Sta.
             Rosa,
             Laguna</span>
         </p>
       </div>
-
       <div class="location-group">
         <div class="address">
           <p>MAP AND LOCATION</p>
@@ -256,8 +272,7 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9251.821258417178!2d121.09870411089376!3d14.321204752693305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9ced32d9719%3A0x45e7aab820391865!2sTagapo%2C%20City%20of%20Santa%20Rosa%2C%20Laguna!5e1!3m2!1sen!2sph!4v1748681749375!5m2!1sen!2sph"
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </footer>
