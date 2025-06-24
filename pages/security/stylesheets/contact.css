@@ -1,7 +1,7 @@
 section.contact-us {
     margin: 0 auto;
-    margin-top: 10vh;
-    margin-bottom: 15vh;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,7 @@ section.contact-us {
     text-align: center;
     transition: box-shadow 0.3s ease;
     transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
     transform: 0.3s ease;
     cursor: pointer;
 }
@@ -32,7 +33,7 @@ section.contact-us {
     cursor: pointer;
 }
 
-.contact-us .container {
+.contact-us .container-wrapper {
     width: 1200px;
     display: flex;
     justify-content: center;
@@ -40,26 +41,26 @@ section.contact-us {
     gap: 50px;
 }
 
-.contact-us .container .grid-1 .card .logo img {
+.contact-us .container-wrapper .grid-1 .card .logo img {
     height: 58px;
     width: 58px;
 }
 
-.contact-us .container .grid-1 {
+.contact-us .container-wrapper .grid-1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-top: 69px;
 }
 
-.contact-us .container .grid-2 {
+.contact-us .container-wrapper .grid-2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-bottom: 69px;
 }
 
-.contact-us .container .grid-1 .card {
+.contact-us .container-wrapper .grid-1 .card {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -75,19 +76,19 @@ section.contact-us {
     transition: background-color 0.3s ease;
 }
 
-.contact-us .container .grid-1 .card h2 {
+.contact-us .container-wrapper .grid-1 .card h2 {
     font-weight: 700;
     font-size: 18px;
     color: #eb0000;
     margin: 0;
 }
 
-.contact-us .container .grid-1 .card h1 {
+.contact-us .container-wrapper .grid-1 .card h1 {
     font-weight: 800;
     color: #000;
 }
 
-.contact-us .container .grid-1 .card .circ {
+.contact-us .container-wrapper .grid-1 .card .circ {
     background-color: #eb0000;
     border-radius: 50%;
     display: flex;
@@ -98,37 +99,37 @@ section.contact-us {
     width: 51px;
 }
 
-.contact-us .container .grid-1 .card a {
+.contact-us .container-wrapper .grid-1 .card a {
     margin: 0 auto;
     font-size: 10px;
 }
 
-.contact-us .container .grid-1 .card:hover {
+.contact-us .container-wrapper .grid-1 .card:hover {
     background-color: #eb0000;
 }
 
-.contact-us .container .grid-1 .card:hover h1 {
+.contact-us .container-wrapper .grid-1 .card:hover h1 {
     color: #fff;
 }
 
-.contact-us .container .grid-1 .card:hover h2 {
+.contact-us .container-wrapper .grid-1 .card:hover h2 {
     color: #fff;
 }
 
-.contact-us .container .grid-1 .card:hover .solid-btn {
+.contact-us .container-wrapper .grid-1 .card:hover .solid-btn {
     background-color: #fff;
     color: #eb0000;
 }
 
-.contact-us .container .grid-1 .card:hover .disc {
+.contact-us .container-wrapper .grid-1 .card:hover .disc {
     background-color: #ffff;
 }
 
-.contact-us .container .grid-1 .card:hover .disc svg path {
+.contact-us .container-wrapper .grid-1 .card:hover .disc svg path {
     color: #eb0000;
 }
 
-.contact-us .container .grid-2 .card {
+.contact-us .container-wrapper .grid-2 .card {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -144,19 +145,19 @@ section.contact-us {
     transition: background-color 0.3s ease;
 }
 
-.contact-us .container .grid-2 .card h2 {
+.contact-us .container-wrapper .grid-2 .card h2 {
     font-weight: 700;
     font-size: 18px;
     color: #eb0000;
     margin: 0;
 }
 
-.contact-us .container .grid-2 .card h1 {
+.contact-us .container-wrapper .grid-2 .card h1 {
     font-weight: 700;
     color: #000;
 }
 
-.contact-us .container .grid-2 .card .circ {
+.contact-us .container-wrapper .grid-2 .card .circ {
     background-color: #eb0000;
     border-radius: 50%;
     display: flex;
@@ -167,29 +168,29 @@ section.contact-us {
     width: 51px;
 }
 
-.contact-us .container .grid-2 .card a {
+.contact-us .container-wrapper .grid-2 .card a {
     margin: 0 auto;
     font-size: 10px;
 }
 
-.contact-us .container .grid-2 .card:hover {
+.contact-us .container-wrapper .grid-2 .card:hover {
     background-color: #eb0000;
 }
 
-.contact-us .container .grid-2 .card:hover h1 {
+.contact-us .container-wrapper .grid-2 .card:hover h1 {
     color: #fff;
 }
 
-.contact-us .container .grid-2 .card:hover h2 {
+.contact-us .container-wrapper .grid-2 .card:hover h2 {
     color: #fff;
 }
 
-.contact-us .container .grid-2 .card:hover .solid-btn {
+.contact-us .container-wrapper .grid-2 .card:hover .solid-btn {
     background-color: #fff;
     color: #eb0000;
 }
 
-.contact-us .container .info {
+.contact-us .container-wrapper .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,16 +199,16 @@ section.contact-us {
     font-weight: 800;
 }
 
-.contact-us .container .info .header #red {
+.contact-us .container-wrapper .info .header #red {
     color: #eb0000;
 }
 
-.contact-us .container .info .header h1 {
+.contact-us .container-wrapper .info .header h1 {
     font-weight: 800;
     font-size: 52px;
 }
 
-.contact-us .container .info .content {
+.contact-us .container-wrapper .info .content {
     font-weight: 400;
     font-size: 18;
     letter-spacing: -0.6px;
@@ -217,6 +218,6 @@ section.contact-us {
     flex-direction: column;
 }
 
-.contact-us .container .info .content a {
+.contact-us .container-wrapper .info .content a {
     font-size: 12px;
 }

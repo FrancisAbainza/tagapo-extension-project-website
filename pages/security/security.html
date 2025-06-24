@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Barangay Tagapo Security Page</title>
-  <link rel="icon" href="./Images/tagapo-logo.png" />
+  <link rel="icon" href="./images/tagapo-logo.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
@@ -27,12 +28,11 @@
 </head>
 
 <body>
-  <!-- header -->
-  <header id="header">
-    <div class="header-container" id="headerContainer">
+  <!-- Header -->
+  <header class="hidden" id="header">
+    <div class="wrapper" id="headerContainer">
       <div class="logo-text">
-        <a href="../../index.html"><img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image"
-            class="logo-image">
+        <a href="/"><img src="./images/tagapo-logo.png" alt="barangay tagapo logo image" class="logo-image" />
           <div>
             <p>City of Sta. Rosa</p>
             <h2>BARANGAY TAGAPO</h2>
@@ -50,7 +50,7 @@
         <ul>
           <li><a href="../../index.html">HOME</a></li>
           <li><a href="../health/health.html">HEALTH</a></li>
-          <li><a href="../security/security.html" class="active">SECURITY</a></li>
+          <li><a href="../security/security.HTML" class="active">SECURITY</a></li>
           <li><a href="../livelihood/livelihood.html">LIVELIHOOD</a></li>
           <li><a href="../sk/sk.html">SK</a></li>
           <li><a href="../environment/Environment.html">ENVIRONMENT</a></li>
@@ -73,7 +73,7 @@
     </div>
   </header>
 
-  <!-- banner -->
+  <!-- Website Banner Section -->
   <section class="banner">
     <div class="background hidden" id="bannerBg"></div>
     <h1 class="title hidden" id="bannerTitle">
@@ -88,7 +88,7 @@
   <!-- PUT YOUR CODE HERE -->
   <section class="contact-us" id="contact">
     <!-- Contact Us Information -->
-    <div class="container">
+    <div class="container-wrapper">
       <div class="grid-1">
         <div class="card"> <!--240px by 250px-->
           <div class="logo">
@@ -113,7 +113,7 @@
             <h2>CDDRMO-C3 <br>Santa Rosa</h2>
             <h1>0995-650-1943</h1>
           </div>
-          <a href="https://www.facebook.com/santarosa.CDRRMO2011 " class="solid-btn">Contact Us →</a>
+          <a href="https://www.facebook.com/santarosa.CDRRMO2011" class="solid-btn" target="_blank">Contact Us →</a>
         </div>
       </div>
       <div class="grid-2">
@@ -130,7 +130,7 @@
             <h2>Bureau of Fire<br>Protection</h2>
             <h1>0922-780-7570</h1>
           </div>
-          <a href="https://www.facebook.com/santarosacityfirestation" class="solid-btn">Contact Us →</a>
+          <a href="https://www.facebook.com/santarosacityfirestation" class="solid-btn" target="_blank">Contact Us →</a>
         </div>
         <div class="card">
           <div class="cp">
@@ -145,7 +145,7 @@
             <h2>PNP - Santa <br>Rosa Station</h2>
             <h1>0905-550-5288</h1>
           </div>
-          <a href="https://www.facebook.com/SRCLPolice " class="solid-btn">Contact Us →</a>
+          <a href="https://www.facebook.com/SRCLPolice" class="solid-btn" target="_blank">Contact Us →</a>
         </div>
       </div>
       <div class="info"> <!--700px by 220px-->
@@ -156,6 +156,9 @@
         <div class="content">
           <p>For any emergency in Santa Rosa, Laguna, remember that immediate help is just a call away. Keep this guide
             handy for quick access to vital services when you need them most.</p>
+          <div>
+            <a href="#" class="solid-btn">Contact Us→</a>
+          </div>
         </div>
       </div>
   </section>
@@ -184,7 +187,7 @@
   <section class="report">
     <!-- Procedure for Filling of Barangay Report -->
     <div id="header">
-      <h2>Procedure for Filing a <br /> <span class="red-highlight">Barangay Report</span></h2>
+      <h2>Procedure for Filing a <br /><span class="red-highlight">Barangay Report</span></h2>
     </div>
 
     <div class="steps-wrapper">
@@ -227,7 +230,7 @@
     </div>
   </section>
 
-  <!-- Outpost Locations -->
+  <!-- locations -->
   <section class="locations" id="locations">
     <h2>Barangay <span>Outpost</span> <br />Locations</h2>
     <main>
@@ -315,16 +318,17 @@
     </div>
   </section>
 
-  <!-- footer -->
-  <footer id="footer">
-    <div class="footer-container">
+  <!-- Footer -->
+  <footer>
+    <div class="wrapper">
       <div class="logo-text">
-        <img src="../assets/images/tagapo-logo.png" alt="barangay tagapo logo image">
+        <img src="./images/tagapo-logo.png" alt="barangay tagapo logo image">
         <p>© <span id="currentYearElement"></span> All rights reserved. <span class="name">Barangay Tagapo, Sta.
             Rosa,
             Laguna</span>
         </p>
       </div>
+
       <div class="location-group">
         <div class="address">
           <p>MAP AND LOCATION</p>
@@ -340,7 +344,8 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9251.821258417178!2d121.09870411089376!3d14.321204752693305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9ced32d9719%3A0x45e7aab820391865!2sTagapo%2C%20City%20of%20Santa%20Rosa%2C%20Laguna!5e1!3m2!1sen!2sph!4v1748681749375!5m2!1sen!2sph"
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </footer>
