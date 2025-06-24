@@ -12,9 +12,9 @@ section.outpost {
       rgba(0, 0, 0, 0.3) 30%,
       rgba(0, 0, 0, 0.1) 50%
     ),
-        url(../Images/locations/rosada.png);
-    background-repeat: repeat;
-    background-position: center top;
+        url(../Images/bg-outpost.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
