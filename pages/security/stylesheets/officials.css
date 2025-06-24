@@ -1,5 +1,9 @@
 
-.officials #brgy-header{
+* {
+font-family: 'Poppins';
+}
+
+section.officials #brgy-header{
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -9,7 +13,7 @@
   
 }
 
-.officials .bpat-content {
+section.officials .bpat-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,35 +24,35 @@
   margin-top: -200px;
 }
 
- .officials .carousel-container,
-.officials .content {
+ section.officials .carousel-container,
+section.officials .content {
   max-width: 500px;
 }
 
-.officials .content{
+section.officials .content{
     margin-top: 100px;
 }
 
-.officials .content h1{
+section.officials .content h1{
     line-height: 1.2;
     font-family: 'Poppins' sans-serif;
     font-weight: bold;
     font-size: 50px;
 }
 
-.officials .content h2{
+section.officials .content h2{
     line-height: 1.2;
     font-family: 'Poppins' sans-serif;
     font-weight: bold;
     color: #eb0000;
 }
 
-.officials .content p {
+section.officials .content p {
     width: 550px;
     text-align: justify;
 }
 
-.officials .carousel-container{
+section.officials .carousel-container{
    overflow:visible;
    width: 600px;
    display: flex;
@@ -57,29 +61,29 @@
 }
 
 
-.officials .carousel {
+section.officials .carousel {
 	height:1000px;
 	perspective: 800px;
 	transform: translateY(-100px);
 }
 
-.officials .carousel .carousel-item {
+section.officials .carousel .carousel-item {
 	cursor: pointer;
 	width: 400px;
 }
 
-.officials .carousel .carousel-item:active {
+section.officials .carousel .carousel-item:active {
 	cursor: pointer;
 }
 
-.officials .carousel .carousel-item img {
+section.officials .carousel .carousel-item img {
 	width: 100%;
     object-fit: cover;
     height: 550px;
     border-radius: 30px;
 }
 
-.officials .carousel .carousel-item h3 {
+section.officials .carousel .carousel-item h3 {
 	background-color: #ffffff;
 	color: #000000;
 	font-size: 2em;
@@ -89,6 +93,6 @@
 	text-align: center;
 }
 
-.officials .carousel-buttons{
+section.officials .carousel-buttons{
     margin-top: 20px;
 }

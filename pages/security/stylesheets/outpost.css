@@ -13,7 +13,7 @@ section.outpost {
       rgba(0, 0, 0, 0.1) 50%
     ),
         url(../Images/bg-outpost.jpeg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }

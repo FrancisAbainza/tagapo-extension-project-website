@@ -1,21 +1,21 @@
 /* officials */
-.locations {
+section.locations {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 0px 24px 168px;
 }
 
-.locations>h2 {
+section.locations>h2 {
   font-size: 63px;
   text-align: center;
 }
 
-.locations>h2>span {
+section.locations>h2>span {
   color: var(--primary-color);
 }
 
-.locations>main {
+section.locations>main {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   max-width: 1200px;
 }
 
-.locations>main>button {
+section.locations>main>button {
   position: absolute;
   top: 50%;
   width: 50px;
@@ -33,28 +33,28 @@
   transform: translateY(-50%);
 }
 
-.locations>main>.left-btn {
+section.locations>main>.left-btn {
   left: -12px;
   visibility: hidden;
 }
 
-.locations>main>.right-btn {
+section.locations>main>.right-btn {
   right: -12px;
 }
 
-.locations>main>.carousel {
+section.locations>main>.carousel {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
 }
 
-.locations>main>.carousel>.container {
+section.locations>main>.carousel>.container {
   display: flex;
   gap: 24px;
   transition: transform .8s ease-in-out;
 }
 
-.locations>main>.carousel>.container>.official-card {
+section.locations>main>.carousel>.container>.official-card {
   position: relative;
   flex-shrink: 0;
   border-radius: 15px;
@@ -62,12 +62,12 @@
   overflow: hidden;
 }
 
-.locations>main>.carousel>.container>.official-card>img {
+section.locations>main>.carousel>.container>.official-card>img {
   display: block;
   width: 100%;
 }
 
-.locations>main>.carousel>.container>.official-card>.content {
+section.locations>main>.carousel>.container>.official-card>.content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -76,24 +76,24 @@
   box-shadow: 0px -5px 10px rgba(0, 0, 0, .5);
 }
 
-.locations>main>.carousel>.container>.official-card>.content>.border {
+section.locations>main>.carousel>.container>.official-card>.content>.border {
   background: linear-gradient(to right, #f0f0f0, #616161, #f0f0f0, #616161, #f0f0f0);
   height: 8px;
 }
 
-.locations>main>.carousel>.container>.official-card>.content>.text {
+section.locations>main>.carousel>.container>.official-card>.content>.text {
   padding: 6px 12px;
   color: white;
   text-align: center;
 }
 
-.locations>main>.navigate-buttons {
+section.locations>main>.navigate-buttons {
   display: flex;
   gap: 12px;
   justify-content: center;
 }
 
-.locations>main>.navigate-buttons>button {
+section.locations>main>.navigate-buttons>button {
   border: none;
   width: 10%;
   height: 6px;
@@ -102,7 +102,7 @@
   transition: background-color .1s ease-in-out;
 }
 
-.locations>main>.navigate-buttons>button.active {
+section.locations>main>.navigate-buttons>button.active {
   background-color: var(--primary-color);
 }
 
@@ -125,7 +125,7 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .locations>main>.carousel>.container>.official-card {
+  section.locations>main>.carousel>.container>.official-card {
     width: calc(50% - 12px);
   }
 }
@@ -133,20 +133,21 @@
 /* ================================================================== */
 /* Tablet breakpoint */
 @media only screen and (min-width: 920px) {
+
   /* officials */
-  .locations {
+  section.locations {
     padding: 0px 48px 168px;
   }
 
-  .locations>main>.carousel>.container>.official-card {
+  section.locations>main>.carousel>.container>.official-card {
     width: calc(33.3% - 16px);
   }
 
-  .locations>main>.left-btn {
+  section.locations>main>.left-btn {
     left: -25px;
   }
 
-  .locations>main>.right-btn {
+  section.locations>main>.right-btn {
     right: -25px;
   }
 }
@@ -154,11 +155,11 @@
 /* ================================================================== */
 /* Desktop breakpoint */
 @media only screen and (min-width: 1400px) {
-  .locations>main>.left-btn {
+  section.locations>main>.left-btn {
     left: -65px;
   }
 
-  .locations>main>.right-btn {
+  section.locations>main>.right-btn {
     right: -65px;
   }
 }
