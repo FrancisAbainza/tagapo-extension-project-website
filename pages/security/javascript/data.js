@@ -31,7 +31,7 @@ export const locations = [
   },
   {
     image: {
-      src: "./Images/locations/zavalla.png",
+      src: "./Images/locations/zavalla3.png",
       alt: "zavalla outpost picture"
     },
   },
