@@ -1,4 +1,3 @@
-/* Carousel*/
 $(document).ready(function () {
   const contentData = [
     {
@@ -28,7 +27,8 @@ $(document).ready(function () {
     }
   ];
 
-  let currentIndex = 0;
+  let currentIndex = 3;
+  const $carousel = $('.bpat-content .carousel');
   const $name = $("#name");
   const $position = $("#position");
   const $description = $("#description");
@@ -38,39 +38,47 @@ $(document).ready(function () {
     const firstName = fullName.slice(0, -1).join(" ");
     const lastName = fullName[fullName.length - 1];
     const nameHTML = `${firstName} <span style="color:#eb0000">${lastName}</span>`;
-
-    // Fade to new content by animating opacity only
-    $name.stop().animate({ opacity: 0.1 }, 300, function () {
-      $(this).html(nameHTML).animate({ opacity: 1 }, 300);
-    });
-
-    $position.stop().animate({ opacity: 0.1 }, 300, function () {
-      $(this).text(contentData[index].position).animate({ opacity: 1 }, 300);
-    });
-
-    $description.stop().animate({ opacity: 0.1 }, 300, function () {
-      $(this).text(contentData[index].description).animate({ opacity: 1 }, 300);
+    
+    // Fade out all content first
+    $name.add($position).add($description).stop().animate({ opacity: 0 }, 400, function() {
+      // Update content when invisible
+      $name.html(nameHTML);
+      $position.text(contentData[index].position);
+      $description.text(contentData[index].description);
+      
+      // Fade in new content
+      $name.add($position).add($description).animate({ opacity: 1 }, 300);
     });
   }
 
-
-  const $carousel = $('.carousel');
-
-
+  // Initialize carousel
   $carousel.carousel({
-
+    fullWidth: false,
+    indicators: false,
+    noWrap: false,
     onCycleTo: function (ele) {
-      const index = $(ele).index();
-      updateContent(index);
+      currentIndex = $(ele).index();
+      updateContent(currentIndex);
     }
   });
 
+  // Set initial position
+  $carousel.carousel('set', currentIndex);
 
-  $('#nextBtn').click(function () {
+  // Navigation buttons
+  $('#nextBtn').click(function (e) {
+    e.preventDefault();
     $carousel.carousel('next');
   });
 
-  $('#prevBtn').click(function () {
+  $('#prevBtn').click(function (e) {
+    e.preventDefault();
     $carousel.carousel('prev');
   });
+
+  // Initialize with fade-in effect
+  $name.css('opacity', 0);
+  $position.css('opacity', 0);
+  $description.css('opacity', 0);
+  updateContent(currentIndex);
 });
