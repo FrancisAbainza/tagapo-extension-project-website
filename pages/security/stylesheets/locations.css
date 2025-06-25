@@ -136,7 +136,7 @@ section.locations>main>.navigate-buttons>button.active {
 
   /* officials */
   section.locations {
-    padding: 0px 48px 168px;
+    padding: 0px 48px 40px;
   }
 
   section.locations>main>.carousel>.container>.official-card {
