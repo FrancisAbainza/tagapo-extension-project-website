@@ -30,7 +30,7 @@
   bottom: 0;
   background:
     linear-gradient(to bottom, transparent 60%, white 80%),
-    url(../Images/banner-img.jpg) center -50px no-repeat;
+    url(../Images/banner-img.png) center -50px no-repeat;
   background-size: cover;
   z-index: -1;
 }

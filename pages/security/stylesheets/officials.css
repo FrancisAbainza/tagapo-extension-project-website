@@ -1,16 +1,15 @@
-
 * {
-font-family: 'Poppins';
+  font-family: 'Poppins';
 }
 
-section.officials #brgy-header{
+section.officials #brgy-header {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   margin-top: 150px;
   font-size: 40px;
-  
+
 }
 
 section.officials .bpat-content {
@@ -24,75 +23,75 @@ section.officials .bpat-content {
   margin-top: -200px;
 }
 
- section.officials .carousel-container,
+section.officials .carousel-container,
 section.officials .content {
   max-width: 500px;
 }
 
-section.officials .content{
-    margin-top: 100px;
+section.officials .content {
+  margin-top: 100px;
 }
 
-section.officials .content h1{
-    line-height: 1.2;
-    font-family: 'Poppins' sans-serif;
-    font-weight: bold;
-    font-size: 50px;
+section.officials .content h1 {
+  line-height: 1.2;
+  font-family: 'Poppins' sans-serif;
+  font-weight: bold;
+  font-size: 50px;
 }
 
-section.officials .content h2{
-    line-height: 1.2;
-    font-family: 'Poppins' sans-serif;
-    font-weight: bold;
-    color: #eb0000;
+section.officials .content h2 {
+  line-height: 1.2;
+  font-family: 'Poppins' sans-serif;
+  font-weight: bold;
+  color: #eb0000;
 }
 
 section.officials .content p {
-    width: 550px;
-    text-align: justify;
+  width: 550px;
+  text-align: justify;
 }
 
-section.officials .carousel-container{
-   overflow:visible;
-   width: 600px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+section.officials .carousel-container {
+  overflow: visible;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 section.officials .carousel {
-	height:1000px;
-	perspective: 800px;
-	transform: translateY(-100px);
+  height: 1000px;
+  perspective: 800px;
+  transform: translateY(-100px);
 }
 
 section.officials .carousel .carousel-item {
-	cursor: pointer;
-	width: 400px;
+  cursor: pointer;
+  width: 400px;
 }
 
 section.officials .carousel .carousel-item:active {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 section.officials .carousel .carousel-item img {
-	width: 100%;
-    object-fit: cover;
-    height: 550px;
-    border-radius: 30px;
+  width: 100%;
+  object-fit: cover;
+  height: 550px;
+  border-radius: 30px;
 }
 
 section.officials .carousel .carousel-item h3 {
-	background-color: #ffffff;
-	color: #000000;
-	font-size: 2em;
-	font-weight: bold;
-	margin: -5px 0 0;
-	padding: 10px 5px;
-	text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 2em;
+  font-weight: bold;
+  margin: -5px 0 0;
+  padding: 10px 5px;
+  text-align: center;
 }
 
-section.officials .carousel-buttons{
-    margin-top: 20px;
+section.officials .carousel-buttons {
+  margin-top: 20px;
 }
