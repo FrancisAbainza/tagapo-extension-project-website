@@ -28,18 +28,22 @@ html {
   padding: 0 20px;
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
 
 .header {
-  width: 100%;
-  max-width: 100%;
+  width: auto;
   overflow: hidden;
   position: relative;
 }
 
 .header img {
-  width: 100%;
+  width: 1950px;
   height: auto;
-  max-width: 100%;
   display: block;
   opacity: 0.90;
 }
@@ -112,8 +116,7 @@ html {
 }
 
 .info .container {
-  margin-left: -3px;
-  margin-right: 0;
+  margin-right: 700px;
   padding: 0;
   max-width: unset;
 }
@@ -122,9 +125,8 @@ html {
   font-size: 22px;
   line-height: 1.5;
   text-align: justify;
-  margin: 20px 0;
-  padding-left: 130px;
-  max-width: 1100px;
+  margin: 0px 0;
+  max-width: 1000px;
   font-weight: 450;
 }
 
@@ -255,11 +257,11 @@ html {
 }
 
 .photo-expand-overlay .more-click-info {
-  margin-top: 10px;
+  margin-top: 5px;
   opacity: 0;
   max-height: 0;
   transition: opacity 0.5s ease, max-height 0.5s ease;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .photo-expand-overlay .more-click-info .date {
@@ -271,7 +273,6 @@ html {
 .photo-expand-overlay .more-click-info .details {
   font-weight: 500;
   font-size: 16px;
-  margin-left: 30px;
 }
 
 
@@ -287,7 +288,7 @@ html {
   max-height: 200px;
   text-shadow: 0 0 6px #000000;
   text-align: justify;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .photo-expand-overlay.expanded .more-click-info .date {
@@ -299,7 +300,6 @@ html {
 .photo-expand-overlay.expanded .more-click-info .details {
   font-weight: 500;
   font-size: 16px;
-  margin-left: 30px;
 }
 
 .photo-expand-overlay.expanded .arrow-icon {
@@ -462,7 +462,7 @@ html {
   right: 30px;
   display: flex;
   gap: 12px;
-  z-index: 5; /* Changed from 10 t0 5. */
+  z-index: 6; /* Changed from 10 t0 6. */
   transform: translateY(-10%);
 }
 
@@ -477,7 +477,7 @@ html {
   transition: background 0.3s, color 0.3s;
   display: inline-block;
   position: relative;
-  z-index: 10; /* Changed from 10 t0 6. */
+  z-index: 7; /* Changed from 10 t0 7. */
 }
 
 .arrow:hover {

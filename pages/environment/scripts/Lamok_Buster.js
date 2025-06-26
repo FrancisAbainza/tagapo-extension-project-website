@@ -25,7 +25,6 @@ function scrollPhotoWraps(button, direction) {
 }
 
 
-
 // Toggle overlay expansion
 document.querySelectorAll(".photo-expand-overlay").forEach((overlay) => {
     overlay.addEventListener("click", () => {
