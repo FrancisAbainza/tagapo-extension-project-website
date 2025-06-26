@@ -6,8 +6,13 @@ function initializeHeaderScript() {
   const nav = document.querySelector('#nav');
   const body = document.querySelector('body');
   const headerHeight = header.getBoundingClientRect().height;
+  const windowWidth = window.innerWidth;
 
-  body.style.marginTop = headerHeight + 'px';
+  if (windowWidth >= 483) {
+    body.style.marginTop = '114px'
+  } else {
+    body.style.marginTop = '119px'
+  }
 
   menu.addEventListener('click', () => {
     nav.classList.add('open-nav');
