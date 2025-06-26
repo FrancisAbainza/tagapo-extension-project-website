@@ -1,79 +1,108 @@
+// Gallery scroll functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all galleries and their navigation buttons
+    const galleries = document.querySelectorAll('.sk-gallery');
+    
+    // First gallery controls
+    const backBtn1 = document.getElementById('backbtn');
+    const nextBtn1 = document.getElementById('nextbtn');
+    
+    // Second gallery controls
+    const backBtn2 = document.getElementById('backbtn2');
+    const nextBtn2 = document.getElementById('nextbtn2');
 
-// Event 1
-const scrollContainer1 = document.querySelector(".sk-gallery");
-const backBtn1 = document.getElementById("backbtn");
-const nextBtn1 = document.getElementById("nextbtn");
+    // Third gallery controls
+    const backBtn3 = document.getElementById('backbtn3');
+    const nextBtn3 = document.getElementById('nextbtn3');
 
-if (scrollContainer1 && backBtn1 && nextBtn1) {
-    nextBtn1.addEventListener("click", () => {
-        scrollContainer1.scrollBy({ left: 430, behavior: "smooth" });
+    // Fourth gallery controls
+     const backBtn4 = document.getElementById('backbtn4');
+    const nextBtn4 = document.getElementById('nextbtn4');
+
+    // Fifth gallery controls
+    const backBtn5 = document.getElementById('backbtn5');
+    const nextBtn5 = document.getElementById('nextbtn5');
+    
+    // Function to scroll gallery
+    function scrollGallery(gallery, direction) {
+        const scrollAmount = gallery.clientWidth; // Scroll by one gallery width
+        
+        if (direction === 'next') {
+            gallery.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        } else if (direction === 'prev') {
+            gallery.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // First gallery button events
+    if (backBtn1 && nextBtn1 && galleries[0]) {
+        backBtn1.addEventListener('click', () => {
+            scrollGallery(galleries[0], 'prev');
+        });
+        
+        nextBtn1.addEventListener('click', () => {
+            scrollGallery(galleries[0], 'next');
+        });
+    }
+    
+    // Second gallery button events
+    if (backBtn2 && nextBtn2 && galleries[1]) {
+        backBtn2.addEventListener('click', () => {
+            scrollGallery(galleries[1], 'prev');
+        });
+        
+        nextBtn2.addEventListener('click', () => {
+            scrollGallery(galleries[1], 'next');
+        });
+    }
+
+    if (backBtn3 && nextBtn3 && galleries[2]) {
+        backBtn3.addEventListener('click', () => {
+            scrollGallery(galleries[2], 'prev');
+        });
+        
+        nextBtn3.addEventListener('click', () => {
+            scrollGallery(galleries[2], 'next');
+        });
+    }
+
+    if (backBtn4 && nextBtn4 && galleries[3]) {
+        backBtn4.addEventListener('click', () => {
+            scrollGallery(galleries[3], 'prev');
+        });
+        
+        nextBtn4.addEventListener('click', () => {
+            scrollGallery(galleries[3], 'next');
+        });
+    }
+
+    if (backBtn5 && nextBtn5 && galleries[4]) {
+        backBtn5.addEventListener('click', () => {
+            scrollGallery(galleries[4], 'prev');
+        });
+        
+        nextBtn5.addEventListener('click', () => {
+            scrollGallery(galleries[4], 'next');
+        });
+    }
+
+    
+    
+    // Optional: Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            // Scroll both galleries left
+            galleries.forEach(gallery => scrollGallery(gallery, 'prev'));
+        } else if (e.key === 'ArrowRight') {
+            // Scroll both galleries right
+            galleries.forEach(gallery => scrollGallery(gallery, 'next'));
+        }
     });
-
-    backBtn1.addEventListener("click", () => {
-        scrollContainer1.scrollBy({ left: -430, behavior: "smooth" });
-    });
-}
-
-// Event 2
-const scrollContainer2 = document.querySelector(".sk-gallery2");
-const backBtn2 = document.getElementById("backbtn2");
-const nextBtn2 = document.getElementById("nextbtn2");
-
-if (scrollContainer2 && backBtn2 && nextBtn2) {
-    nextBtn2.addEventListener("click", () => {
-        scrollContainer2.scrollBy({ left: 430, behavior: "smooth" });
-    });
-
-    backBtn2.addEventListener("click", () => {
-        scrollContainer2.scrollBy({ left: -430, behavior: "smooth" });
-    });
-}
-
-// Event 3
-const scrollContainer3 = document.querySelectorAll(".sk-gallery")[1];
-const backBtn3 = document.getElementById("backBtn3");
-const nextBtn3 = document.getElementById("nextBtn3");
-
-if (scrollContainer3 && backBtn3 && nextBtn3) {
-    nextBtn3.addEventListener("click", () => {
-        scrollContainer3.scrollBy({ left: 430, behavior: "smooth" });
-    });
-
-    backBtn3.addEventListener("click", () => {
-        scrollContainer3.scrollBy({ left: -430, behavior: "smooth" });
-    });
-}
-
-// Event 4
-const scrollContainer4 = document.querySelectorAll(".sk-gallery2")[1];
-const backBtn4 = document.getElementById("backBtn4");
-const nextBtn4 = document.getElementById("nextBtn4");
-
-if (scrollContainer4 && backBtn4 && nextBtn4) {
-    nextBtn4.addEventListener("click", () => {
-        scrollContainer4.scrollBy({ left: 430, behavior: "smooth" });
-    });
-
-    backBtn4.addEventListener("click", () => {
-        scrollContainer4.scrollBy({ left: -430, behavior: "smooth" });
-    });
-}
-
-// Event 5
-const scrollContainer5 = document.querySelectorAll(".sk-gallery")[2];
-const backBtn5 = document.getElementById("backbtn5");
-const nextBtn5 = document.getElementById("nextbtn5");
-
-if (scrollContainer5 && backBtn5 && nextBtn5) {
-    nextBtn5.addEventListener("click", () => {
-        scrollContainer5.scrollBy({ left: 430, behavior: "smooth" });
-    });
-
-    backBtn5.addEventListener("click", () => {
-        scrollContainer5.scrollBy({ left: -430, behavior: "smooth" });
-    });
-
-
-}
-
-
+    
+});

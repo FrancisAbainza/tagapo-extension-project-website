@@ -551,6 +551,7 @@ html {
 
 .impact-box p {
     font-size: 1.18vw;
+    width: 16vw;
 }
 
 .impact-list {
@@ -606,6 +607,7 @@ html {
     max-width: 46vw;
     margin-right: 5vw;
     margin-top: 1.3vw;
+    text-align: justify;
 }
 
 /*Para sa Bagong Tagapo section*/
@@ -618,7 +620,7 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.93vw;
-    max-width: 87.86vw;
+    max-width: auto;
     margin: auto;
     position: relative;
     z-index: 1;
@@ -640,13 +642,14 @@ html {
     border-radius: 1vw;
     overflow: hidden;
     box-shadow: 0.073vw 0.29vw 0.44vw rgba(41, 40, 40, 0.1);
-    width: 21.96vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
     cursor: context-menu;
+    text-align: center;
 }
 
 .case img {
@@ -661,13 +664,15 @@ html {
 }
 
 .case h2 {
-    font-size: 1.47vw;
+    font-size: 1.12vw;
     margin: 0 0 0.73vw;
 }
 
 .case p {
-    font-size: 1.18vw;
+    font-size: 1.1vw;
     color: #333;
+    width: 22vw;
+    text-align: justify;
 }
 
 /* Volunteer With Us section*/
@@ -858,17 +863,17 @@ html {
 
 .back-to-top {
     align-items: center;
-    gap: 0.73vw;
-    padding: 0.37vw 1.1vw;
+    padding: 0.60vw 1.1vw;
     background-color: #eb0000;
     border-radius: 1.46vw;
     justify-content: flex-end;
     color: white;
+    font-size: 1.17vw; 
     font-weight: 600;
     margin-left: auto;
     margin-right: 0;
     margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-bottom: 4vw;
 }
 
 .back-to-top:hover {
