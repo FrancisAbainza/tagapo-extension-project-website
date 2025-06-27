@@ -149,14 +149,14 @@ html {
 
 .expanded-dropdown.active {
   max-height: 1000px;
-  padding: 60px 0;
+  padding: 40px 0;
   opacity: 1;
   visibility: visible;
 }
 
 .collapse-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .collapse-btn {

@@ -41,11 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function openDropdown() {
         dropdown.classList.add('active');
         setTimeout(() => {
+            const footerOffset = 200; // Changed
             window.scrollTo({
-                top: document.body.scrollHeight,
+                top: document.body.scrollHeight - footerOffset,
                 behavior: 'smooth'
             });
-        }, 250);
+        }, 170);
     }
 
     function closeDropdown() {
@@ -95,7 +96,7 @@ document.querySelectorAll('.slider-img').forEach(slide => {
         const learnMoreBtn = slide.querySelector('.learn-more-btn');
         if (learnMoreBtn && !document.querySelector('.expanded-dropdown').classList.contains('active')) {
             setTimeout(() => {
-                learnMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                learnMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }, 170);
         }
     });

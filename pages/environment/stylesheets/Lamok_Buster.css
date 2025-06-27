@@ -64,7 +64,7 @@ html {
 .header-text {
   position: absolute;
   bottom: 0px;
-  left: 135px;
+  left: 12vw;
   color: var(--dark-color);
   padding: 20px;
   z-index: 2;
@@ -82,7 +82,7 @@ html {
 .home-icon-overlay {
   position: absolute;
   top: 50px;
-  left: 115px;
+  left: 13vw;
   z-index: 2;
   text-decoration: none;
 }
@@ -124,7 +124,7 @@ html {
   font-size: 22px;
   line-height: 1.5;
   text-align: justify;
-  margin-left: 85px;
+  margin-left: 12.5vw;
   max-width: 1000px;
   font-weight: 450;
 }
@@ -280,7 +280,7 @@ html {
 
 /* When clicked: show info and rotates arrow */
 .photo-expand-overlay.expanded {
-  height: 16.5vh; /* Changed. */
+  height: 20vh; /* Changed. */
   padding: 20px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
 }
