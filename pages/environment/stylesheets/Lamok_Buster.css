@@ -565,3 +565,22 @@ html {
   color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(235, 0, 0, 0.3);
 }
+
+/* Center Sections */
+section.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.format-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.format-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
