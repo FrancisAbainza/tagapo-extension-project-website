@@ -1414,7 +1414,7 @@ html {
   line-height: 1.2;
   position: relative;
   z-index: 1;
-  gap: 10px;
+  margin: 10px 0;
 }
 
 .health-act .modal-container#modal-2 .modal-content .title p {
