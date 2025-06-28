@@ -26,13 +26,21 @@ section {
     text-align: center;
     font-weight: bold;
     margin-bottom: 25px;
-    text-shadow: 0 0 6px rgba(25, 0, 255, .7);
+}
+
+.glow-animation {
     animation: blueYellowGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes blueYellowGlow {
+    0% {
+        text-shadow: 0 0 4px rgba(0, 255, 255, 0.3),
+            0 0 8px rgba(0, 255, 255, 0.2);
+    }
+
     100% {
-        text-shadow: 0 0 6px rgba(234, 245, 39, .7);
+        text-shadow: 0 0 4px rgba(255, 204, 0, 0.3),
+            0 0 8px rgba(255, 204, 0, 0.2);
     }
 }
 
