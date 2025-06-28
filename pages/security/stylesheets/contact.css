@@ -1,165 +1,186 @@
 section.contact-us {
-    margin: 0 auto;
-    margin-top: 20vh;
-    margin-bottom: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    max-height: 60vh;
-    max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  margin-bottom: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-height: 60vh;
+  max-width: 1200px;
 }
 
 .contact-us .solid-btn {
-    border: none;
-    border-radius: 50vh;
-    padding: 5px 9px;
-    background-color: #eb0000;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-    transition: background-color 0.3s ease;
-    transition: transform 0.3s ease;
-    transform: 0.3s ease;
-    cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 63px;
+  border: none;
+  border-radius: 50vh;
+  padding: 5px 9px;
+  background-color: #eb0000;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-us .solid-btn:hover {
-    background-color: #c70000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transform: translateY(-5px);
-    cursor: pointer;
+  background-color: #c70000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
 .contact-us .container-wrapper {
-    width: 1200px;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+  width: 1200px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-us .container-wrapper .grid .card .logo img {
-    height: 58px;
-    width: 58px;
+  height: 58px;
+  width: 58px;
+}
+
+.contact-us .container-wrapper .grid .card .logo,
+.contact-us .container-wrapper .grid .card .cp {
+  position: absolute;
+  top: 25px;
 }
 
 .contact-us .container-wrapper .grid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .contact-us .container-wrapper .grid .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    gap: 15px;
-    height: 280px;
-    width: 240px;
-    border-radius: 40px;
-    padding: 16px;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
-    transition: background-color 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 15px;
+  height: 280px;
+  width: 240px;
+  border-radius: 40px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .contact-us .container-wrapper .grid .card h2 {
-    font-weight: 700;
-    font-size: 18px;
-    color: #eb0000;
-    margin: 0;
+  position: absolute;
+  font-weight: 700;
+  font-size: 18px;
+  color: #eb0000;
+  margin: 0;
+  top: 135px;
+  left: 125px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 0 10px;
 }
 
 .contact-us .container-wrapper .grid .card h1 {
-    font-weight: 800;
-    color: #000;
+  position: absolute;
+  font-weight: 800;
+  color: #000;
+  bottom: 65px;
 }
 
 .contact-us .container-wrapper .grid .card .circ {
-    background-color: #eb0000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 51px;
-    width: 51px;
+  background-color: #eb0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 51px;
+  width: 51px;
 }
 
 .contact-us .container-wrapper .grid .card a {
-    margin: 0 auto;
-    font-size: 14px;
+  margin: 0 auto;
+  font-size: 14px;
 }
 
 .contact-us .container-wrapper .grid .card:hover {
-    background-color: #eb0000;
+  background-color: #eb0000;
+  box-shadow: rgba(136, 165, 191, 0.68) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transform: scale(1.03);
 }
 
 .contact-us .container-wrapper .grid .card:hover h1 {
-    color: #fff;
+  color: #fff;
 }
 
 .contact-us .container-wrapper .grid .card:hover h2 {
-    color: #fff;
+  color: #fff;
 }
 
 .contact-us .container-wrapper .grid .card:hover .solid-btn {
-    background-color: #fff;
-    color: #eb0000;
+  background-color: #fff;
+  color: #eb0000;
 }
 
 .contact-us .container-wrapper .grid .card:hover .disc {
-    background-color: #ffff;
+  background-color: #ffff;
 }
 
 .contact-us .container-wrapper .grid .card:hover .disc svg path {
-    color: #eb0000;
+  color: #eb0000;
 }
 
 .contact-us .container-wrapper .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 400px;
-    width: 1200px;
-    font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 1200px;
+  font-weight: 800;
 }
 
 .contact-us .container-wrapper .info .header-wrapper {
-    display: flex;
-    justify-content: start;
-    align-content: end;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: start;
+  align-content: end;
+  align-items: center;
+  gap: 20px;
 }
 
 .contact-us .container-wrapper .info .header-wrapper #red {
-    color: #eb0000;
+  color: #eb0000;
 }
 
 .contact-us .container-wrapper .info .header-wrapper h1 {
-    font-weight: 800;
-    font-size: 82px;
+  font-weight: 800;
+  font-size: 82px;
 }
 
 .contact-us .container-wrapper .info .header-wrapper h3 {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .contact-us .container-wrapper .info .content {
-    font-weight: 400;
-    font-size: 28px;
-    letter-spacing: -0.6px;
-    line-height: 1.2;
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
 }
 
 .contact-us .container-wrapper .info .content a {
-    font-size: 22px;
+  font-size: 22px;
 }
