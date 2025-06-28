@@ -214,8 +214,6 @@ section {
     margin-left: 103px;
     margin-top: -60px;
     display: inline-flex;
-
-
 }
 
 .sk-desc {
@@ -230,7 +228,6 @@ section {
 }
 
 .sk-mandates {
-
     max-width: 400px;
     margin-top: 10px;
     font-size: 15px;
@@ -245,8 +242,6 @@ section {
     min-height: 120px;
     /* Ensures consistent height */
     border-radius: 10px;
-
-
 }
 
 .container-mandates {
@@ -256,23 +251,15 @@ section {
     grid-gap: 10px;
     position: relative;
     margin-left: 200px;
-
-
-
 }
 
 
 
 .container-mandates .sk-mandates {
-
     height: auto;
 }
 
-
-
-
 .content {
-
     position: absolute;
     top: -30px;
     left: 100%;
@@ -282,7 +269,6 @@ section {
     box-sizing: border-box;
     transition: all 0.8s;
     opacity: 0;
-
 }
 
 #health-content {
@@ -311,9 +297,7 @@ section {
 }
 
 .container-hover:hover {
-
     transition: transform 2s ease;
-
 }
 
 .sk-title {
