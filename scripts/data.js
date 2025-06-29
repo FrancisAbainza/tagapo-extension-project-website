@@ -548,12 +548,12 @@ export const locations = [
 export const officials = [
   {
     image: {
-      src: "./images/officials/emerson_velasco.jpg",
-      alt: "Emerson E. Velasco Jr. picture"
+      src: "./images/officials/edison_caravana.jpg",
+      alt: "HON. Edison Caravana picture"
     },
-    firstName: "Emerson E.",
-    lastName: "Velasco Jr.",
-    position: "Treasurer"
+    firstName: "HON. EDISON “ETAW”",
+    lastName: "CARAVANA",
+    position: "PUNONG BARANGAY"
   },
   {
     image: {
@@ -629,11 +629,86 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/officials/edison_caravana.jpg",
-      alt: "HON. Edison Caravana picture"
+      src: "./images/officials/emerson_velasco.jpg",
+      alt: "Emerson E. Velasco Jr. picture"
     },
-    firstName: "HON. EDISON “ETAW”",
-    lastName: "CARAVANA",
-    position: "PUNONG BARANGAY"
+    firstName: "Emerson E.",
+    lastName: "Velasco Jr.",
+    position: "Treasurer"
+  },
+]
+
+export const standingCommitees = [
+  {
+    committee: "COMMITTEE ON APPROPRIATION",
+    chairman: "Kag. Duncan S. Amarante",
+  },
+  {
+    committee: "COMMITTEE ON EDUCATION",
+    chairman: "Kag. Leonard Bryan L. Lianza",
+  },
+  {
+    committee: "COMMITTEE ON INFRASTRUCTURE",
+    chairman: "Kag. Carlo C. Alojado",
+  },
+  {
+    committee: "COMMITTEE ON SENIOR CITIZENS AND PWD",
+    chairman: "Kag. Leonard Bryan L. Lianza",
+  },
+  {
+    committee: "COMMITTEE ON TRANSPORTATION",
+    chairman: "Kag. Duncan S. Amarante",
+  },
+  {
+    committee: "COMMITTEE ON TRADE AND INDUSTRY",
+    chairman: "Kag. Adjar M. Lumague",
+  },
+  {
+    committee: "COMMITTEE ON WOMEN AND FAMILY",
+    chairman: "Kag. Carlo C. Alojado",
+  },
+  {
+    committee: "COMMITTEE ON JOB EMPLOYMENT",
+    chairman: "Kag. Manuel G. Alon",
+  },
+  {
+    committee: "COMMITTEE ON WAYS AND MEANS",
+    chairman: "Kag. Marvin B. Ambas",
+  },
+  {
+    committee: "COMMITTEE ON ETHICS",
+    chairman: "Kag. Robert Aldrich B. Lumague",
+  },
+  {
+    committee: "COMMITTEE ON SOCIAL SERVICES",
+    chairman: "Kag. Marvin B. Ambas",
+  },
+  {
+    committee: "COMMITTEE ON ENVIRONMENT",
+    chairman: "Kag. Leonard Bryan L. Lianza",
+  },
+  {
+    committee: "COMMITTEE ON HEALTH AND SANITATION",
+    chairman: "Kag. Carlo C. Alojado",
+  },
+  {
+    committee: "COMMITTEE ON AGRICULTURE",
+    chairman: "Kag. Robert Aldrich B. Lumague",
+  },
+  {
+    committee: "COMMITTEE ON LIVELIHOOD",
+    chairman: "Kag. Marvin B. Ambas",
+  },
+  {
+    committee: "COMMITTEE ON HUMAN RIGHTS",
+    chairman: "Kag. Adjar M. Lumague",
+  },
+  {
+    committee: "COMMITTEE ON PEACE AND ORDER",
+    chairman: "Kag. Duncan S. Amarante",
+  },
+  {
+    committee: "COMMITTEE ON YOUTH AND SPORTS DEVELOPMENT",
+    chairman: "Hon. Alexandra A. Lumague",
   },
 ]

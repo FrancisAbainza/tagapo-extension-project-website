@@ -193,102 +193,30 @@
     </main>
   </section>
 
-  <section class="committee">
-    <h2>Standing <span>Committees</span></h2>
-    <p>Shows the official Standing Committees of Barangay Tagapo <br> and their are of responsibility.</p>
+  <!-- committees -->
+  <section class="committees hidden" id="committees">
+    <h2>STANDING <span>COMMITTEES</span></h2>
+    <p>Shows the official Standing Committees of Barangay Tagapo and their areas of responsibility.</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>COMMITTEE ON APPROPRIATION</h3>
-        <p class="grey-box"><span>Kag. Duncan S. Amarante</span></p>
-        <p class="desc">Chairman</p>
+    <main>
+      <button class="solid-button left-btn" id="committeesCarouselLeftBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825Z" fill="white" />
+        </svg>
+      </button>
+      <button class="solid-button right-btn" id="committeesCarouselRightBtn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white" />
+        </svg>
+      </button>
+      <div class="carousel">
+        <div class="container" id="committeesCarouselContainer">
+        </div>
       </div>
-      <div class="card">
-        <h3>COMMITTEE ON INFRASTRACTURE</h3>
-        <p class="grey-box"><span>Kag. Carlo C. Alojado</span></p>
-        <p class="desc">Chairman</p>
       </div>
-      <div class="card">
-        <h3>COMMITTEE ON TRANSPORTATION</h3>
-        <p class="grey-box"><span>Kag. Duncan S. Amarante</span></p>
-        <p class="desc">Chairman</p>
+      <div class="navigate-buttons" id="committeesNavigateButtonsContainer">
       </div>
-      <div class="card">
-        <h3>COMMITTEE ON EDUCATION</h3>
-        <p class="grey-box"><span>Kag. Leonard Bryan L. Lianza</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON SENIOR CITIZENS AND PWD</h3>
-        <p class="grey-box"><span>Kag. Leonard Bryan L. Lianza</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON TRADE AND INDUSTRY</h3>
-        <p class="grey-box"><span>Kag. Adjar M. Lumague</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON WOMEN AND FAMILY</h3>
-        <p class="grey-box"><span>Kag. Carlo C. Alojado</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON WAYS AND MEANS</h3>
-        <p class="grey-box"><span>Kag. Marvin B. Ambas</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON SOCIAL SERVICES</h3>
-        <p class="grey-box"><span>Kag. Marvin B. Ambas</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON JOB EMPLOYMENT</h3>
-        <p class="grey-box"><span>Kag. Manuel G. ALon</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON ETHICS</h3>
-        <p class="grey-box"><span>Kag. Robert Aldrich B. Lumague</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON ENVIRONMENT</h3>
-        <p class="grey-box"><span>Kag. Leonard Bryan L. Lianza</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON HEALTH AND SANITATION</h3>
-        <p class="grey-box"><span>Kag. Carlo C. Alojado</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON LIVELIHOOD</h3>
-        <p class="grey-box"><span>Kag. Marvin B. Ambas</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON PEACE AND ORDER</h3>
-        <p class="grey-box"><span>Kag. Duncan S. Amarante</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON AGRICULTURE</h3>
-        <p class="grey-box"><span>Kag. Robert Aldrich B. Lumague</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON HUMAN RIGHTS</h3>
-        <p class="grey-box"><span>Kag. Adjar M. Lumague</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-      <div class="card">
-        <h3>COMMITTEE ON YOUTH AND SPORTS DEVELOPMENT</h3>
-        <p class="grey-box"><span>Hon. Alexandra A. Lumague</span></p>
-        <p class="desc">Chairman</p>
-      </div>
-    </div>
+    </main>
   </section>
 
   <!-- ID Application -->
@@ -438,7 +366,7 @@
   <!-- sectors -->
   <section class="sectors hidden" id="sectors">
     <h2>BARANGAY <span>SECTORS</span></h2>
-    <p>"Covers healthcare, safety, youth (SK) programs, local businesses, and environmental efforts."</p>
+    <p>Covers healthcare, safety, youth (SK) programs, local businesses, and environmental efforts.</p>
     <div class="container">
       <article class="card health">
         <a href="./pages/health/health.html">

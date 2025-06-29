@@ -1,4 +1,4 @@
-import { locations, officials } from './data.js';
+import { locations, officials, standingCommitees } from './data.js';
 
 /* subheader */
 function initializeSubheaderScript() {
@@ -353,6 +353,180 @@ function initializeOfficialsScript() {
   initializeCarouselButtonsScript();
 }
 
+/* committees */
+function initializeCommitteesScript() {
+  const committeesCarouselContainer = document.querySelector('#committeesCarouselContainer');
+  const committeesNavigateButtonsContainer = document.querySelector('#committeesNavigateButtonsContainer');
+  let carouselItemCount = 0;
+
+  function getNumberOfCardsPerPage() {
+    const viewportWidth = window.innerWidth;
+    let numOfCardsPerPage;
+
+    if (viewportWidth >= 920) {
+      numOfCardsPerPage = 3;
+    } else if (viewportWidth >= 700) {
+      numOfCardsPerPage = 2;
+    } else {
+      numOfCardsPerPage = 1;
+    }
+
+    return numOfCardsPerPage;
+  }
+
+  function renderItems() {
+    for (let i = 0; i < standingCommitees.length; i += 2) {
+      carouselItemCount++;
+      committeesCarouselContainer.innerHTML += `
+        <article class="committee-card">
+          <article class="committee-card">
+            <h3>${standingCommitees[i].committee}</h3>
+            <div>
+              <h3>${standingCommitees[i].chairman}</h3>
+            </div>
+            <p>Chairman</p>
+          </article>
+
+          <article class="committee-card">
+            <h3>${standingCommitees[i + 1].committee}</h3>
+            <div>
+              <h3>${standingCommitees[i + 1].chairman}</h3>
+            </div>
+            <p>Chairman</p>
+          </article>
+        </article>
+      `
+    }
+  }
+
+  function renderCarouselNavButtons() {
+    const numOfCardsPerPage = getNumberOfCardsPerPage();
+    let lastPage;
+
+    /* Determine the maximum amount of page using this formula: 
+    Math.ceil(o / c) - 1 
+    o = number of committees
+    c = number of cards
+    */
+    lastPage = Math.ceil(carouselItemCount / numOfCardsPerPage);
+
+    committeesNavigateButtonsContainer.innerHTML = "";
+    for (let i = 0; i < lastPage; i++) {
+      committeesNavigateButtonsContainer.innerHTML += `
+        <button data-committee-carousel-nav-btn></button>
+      `
+    }
+  }
+
+  function initializeCarouselButtonsScript() {
+    const committeesCards = document.getElementsByClassName('committee-card');
+    const committeesCarouselLeftBtn = document.querySelector('#committeesCarouselLeftBtn');
+    const committeesCarouselRightBtn = document.querySelector('#committeesCarouselRightBtn');
+    let carouselNavButtons;
+    let currentPage = 0;
+
+    committeesCarouselLeftBtn.addEventListener('click', () => {
+      changePage(currentPage - 1);
+      updateUI();
+    });
+
+    committeesCarouselRightBtn.addEventListener('click', () => {
+      changePage(currentPage + 1);
+      updateUI();
+    });
+
+    // Adds event listener to carousel navigation buttons
+    function initializeCarouselNavButtonsScript() {
+      carouselNavButtons = document.querySelectorAll('[data-committee-carousel-nav-btn]');
+      carouselNavButtons[0].classList.add('active');
+
+      carouselNavButtons.forEach((carouselNavButton, index) => {
+        carouselNavButton.addEventListener("click", () => {
+          changePage(index);
+          updateUI();
+        })
+      });
+    }
+
+    // Changes current page
+    function changePage(newPage) {
+      const prevActiveNavButton = carouselNavButtons[currentPage];
+      const currentActiveNavButton = carouselNavButtons[newPage];
+      prevActiveNavButton.classList.remove('active');
+      currentActiveNavButton.classList.add('active');
+
+      currentPage = newPage;
+    }
+
+    // Updates carousel container transform
+    function updateUI() {
+      const committeesCardWidth = committeesCards[0].getBoundingClientRect().width;
+      const numOfCardsPerPage = getNumberOfCardsPerPage();
+      let cardsPassed;
+      let lastPage;
+
+      /* Set both button's visibility to visible */
+      committeesCarouselLeftBtn.style.visibility = 'visible';
+      committeesCarouselRightBtn.style.visibility = 'visible';
+
+      /* Determine the number of cards the carousel have passed base on the current page */
+      cardsPassed = numOfCardsPerPage * currentPage;
+
+      /* Determine the maximum amount of page using this formula: 
+      Math.ceil(o / c) - 1 
+      o = number of committees
+      c = number of cards
+      */
+      lastPage = Math.ceil(carouselItemCount / numOfCardsPerPage) - 1;
+
+      /* Prevent the cardsPassed from exceeding (number of committees - number of cards per page) */
+      if (cardsPassed > carouselItemCount - numOfCardsPerPage) {
+        cardsPassed = carouselItemCount - numOfCardsPerPage;
+      }
+
+      /* Remove the right button when the carousel reaches the last page */
+      if (currentPage === lastPage) {
+        committeesCarouselRightBtn.style.visibility = 'hidden';
+      }
+
+      /* Remove the left button when the carousel reaches the first page */
+      if (currentPage === 0) {
+        committeesCarouselLeftBtn.style.visibility = 'hidden';
+      }
+
+      /* Apply the carousel container transform value by adding
+      1. Total width of all cards passed
+      2. total width of all the gaps passed
+      */
+      committeesCarouselContainer.style.transform = `translateX(-${(committeesCardWidth * cardsPassed) + (24 * cardsPassed)}px)`
+    }
+
+    // Reset the carousel transform when the screen resizes to prevent unorganized transform state and rerender navigation buttons and their script
+    function initializeWindowResizeEventScript() {
+      let lastWidth = window.innerWidth;
+
+      window.addEventListener('resize', () => {
+        const currentWidth = window.innerWidth;
+
+        if (currentWidth !== lastWidth) {
+          lastWidth = currentWidth;
+          renderCarouselNavButtons();
+          initializeCarouselNavButtonsScript();
+          changePage(0);
+          updateUI();
+        }
+      });
+    }
+
+    initializeCarouselNavButtonsScript();
+    initializeWindowResizeEventScript();
+  }
+
+  renderItems();
+  renderCarouselNavButtons();
+  initializeCarouselButtonsScript();
+}
+
 /* id application */
 async function initializeIdApplicationScript() {
   const idApplicationStep1 = document.querySelector('#idApplicationStep1');
@@ -393,6 +567,7 @@ function initializeIntersectAnimations() {
   const historyCard = document.querySelector('#historyCard');
   const map = document.querySelector('#map');
   const officials = document.querySelector('#officials');
+  const committees = document.querySelector('#committees');
   const idApplication = document.querySelector('#idApplication');
   const articles = document.querySelector('#articles');
   const sectors = document.querySelector('#sectors');
@@ -405,6 +580,7 @@ function initializeIntersectAnimations() {
   observeElement(historyCard, "animate-scaleup");
   observeElement(map, "animate-scaleup");
   observeElement(officials, "animate-scaleup");
+  observeElement(committees, "animate-scaleup");
   observeElement(idApplication, "animate-scaleup");
   observeElement(articles, "animate-scaleup");
   observeElement(sectors, "animate-scaleup");
@@ -428,5 +604,6 @@ initializeSubheaderScript();
 initializeHistoryScript();
 initializeMapScript();
 initializeOfficialsScript();
+initializeCommitteesScript();
 initializeIdApplicationScript();
 initializeIntersectAnimations();
