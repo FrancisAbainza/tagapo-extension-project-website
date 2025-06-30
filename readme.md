@@ -58,6 +58,8 @@ Key areas include:
 | **5**     | Barruga, Jucel P.                         | Abrea, Jofy Marco B.<br>Capuso, Czyruss A. | Napi, Charisse Mae A.             | Manalo, Zamantha Artlyn O.<br>Diaz, Leah Jean L. | Ebero, Christian James O.<br>Abainza, Francis Rafael A. | Librada, Ma. Cathleen O.<br>Buenaflor, Alexa Jane V. |
 | **6**     | Cosio, John Lory D.                       | Karunungan, Myka C.<br>Fiscal, Dan Jeshua D. |                               | Pacuan, Ansherie Dylan Franzesca A.          |                                        |                                      |
 
+---
+
 ## 🚀 Key Features by Section
 
 ### 🏠 Home Page
