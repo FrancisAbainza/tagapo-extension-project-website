@@ -1,3 +1,5 @@
+import { initializeHeaderFooterScript } from "../scripts/headerFooter.js";
+
 const backBtn = document.querySelector("#backBtn");
 const featureArticle = document.querySelector("#featureArticle");
 
@@ -18,3 +20,4 @@ backBtn.addEventListener("click", () => {
 });
 
 observeElement(featureArticle, "animate-scaleup");
+initializeHeaderFooterScript();

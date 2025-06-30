@@ -1,4 +1,6 @@
 import { locations, officials, standingCommitees } from './data.js';
+import { initializeHeaderFooterScript } from './headerFooter.js';
+import { initializeCarouselScript } from './carousel.js';
 
 /* subheader */
 function initializeSubheaderScript() {
@@ -187,344 +189,68 @@ async function initializeMapScript() {
 
 /* officials */
 function initializeOfficialsScript() {
-  const officialsCarouselContainer = document.querySelector('#officialsCarouselContainer');
-  const navigateButtonsContainer = document.querySelector('#navigateButtonsContainer');
+  const officialsCarousel = document.querySelector('#officialsCarousel');
+  const officialsBreakpoints = [
+    { viewportWidth: 1400, numOfItems: 4 },
+    { viewportWidth: 920, numOfItems: 3 },
+    { viewportWidth: 700, numOfItems: 2 },
+    { viewportWidth: 0, numOfItems: 1 },
+  ];
+  const officialsCarouselGap = 24;
+  let officialsCarouselItems = [];
 
-  function getNumberOfCardsPerPage() {
-    const viewportWidth = window.innerWidth;
-    let numOfCardsPerPage;
-
-    if (viewportWidth >= 1400) {
-      numOfCardsPerPage = 4;
-    } else if (viewportWidth >= 920) {
-      numOfCardsPerPage = 3;
-    } else if (viewportWidth >= 700) {
-      numOfCardsPerPage = 2;
-    } else {
-      numOfCardsPerPage = 1;
-    }
-
-    return numOfCardsPerPage;
-  }
-
-  function renderOfficialCards() {
-    officials.forEach((official) => {
-      officialsCarouselContainer.innerHTML += `
-        <article class="official-card">
-          <img src="${official.image.src}" alt="${official.image.alt}">
-          <div class="content">
-            <div class="border"></div>
-            <div class="text">
-              <h3>${official.firstName} <br />${official.lastName}</h3>
-              <p>${official.position}</p>
-            </div>
-            <div class="border"></div>
+  officials.forEach((official) => {
+    officialsCarouselItems.push(`
+      <article class="official-card item">
+        <img src="${official.image.src}" alt="${official.image.alt}">
+        <div class="content">
+          <div class="border"></div>
+          <div class="text">
+            <h3>${official.firstName} <br />${official.lastName}</h3>
+            <p>${official.position}</p>
           </div>
-        </article>
-      `
-    });
-  }
+          <div class="border"></div>
+        </div>
+      </article>
+    `);
+  });
 
-  function renderCarouselNavButtons() {
-    const numOfCardsPerPage = getNumberOfCardsPerPage();
-    let lastPage;
-
-    /* Determine the maximum amount of page using this formula: 
-    Math.ceil(o / c) - 1 
-    o = number of officials
-    c = number of cards
-    */
-    lastPage = Math.ceil(officials.length / numOfCardsPerPage);
-
-    navigateButtonsContainer.innerHTML = "";
-    for (let i = 0; i < lastPage; i++) {
-      navigateButtonsContainer.innerHTML += `
-        <button data-official-carousel-nav-btn></button>
-      `
-    }
-  }
-
-  function initializeCarouselButtonsScript() {
-    const officialsCards = document.getElementsByClassName('official-card');
-    const officialsCarouselLeftBtn = document.querySelector('#officialsCarouselLeftBtn');
-    const officialsCarouselRightBtn = document.querySelector('#officialsCarouselRightBtn');
-    let carouselNavButtons;
-    let currentPage = 0;
-
-    officialsCarouselLeftBtn.addEventListener('click', () => {
-      changePage(currentPage - 1);
-      updateUI();
-    });
-
-    officialsCarouselRightBtn.addEventListener('click', () => {
-      changePage(currentPage + 1);
-      updateUI();
-    });
-
-    // Adds event listener to carousel navigation buttons
-    function initializeCarouselNavButtonsScript() {
-      carouselNavButtons = document.querySelectorAll('[data-official-carousel-nav-btn]');
-      carouselNavButtons[0].classList.add('active');
-
-      carouselNavButtons.forEach((carouselNavButton, index) => {
-        carouselNavButton.addEventListener("click", () => {
-          changePage(index);
-          updateUI();
-        })
-      });
-    }
-
-    // Changes current page
-    function changePage(newPage) {
-      const prevActiveNavButton = carouselNavButtons[currentPage];
-      const currentActiveNavButton = carouselNavButtons[newPage];
-      prevActiveNavButton.classList.remove('active');
-      currentActiveNavButton.classList.add('active');
-
-      currentPage = newPage;
-    }
-
-    // Updates carousel container transform
-    function updateUI() {
-      const officialsCardWidth = officialsCards[0].getBoundingClientRect().width;
-      const numOfCardsPerPage = getNumberOfCardsPerPage();
-      let cardsPassed;
-      let lastPage;
-
-      /* Set both button's visibility to visible */
-      officialsCarouselLeftBtn.style.visibility = 'visible';
-      officialsCarouselRightBtn.style.visibility = 'visible';
-
-      /* Determine the number of cards the carousel have passed base on the current page */
-      cardsPassed = numOfCardsPerPage * currentPage;
-
-      /* Determine the maximum amount of page using this formula: 
-      Math.ceil(o / c) - 1 
-      o = number of officials
-      c = number of cards
-      */
-      lastPage = Math.ceil(officials.length / numOfCardsPerPage) - 1;
-
-      /* Prevent the cardsPassed from exceeding (number of officials - number of cards per page) */
-      if (cardsPassed > officials.length - numOfCardsPerPage) {
-        cardsPassed = officials.length - numOfCardsPerPage;
-      }
-
-      /* Remove the right button when the carousel reaches the last page */
-      if (currentPage === lastPage) {
-        officialsCarouselRightBtn.style.visibility = 'hidden';
-      }
-
-      /* Remove the left button when the carousel reaches the first page */
-      if (currentPage === 0) {
-        officialsCarouselLeftBtn.style.visibility = 'hidden';
-      }
-
-      /* Apply the carousel container transform value by adding
-      1. Total width of all cards passed
-      2. total width of all the gaps passed
-      */
-      officialsCarouselContainer.style.transform = `translateX(-${(officialsCardWidth * cardsPassed) + (24 * cardsPassed)}px)`
-    }
-
-    // Reset the carousel transform when the screen resizes to prevent unorganized transform state and rerender navigation buttons and their script
-    function initializeWindowResizeEventScript() {
-      let lastWidth = window.innerWidth;
-
-      window.addEventListener('resize', () => {
-        const currentWidth = window.innerWidth;
-
-        if (currentWidth !== lastWidth) {
-          lastWidth = currentWidth;
-          renderCarouselNavButtons();
-          initializeCarouselNavButtonsScript();
-          changePage(0);
-          updateUI();
-        }
-      });
-    }
-
-    initializeCarouselNavButtonsScript();
-    initializeWindowResizeEventScript();
-  }
-
-  renderOfficialCards();
-  renderCarouselNavButtons();
-  initializeCarouselButtonsScript();
+  initializeCarouselScript(officialsCarousel, officialsCarouselItems, officialsBreakpoints, officialsCarouselGap);
 }
 
 /* committees */
 function initializeCommitteesScript() {
-  const committeesCarouselContainer = document.querySelector('#committeesCarouselContainer');
-  const committeesNavigateButtonsContainer = document.querySelector('#committeesNavigateButtonsContainer');
-  let carouselItemCount = 0;
-
-  function getNumberOfCardsPerPage() {
-    const viewportWidth = window.innerWidth;
-    let numOfCardsPerPage;
-
-    if (viewportWidth >= 920) {
-      numOfCardsPerPage = 3;
-    } else if (viewportWidth >= 700) {
-      numOfCardsPerPage = 2;
-    } else {
-      numOfCardsPerPage = 1;
-    }
-
-    return numOfCardsPerPage;
-  }
-
-  function renderItems() {
-    for (let i = 0; i < standingCommitees.length; i += 2) {
-      carouselItemCount++;
-      committeesCarouselContainer.innerHTML += `
+  const committeesCarousel = document.querySelector('#committeesCarousel');
+  const committeesBreakpoints = [
+    { viewportWidth: 920, numOfItems: 3 },
+    { viewportWidth: 700, numOfItems: 2 },
+    { viewportWidth: 0, numOfItems: 1 },
+  ];
+  const committeesCarouselGap = 12;
+  let committeesCarouselItems = [];
+  for (let i = 0; i < standingCommitees.length; i += 2) {
+    committeesCarouselItems.push(`
+      <article class="committee-item item">
         <article class="committee-card">
-          <article class="committee-card">
-            <h3>${standingCommitees[i].committee}</h3>
-            <div>
-              <h3>${standingCommitees[i].chairman}</h3>
-            </div>
-            <p>Chairman</p>
-          </article>
-
-          <article class="committee-card">
-            <h3>${standingCommitees[i + 1].committee}</h3>
-            <div>
-              <h3>${standingCommitees[i + 1].chairman}</h3>
-            </div>
-            <p>Chairman</p>
-          </article>
+          <h3>${standingCommitees[i].committee}</h3>
+          <div>
+            <h3>${standingCommitees[i].chairman}</h3>
+          </div>
+          <p>Chairman</p>
         </article>
-      `
-    }
+
+        <article class="committee-card">
+          <h3>${standingCommitees[i + 1].committee}</h3>
+          <div>
+            <h3>${standingCommitees[i + 1].chairman}</h3>
+          </div>
+          <p>Chairman</p>
+        </article>
+      </article>
+    `);
   }
 
-  function renderCarouselNavButtons() {
-    const numOfCardsPerPage = getNumberOfCardsPerPage();
-    let lastPage;
-
-    /* Determine the maximum amount of page using this formula: 
-    Math.ceil(o / c) - 1 
-    o = number of committees
-    c = number of cards
-    */
-    lastPage = Math.ceil(carouselItemCount / numOfCardsPerPage);
-
-    committeesNavigateButtonsContainer.innerHTML = "";
-    for (let i = 0; i < lastPage; i++) {
-      committeesNavigateButtonsContainer.innerHTML += `
-        <button data-committee-carousel-nav-btn></button>
-      `
-    }
-  }
-
-  function initializeCarouselButtonsScript() {
-    const committeesCards = document.getElementsByClassName('committee-card');
-    const committeesCarouselLeftBtn = document.querySelector('#committeesCarouselLeftBtn');
-    const committeesCarouselRightBtn = document.querySelector('#committeesCarouselRightBtn');
-    let carouselNavButtons;
-    let currentPage = 0;
-
-    committeesCarouselLeftBtn.addEventListener('click', () => {
-      changePage(currentPage - 1);
-      updateUI();
-    });
-
-    committeesCarouselRightBtn.addEventListener('click', () => {
-      changePage(currentPage + 1);
-      updateUI();
-    });
-
-    // Adds event listener to carousel navigation buttons
-    function initializeCarouselNavButtonsScript() {
-      carouselNavButtons = document.querySelectorAll('[data-committee-carousel-nav-btn]');
-      carouselNavButtons[0].classList.add('active');
-
-      carouselNavButtons.forEach((carouselNavButton, index) => {
-        carouselNavButton.addEventListener("click", () => {
-          changePage(index);
-          updateUI();
-        })
-      });
-    }
-
-    // Changes current page
-    function changePage(newPage) {
-      const prevActiveNavButton = carouselNavButtons[currentPage];
-      const currentActiveNavButton = carouselNavButtons[newPage];
-      prevActiveNavButton.classList.remove('active');
-      currentActiveNavButton.classList.add('active');
-
-      currentPage = newPage;
-    }
-
-    // Updates carousel container transform
-    function updateUI() {
-      const committeesCardWidth = committeesCards[0].getBoundingClientRect().width;
-      const numOfCardsPerPage = getNumberOfCardsPerPage();
-      let cardsPassed;
-      let lastPage;
-
-      /* Set both button's visibility to visible */
-      committeesCarouselLeftBtn.style.visibility = 'visible';
-      committeesCarouselRightBtn.style.visibility = 'visible';
-
-      /* Determine the number of cards the carousel have passed base on the current page */
-      cardsPassed = numOfCardsPerPage * currentPage;
-
-      /* Determine the maximum amount of page using this formula: 
-      Math.ceil(o / c) - 1 
-      o = number of committees
-      c = number of cards
-      */
-      lastPage = Math.ceil(carouselItemCount / numOfCardsPerPage) - 1;
-
-      /* Prevent the cardsPassed from exceeding (number of committees - number of cards per page) */
-      if (cardsPassed > carouselItemCount - numOfCardsPerPage) {
-        cardsPassed = carouselItemCount - numOfCardsPerPage;
-      }
-
-      /* Remove the right button when the carousel reaches the last page */
-      if (currentPage === lastPage) {
-        committeesCarouselRightBtn.style.visibility = 'hidden';
-      }
-
-      /* Remove the left button when the carousel reaches the first page */
-      if (currentPage === 0) {
-        committeesCarouselLeftBtn.style.visibility = 'hidden';
-      }
-
-      /* Apply the carousel container transform value by adding
-      1. Total width of all cards passed
-      2. total width of all the gaps passed
-      */
-      committeesCarouselContainer.style.transform = `translateX(-${(committeesCardWidth * cardsPassed) + (24 * cardsPassed)}px)`
-    }
-
-    // Reset the carousel transform when the screen resizes to prevent unorganized transform state and rerender navigation buttons and their script
-    function initializeWindowResizeEventScript() {
-      let lastWidth = window.innerWidth;
-
-      window.addEventListener('resize', () => {
-        const currentWidth = window.innerWidth;
-
-        if (currentWidth !== lastWidth) {
-          lastWidth = currentWidth;
-          renderCarouselNavButtons();
-          initializeCarouselNavButtonsScript();
-          changePage(0);
-          updateUI();
-        }
-      });
-    }
-
-    initializeCarouselNavButtonsScript();
-    initializeWindowResizeEventScript();
-  }
-
-  renderItems();
-  renderCarouselNavButtons();
-  initializeCarouselButtonsScript();
+  initializeCarouselScript(committeesCarousel, committeesCarouselItems, committeesBreakpoints, committeesCarouselGap);
 }
 
 /* id application */
@@ -600,6 +326,7 @@ function observeElement(element, className) {
 }
 
 /* Run all sections' script */
+initializeHeaderFooterScript();
 initializeSubheaderScript();
 initializeHistoryScript();
 initializeMapScript();
