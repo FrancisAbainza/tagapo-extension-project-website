@@ -1,0 +1,85 @@
+.main-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.main-carousel>button {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 7;
+  transform: translateY(-50%);
+}
+
+.main-carousel>.left-btn {
+  left: -12px;
+}
+
+.main-carousel>.right-btn {
+  right: -12px;
+}
+
+.main-carousel>.carousel {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.main-carousel>.carousel>.container {
+  display: flex;
+  gap: 24px;
+  transition: transform .8s ease-in-out;
+}
+
+.main-carousel>.carousel>.container>.item {
+  flex-shrink: 0;
+}
+
+.main-carousel>.navigate-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.main-carousel>.navigate-buttons>button {
+  border: none;
+  width: 10%;
+  height: 6px;
+  background-color: #D9D9D9;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+}
+
+.main-carousel>.navigate-buttons>button.active {
+  background-color: var(--primary-color);
+}
+
+/* ================================================================== */
+/* Tablet breakpoint */
+@media only screen and (min-width: 920px) {
+  .main-carousel>.left-btn {
+    left: -25px;
+  }
+
+  .main-carousel>.right-btn {
+    right: -25px;
+  }
+}
+
+/* ================================================================== */
+/* Desktop breakpoint */
+@media only screen and (min-width: 1400px) {
+  .main-carousel>.left-btn {
+    left: -65px;
+  }
+
+  .main-carousel>.right-btn {
+    right: -65px;
+  }
+}

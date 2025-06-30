@@ -62,6 +62,8 @@ function observeElement(element, className) {
   observer.observe(element);
 }
 
-initializeHeaderScript();
-initializeFooterScript();
-initializeIntersectAnimations();
+export function initializeHeaderFooterScript() {
+  initializeHeaderScript();
+  initializeFooterScript();
+  initializeIntersectAnimations();
+};

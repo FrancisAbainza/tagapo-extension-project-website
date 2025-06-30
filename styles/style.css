@@ -1,3 +1,7 @@
+@import url(./global.css);
+@import url(./header-footer.css);
+@import url(./carousel.css);
+
 .subheader {
   background-color: var(--primary-color);
   padding: 12px 24px;
@@ -318,46 +322,7 @@
   text-align: center;
 }
 
-.officials>main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin: auto;
-  max-width: 1200px;
-}
-
-.officials>main>button {
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  z-index: 7;
-  transform: translateY(-50%);
-}
-
-.officials>main>.left-btn {
-  left: -12px;
-  visibility: hidden;
-}
-
-.officials>main>.right-btn {
-  right: -12px;
-}
-
-.officials>main>.carousel {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.officials>main>.carousel>.container {
-  display: flex;
-  gap: 24px;
-  transition: transform .8s ease-in-out;
-}
-
-.officials>main>.carousel>.container>.official-card {
+.official-card {
   position: relative;
   flex-shrink: 0;
   border-radius: 15px;
@@ -365,12 +330,12 @@
   overflow: hidden;
 }
 
-.officials>main>.carousel>.container>.official-card>img {
+.official-card>img {
   display: block;
   width: 100%;
 }
 
-.officials>main>.carousel>.container>.official-card>.content {
+.official-card>.content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -379,40 +344,15 @@
   box-shadow: 0px -5px 10px rgba(0, 0, 0, .5);
 }
 
-.officials>main>.carousel>.container>.official-card>.content>.border {
+.official-card>.content>.border {
   background: linear-gradient(to right, #f0f0f0, #616161, #f0f0f0, #616161, #f0f0f0);
   height: 8px;
 }
 
-.officials>main>.carousel>.container>.official-card>.content>.text {
+.official-card>.content>.text {
   padding: 6px 12px;
   color: white;
   text-align: center;
-}
-
-.officials>main>.navigate-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.officials>main>.navigate-buttons>button {
-  border: none;
-  width: 10%;
-  height: 6px;
-  background-color: #D9D9D9;
-  cursor: pointer;
-  transition: background-color .1s ease-in-out;
-}
-
-.officials>main>.navigate-buttons>button.active {
-  background-color: var(--primary-color);
-}
-
-@media only screen and (min-width: 700px) {
-  .officials>main>.carousel>.container>.official-card {
-    width: calc(50% - 12px);
-  }
 }
 
 /* committees */
@@ -436,56 +376,14 @@
   text-align: center;
 }
 
-.committees>main {
-  position: relative;
+.committee-item {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin: auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.committees>main>button {
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  z-index: 7;
-  transform: translateY(-50%);
-}
-
-.committees>main>.left-btn {
-  left: -12px;
-  visibility: hidden;
-}
-
-.committees>main>.right-btn {
-  right: -12px;
-}
-
-.committees>main>.carousel {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.committees>main>.carousel>.container {
-  display: flex;
-  gap: 24px;
-  transition: transform .8s ease-in-out;
-}
-
-.committees>main>.carousel>.container>.committee-card {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 100%;
   padding: 12px;
 }
 
-.committees>main>.carousel>.container>.committee-card>.committee-card {
+.committee-item>.committee-card {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -498,7 +396,7 @@
   box-shadow: 0px 1px 10px rgba(0, 0, 0, .5);
 }
 
-.committees>main>.carousel>.container>.committee-card>.committee-card>div {
+.committee-item>.committee-card>div {
   align-self: stretch;
   margin-top: auto;
   border-radius: 50vh;
@@ -506,33 +404,8 @@
   background-color: #DCDCDC;
 }
 
-.committees>main>.carousel>.container>.committee-card>.committee-card>div>h3 {
+.committee-item>.committee-card>div>h3 {
   color: var(--primary-color);
-}
-
-.committees>main>.navigate-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.committees>main>.navigate-buttons>button {
-  border: none;
-  width: 10%;
-  height: 6px;
-  background-color: #D9D9D9;
-  cursor: pointer;
-  transition: background-color .1s ease-in-out;
-}
-
-.committees>main>.navigate-buttons>button.active {
-  background-color: var(--primary-color);
-}
-
-@media only screen and (min-width: 700px) {
-  .committees>main>.carousel>.container>.committee-card {
-    width: calc(50% - 12px);
-  }
 }
 
 /* id-application */
@@ -843,33 +716,9 @@
     padding: 0px 48px 168px;
   }
 
-  .officials>main>.carousel>.container>.official-card {
-    width: calc(33.3% - 16px);
-  }
-
-  .officials>main>.left-btn {
-    left: -25px;
-  }
-
-  .officials>main>.right-btn {
-    right: -25px;
-  }
-
   /* committees */
   .committees {
     padding: 0px 48px 168px;
-  }
-
-  .committees>main>.carousel>.container>.committee-card {
-    width: calc(33.3% - 16px);
-  }
-
-  .committees>main>.left-btn {
-    left: -25px;
-  }
-
-  .committees>main>.right-btn {
-    right: -25px;
   }
 
   /* id-application */
@@ -975,120 +824,3 @@
     text-align: left;
   }
 }
-
-/* ================================================================== */
-/* Desktop breakpoint */
-@media only screen and (min-width: 1400px) {
-  /* officials */
-  .officials>main>.carousel>.container>.official-card {
-    width: calc(25% - 18px);
-  }
-
-  .officials>main>.left-btn {
-    left: -65px;
-  }
-
-  .officials>main>.right-btn {
-    right: -65px;
-  }
-
-  /* committees */
-  .committees>main>.left-btn {
-    left: -65px;
-  }
-
-<<<<<<< Updated upstream
-  .committees>main>.right-btn {
-    right: -65px;
-  }
-}
-=======
-
-
-/*=================================================================*/
-/* Temporary Style for Committees" */
-section.committee {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
-  padding: 0px 48px 168px;
-  flex-direction: column;
-}
-
-section.committee>h2 {
-  padding: 0px 0px 24px;
-  font-size: 60px;
-  font-weight: 700;
-}
-
-section.committee>h2 span {
-  color: var(--primary-color);
-}
-
-section.committee>p {
-  text-align: center;
-  font-weight: 500;
-}
-
-section.committee>.grid {
-  padding: 48px 0px;
-  display: grid;
-  width: 1200px;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 48px;
-}
-
-section.committee>.grid .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  box-shadow:
-    -4px 4px 12px rgba(0, 0, 0, 0.1),
-    /* left shadow */
-    4px 4px 12px rgba(0, 0, 0, 0.1),
-    /* right shadow */
-    0px 8px 16px rgba(0, 0, 0, 0.1);
-  /* bottom shadow */
-  width: 380px;
-  height: 150px;
-  padding: 24px;
-  border-radius: 24px;
-  cursor: default;
-}
-
-section.committee > .grid .card:hover {
-  box-shadow: 
-    -4px 4px 12px rgba(235, 0, 0, 0.15),   /* soft red tint on left */
-     4px 4px 12px rgba(235, 0, 0, 0.15),   /* right */
-     0px 6px 16px rgba(235, 0, 0, 0.25);   /* bottom */
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-section.committee>.grid .card h3 {
-  font-weight: 550;
-  font-size: 17px;
-}
-
-section.committee>.grid .card .grey-box {
-  text-align: center;
-  margin: 0 auto;
-  width: 330px;
-  background-color: #D9D9D9;
-  padding: 6px 12px;
-  border-radius: 16px;
-  white-space: nowrap;
-  font-size: 17px;
-  font-style: italic;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-section.committee>.grid .card:hover .grey-box {
-  background-color: #f0f0f0;
-}
->>>>>>> Stashed changes
