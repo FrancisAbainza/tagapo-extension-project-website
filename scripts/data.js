@@ -566,11 +566,11 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/officials/marvin_ambas.jpg",
-      alt: "Marvin B. Ambas picture"
+      src: "./images/officials/leonard_lianza.jpg",
+      alt: "Leonard Bryan L. Lianza picture"
     },
-    firstName: "Marvin B.",
-    lastName: "Ambas",
+    firstName: "Leonard Bryan L.",
+    lastName: "Lianza",
     position: "Kagawad"
   },
   {
@@ -584,20 +584,20 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/officials/leonard_lianza.jpg",
-      alt: "Leonard Bryan L. Lianza picture"
+      src: "./images/officials/marvin_ambas.jpg",
+      alt: "Marvin B. Ambas picture"
     },
-    firstName: "Leonard Bryan L.",
-    lastName: "Lianza",
+    firstName: "Marvin B.",
+    lastName: "Ambas",
     position: "Kagawad"
   },
   {
     image: {
-      src: "./images/officials/robert_lumague.jpg",
-      alt: "Robert Aldrich B. Lumague picture"
+      src: "./images/officials/manuel_alon.jpg",
+      alt: "Manuel G. Alon picture"
     },
-    firstName: "Robert Aldrich B.",
-    lastName: "Lumague",
+    firstName: "Manuel G.",
+    lastName: "Alon",
     position: "Kagawad"
   },
   {
@@ -611,11 +611,11 @@ export const officials = [
   },
   {
     image: {
-      src: "./images/officials/manuel_alon.jpg",
-      alt: "Manuel G. Alon picture"
+      src: "./images/officials/robert_lumague.jpg",
+      alt: "Robert Aldrich B. Lumague picture"
     },
-    firstName: "Manuel G.",
-    lastName: "Alon",
+    firstName: "Robert Aldrich B.",
+    lastName: "Lumague",
     position: "Kagawad"
   },
   {
