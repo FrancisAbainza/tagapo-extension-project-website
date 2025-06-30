@@ -218,6 +218,8 @@ html {
     transform: scale(1.05);
     z-index: 2;
     box-shadow: 0 0.73vw 1.83vw rgba(0, 0, 0, 0.2);
+    
+       
 }
 
 .card {
@@ -225,7 +227,7 @@ html {
     background-color: #ffffff;
     border-radius: 1vw;
     overflow: hidden;
-    width: 21.96vw;
+    width:27vw;/* 21.96vw;*/
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -235,21 +237,29 @@ html {
 
 .card img {
     width: 100%;
-    height: 14.65vw;
+    height: 16vw;
     object-fit: cover;
+    border-radius: 1vw;
 }
 
 .card-content {
-    padding: 1.1vw;
+    padding: 1vw;
 }
 
 .card h2 {
-    font-size: 1.49vw;
+    font-size: 1.5vw;
     margin: 0 0 0.73vw;
 }
+.card .card-title-red{
+    color: #eb0000;
+    font-size: 0.9vw;
+    font-weight: 500;
+}   
 
 .card p {
-    font-size: 1.18vw;
+    font-size: 1vw;
+    width: 25vw;
+    text-align: justify;
 }
 
 .card i.fa-arrow-right {
@@ -268,21 +278,10 @@ html {
     border-radius: 50%;
 }
 
-.card i.fa-arrow-right:hover {
-    position: absolute;
-    width: 2.2vw;
-    height: 2.2vw;
-    top: 1.1vw;
-    right: 1.1vw;
-    padding: 0.37vw;
-    font-size: 0.95vw;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.card:hover i.fa-arrow-right {
     background-color: #ffffff;
     color: #eb0000;
     box-shadow: 0 0.29vw 0.88vw rgba(235, 0, 0, 0.3);
-    border-radius: 50%;
 }
 
 /*Buttons CSS*/
@@ -615,71 +614,6 @@ html {
     text-align: justify;
 }
 
-/*Para sa Bagong Tagapo section*/
-.bagongTagapoHeader {
-    margin-bottom: 2vw;
-}
-
-.case-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.93vw;
-    max-width: auto;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-}
-
-.case-container .case:hover {
-    opacity: 1 !important;
-    transform: scale(1.05);
-    z-index: 2;
-    box-shadow: 0 0.73vw 1.83vw rgba(90, 77, 77, 0.2);
-    outline: 0.15vw solid #eb0000;
-    outline-offset: 0.07vw;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.case {
-    position: relative;
-    background-color: #e2dfdf;
-    border-radius: 1vw;
-    overflow: hidden;
-    box-shadow: 0.073vw 0.29vw 0.44vw rgba(41, 40, 40, 0.1);
-    width: 25vw;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    cursor: context-menu;
-    text-align: center;
-}
-
-.case img {
-    width: 100%;
-    height: 16.1vw;
-    object-fit: cover;
-    border-radius: 0.66vw;
-}
-
-.case-content {
-    padding: 0.44vw 1.1vw;
-}
-
-.case h2 {
-    font-size: 1.12vw;
-    margin: 0 0 0.73vw;
-}
-
-.case p {
-    font-size: 1.1vw;
-    color: #333;
-    width: 22vw;
-    text-align: justify;
-}
-
 /* Volunteer With Us section*/
 .volunteerHeader {
     display: flex;
@@ -695,8 +629,9 @@ html {
     min-width: 0;
     width: auto;
     word-break: break-word;
-    width: 58vw;
-    margin-left: 7.03vw;
+    width: 57vw;
+     margin:2vw auto 2vw;/*margin-left: 7.03vw;*/
+     text-align: justify;
 }
 
 .verticalLine {
@@ -707,8 +642,8 @@ html {
 
 .box {
     width: 100%;
-    max-width: 54vw;
-    margin: 1vw;
+    max-width: 57vw;
+    margin:auto; /*1vw;*/
     height: auto;
     border-radius: 2vw;
     border: 0.15vw solid #000000;
@@ -719,7 +654,8 @@ html {
     position: relative;
     overflow: hidden;
     gap: 1.5vw;
-    margin-left: 7vw;
+   /* margin-left: 7vw;*/
+    
 }
 
 .box .bookmark,
@@ -797,8 +733,8 @@ html {
 
 .box-2 {
     width: 100%;
-    max-width: 54vw;
-    margin: 1vw 7vw 1vw auto;
+    max-width: 57vw;
+    margin:2vw auto; /* margin: 1vw 7vw 1vw auto;*/
     height: auto;
     border-radius: 2vw;
     border: 0.15vw solid #000000;
@@ -838,6 +774,7 @@ html {
     object-fit: contain;
     flex-shrink: 0;
     margin-left: 1vw;
+    margin-top: -1vw;
 }
 
 .contact-row .email-info {
