@@ -17,7 +17,9 @@ export function initializeCarouselScript(mainCarousel, carouselItems, breakpoint
     carouselItems.forEach((carouselItem) => {
       carouselContainer.innerHTML += carouselItem;
       carouselItemCount++;
-    })
+    });
+    
+    carouselContainer.style.gap = `${gap}px`;
   }
 
   // Method for adding responsive width for carousel items
@@ -139,7 +141,7 @@ export function initializeCarouselScript(mainCarousel, carouselItems, breakpoint
       1. Total width of all items passed
       2. total width of all the gaps passed
       */
-      carouselContainer.style.transform = `translateX(-${(itemWidth * itemsPassed) + (24 * itemsPassed)}px)`
+      carouselContainer.style.transform = `translateX(-${(itemWidth * itemsPassed) + (gap * itemsPassed)}px)`
     }
 
     // Reset the carousel transform when the screen resizes to prevent unorganized transform state and rerender navigation buttons and their script

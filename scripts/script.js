@@ -226,7 +226,7 @@ function initializeCommitteesScript() {
     { viewportWidth: 700, numOfItems: 2 },
     { viewportWidth: 0, numOfItems: 1 },
   ];
-  const committeesCarouselGap = 24;
+  const committeesCarouselGap = 12;
   let committeesCarouselItems = [];
   for (let i = 0; i < standingCommitees.length; i += 2) {
     committeesCarouselItems.push(`
