@@ -12,7 +12,8 @@
 ---
 ## 📑 Table of Contents
 
-- [📌 Project Overview](#-project-overview)  
+- [📌 Project Overview](#-project-overview)
+- [🤝 Meet The Team](#-meet-the-team)
 - [🚀 Key Features by Section](#-key-features-by-section)  
   - [🏠 Home Page](#-home-page)  
   - [🩺 Health Services](#-health-services)  
@@ -42,6 +43,20 @@ Key areas include:
 - 🌱 Environmental sustainability efforts  
 
 ---
+
+## 🤝 Meet The Team
+
+### 👥 Project Team Structure
+
+| Sub-group | **Project Managers**                      | **Quality Assurance Analyst**          | **Business Analysts**                 | **Technical Writers**                        | **Developers**                         | **UI/UX Designers**                  |
+|-----------|-------------------------------------------|----------------------------------------|---------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------|
+| **CORE**  | **Lead:** Carta, John Benedict S.<br>**Assistant:** Barruga, Jucel P. | **Lead:** Sangalang, Josiah Angelo T. | **Lead:** Calderon, Benedict N.       | **Lead:** Manalo, Zamantha Artlyn O.         | **Lead:** Ebero, Christian James O.   | **Lead** Buenaflor, Alexa Jane V.     |
+| **1**     | Diongco, Angelo L.                        | Cajegas, Frances Glyn                  | Endrina, Aldis M.                     | Magallanes, Paul Marley                      | Bonalos, Jayver Mark G.               | Estanislao, Hezekiel Reyjohn D.      |
+| **2**     | Velez Jr, Ariel A.                        | Suto, Antonia Jillian D.               | Pineda, Marienelle O.                 | Bato, Erman Jeymi    | Dela Cruz, Ezrah Simone<br>Revellame, Marianne    | Simon, Shaine Ashly D.               |
+| **3**     | Lubugin, Carl Jeremy D.                   | Alpajora, Mark Clarenz D.              | Calderon, Benedict N.                 | Crizaldo, Francine Karylle P.<br>Reyes, Rhafael S. | Riego, Phillip Lawrenz D.             | Hermo, Beatrice Marife B.            |
+| **4**     | Casacop, Maria Angela C.                  | De Castro, Geisler M.                  | Peralta, Margaret C.                  | Caratihan, Odessa Jen C.                     | De Guzman, Leonifel C.                | Tañala, Yanina Liro P.               |
+| **5**     | Barruga, Jucel P.                         | Abrea, Jofy Marco B.<br>Capuso, Czyruss A. | Napi, Charisse Mae A.             | Manalo, Zamantha Artlyn O.<br>Diaz, Leah Jean L. | Ebero, Christian James O.<br>Abainza, Francis Rafael A. | Librada, Ma. Cathleen O.<br>Buenaflor, Alexa Jane V. |
+| **6**     | Cosio, John Lory D.                       | Karunungan, Myka C.<br>Fiscal, Dan Jeshua D. |                               | Pacuan, Ansherie Dylan Franzesca A.          |                                        |                                      |
 
 ## 🚀 Key Features by Section
 
