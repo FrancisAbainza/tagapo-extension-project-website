@@ -28,7 +28,7 @@ body {
     text-align: center;
 }
 
-.banner>* {
+.banner * {
     margin: 0;
 }
 
@@ -39,9 +39,11 @@ body {
     right: 0;
     bottom: 0;
     background:
-        linear-gradient(to bottom, transparent 60%, white 80%),
-        url(../env_images/FrontPagePhoto/banner-img.png) center -50px no-repeat;
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 35%, #ffffff 95%),
+        url(../env_images/FrontPagePhoto/backgroundMain.jpg) center -50px no-repeat;
     background-size: cover;
+    background-position: center;
+    opacity: 0.6;
     z-index: -1;
 }
 
@@ -55,16 +57,19 @@ body {
     animation: blueYellowGlow 2s ease-in-out infinite alternate;
 }
 
-@keyframes blueYellowGlow {
-    0% {
-        text-shadow: 0 0 4px rgba(0, 255, 255, 0.3),
-            0 0 8px rgba(0, 255, 255, 0.2);
-    }
+.banner .desc {
+    font-size: 1.32vw;
+}
 
-    100% {
-        text-shadow: 0 0 4px rgba(255, 204, 0, 0.3),
-            0 0 8px rgba(255, 204, 0, 0.2);
-    }
+@keyframes blueYellowGlow {
+  0% {
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.3),
+                 0 0 8px rgba(0, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(255, 204, 0, 0.3),
+                 0 0 8px rgba(255, 204, 0, 0.2);
+  }
 }
 
 .wrapper {
@@ -96,6 +101,74 @@ html {
     background-color: #d9d9d9;
 }
 
+/*Header CSS*/
+.header {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 43.93vw;
+    overflow: hidden;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.header img {
+    width: 100%;
+    height: 43.93vw;
+    display: block;
+    opacity: 0.4;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 21.96vw;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 35%, #ffffff 85%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.header-text h1 {
+    font-size: 4.39vw;
+    margin: 0;
+    line-height: 1.2;
+    max-width: 90vw;
+}
+
+.header-text p {
+    margin: 2vw 0;
+    padding-left: 0;
+    width: 55vw;
+    max-width: 62.5vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-word;
+    text-align: center;
+    font-size: 1.32vw;
+    font-weight: 400;
+}
+
+.header-text span {
+    color: #eb0000;
+}
+
 /*Services Offered CSS*/
 .services {
     margin: auto;
@@ -109,6 +182,7 @@ html {
     display: flex;
     font-size: 1.32vw;
     margin-top: -1vw;
+
 }
 
 .services h2 {
@@ -144,8 +218,8 @@ html {
     transform: scale(1.05);
     z-index: 2;
     box-shadow: 0 0.73vw 1.83vw rgba(0, 0, 0, 0.2);
-
-
+    
+       
 }
 
 .card {
@@ -153,8 +227,7 @@ html {
     background-color: #ffffff;
     border-radius: 1vw;
     overflow: hidden;
-    width: 27vw;
-    /* 21.96vw;*/
+    width:27vw;/* 21.96vw;*/
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -173,16 +246,34 @@ html {
     padding: 1vw;
 }
 
-.card h2 {
-    font-size: 1.5vw;
-    margin: 0 0 0.73vw;
+.title-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.card .card-title-red {
-    color: #eb0000;
-    font-size: 0.9vw;
-    font-weight: 500;
+.card-title {
+    font-size: 2vw;
+    font-weight: bold;
 }
+
+.subtitle {
+    color: red;
+    font-size: 1.1vw;
+    text-align: justify;
+    max-width: 17vw;
+    line-height: 1.2;
+    margin-left: 0.8vw;
+    margin-top: 0.2vw;
+}
+.subtitle1 {
+    color: red;
+    font-size: 1.1vw;
+    text-align: justify;
+    max-width: 17vw;
+    margin-left: 0.8vw;
+    margin-top: 0.6vw;
+}  
 
 .card p {
     font-size: 1vw;
@@ -226,7 +317,7 @@ html {
     border-radius: 1.83vw;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.17vw;
     gap: 0.5vw;
     cursor: pointer;
 }
@@ -558,9 +649,8 @@ html {
     width: auto;
     word-break: break-word;
     width: 57vw;
-    margin: 2vw auto 2vw;
-    /*margin-left: 7.03vw;*/
-    text-align: justify;
+     margin:2vw auto 2vw;/*margin-left: 7.03vw;*/
+     text-align: justify;
 }
 
 .verticalLine {
@@ -572,8 +662,7 @@ html {
 .box {
     width: 100%;
     max-width: 57vw;
-    margin: auto;
-    /*1vw;*/
+    margin:auto; /*1vw;*/
     height: auto;
     border-radius: 2vw;
     border: 0.15vw solid #000000;
@@ -584,8 +673,8 @@ html {
     position: relative;
     overflow: hidden;
     gap: 1.5vw;
-    /* margin-left: 7vw;*/
-
+   /* margin-left: 7vw;*/
+    
 }
 
 .box .bookmark,
@@ -664,8 +753,7 @@ html {
 .box-2 {
     width: 100%;
     max-width: 57vw;
-    margin: 2vw auto;
-    /* margin: 1vw 7vw 1vw auto;*/
+    margin:2vw auto; /* margin: 1vw 7vw 1vw auto;*/
     height: auto;
     border-radius: 2vw;
     border: 0.15vw solid #000000;
@@ -741,7 +829,7 @@ html {
     border-radius: 1.46vw;
     justify-content: flex-end;
     color: white;
-    font-size: 1.17vw;
+    font-size: 1.17vw; 
     font-weight: 600;
     margin-left: auto;
     margin-right: 0;

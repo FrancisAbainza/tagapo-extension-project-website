@@ -141,6 +141,43 @@ section.contact-us {
   color: #eb0000;
 }
 
+.contact-us .container-wrapper .grid .card.tagapo {
+  background-color: #eb0000;
+  box-shadow: rgba(136, 165, 191, 0.68) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.contact-us .container-wrapper .grid .card.tagapo h1 {
+  color: #fff;
+}
+
+.contact-us .container-wrapper .grid .card.tagapo h2 {
+  color: #fff;
+}
+
+.contact-us .container-wrapper .grid .card.tagapo .solid-btn {
+  background-color: #fff;
+  color: #eb0000;
+}
+
+.contact-us .container-wrapper .grid .card.tagapo:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us .container-wrapper .grid .card.tagapo:hover h1 {
+  color: #000;
+}
+
+.contact-us .container-wrapper .grid .card.tagapo:hover h2 {
+  color: #eb0000;
+}
+
+.contact-us .container-wrapper .grid .card.tagapo:hover .solid-btn {
+  background-color: #eb0000;
+  color: #fff;
+}
+
 .contact-us .container-wrapper .info {
   display: flex;
   flex-direction: column;
