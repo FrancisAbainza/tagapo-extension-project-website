@@ -29,11 +29,11 @@
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  height: unset;
 }
 
 .main-carousel>.carousel>.container {
   display: flex;
-  gap: 24px;
   transition: transform .8s ease-in-out;
 }
 
