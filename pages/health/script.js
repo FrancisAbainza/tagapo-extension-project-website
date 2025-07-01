@@ -65,6 +65,7 @@ function setupHoverCard(cardId, summaryHTML, detailHTML) {
     window.addEventListener('resize', setupListeners);
 }
 
+/* Variable for svg arrow */
 const arrowSVG = `
       <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 10V0L5 5L0 10Z" fill="#2A1613" />
@@ -143,45 +144,11 @@ setupHoverCard(
     `<em>(no consultation on weekends)</em`
 )
 
-/*
-function setupHoverCard(cardId, summaryHTML, detailHTML) {
-  const card = document.getElementById(cardId);
-  const text = card.querySelector(".card-text");
-  text.innerHTML = summaryHTML;
-
-  card.addEventListener("mouseenter", () => {
-    text.innerHTML = detailHTML;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    text.innerHTML = summaryHTML;
-  });
-}
-*/
-
-/*
-function setupClickCard(cardId, summaryHTML, detailHTML) {
-  const card = document.getElementById(cardId);
-  const text = card.querySelector(".card-text");
-  let showingDetail = false;
-
-  text.innerHTML = summaryHTML;
-
-  card.addEventListener("click", () => {
-    if (showingDetail) {
-      text.innerHTML = summaryHTML;
-    } else {
-      text.innerHTML = detailHTML;
-    }
-    showingDetail = !showingDetail;
-  });
-}
-*/
-
 // Define at module level (not global)
 
 const originalContentMap = {};
 
+/* function for partial toggle*/
 function setupPartialToggle(buttonClass, toggleSectionClass, newHTMLMap) {
     const buttons = document.querySelectorAll(`.${buttonClass}`);
 
@@ -199,7 +166,7 @@ function setupPartialToggle(buttonClass, toggleSectionClass, newHTMLMap) {
 
             setTimeout(() => {
                 toggleSection.innerHTML = newHTMLMap[targetId] + `
-            <br><button class="solid-button" id="back-btn">&times;</button>
+            <button class="solid-button" id="back-btn">&times;</button>
           `;
                 toggleSection.classList.remove("fade-out");
 

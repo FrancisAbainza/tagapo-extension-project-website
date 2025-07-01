@@ -695,6 +695,23 @@ html {
   gap: 30px;
 }
 
+.oth-health .container-wrapper .grid .container-grid .lab-test .header-info {
+  background: var(--primary-color);
+  padding: 9px 24px;
+  border-radius: 28px;
+}
+
+.oth-health .container-wrapper .grid .container-grid .lab-test .header-info p {
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.oth-health .container-wrapper .grid .container-grid .lab-test .header-info span {
+  font-size: 28px;
+}
+
 .oth-health .container-wrapper .grid .container-grid .lab-test .label-area {
   display: flex;
   align-items: center;
@@ -1659,4 +1676,14 @@ html {
 #main-content {
   opacity: 1;
   transition: opacity 0.4s ease;
+}
+
+.health-act .toggle-section {
+  position: relative;
+}
+
+#back-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
