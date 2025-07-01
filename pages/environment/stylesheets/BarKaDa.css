@@ -27,7 +27,7 @@
 }
 
 .header img {
-  width: 1950px;
+  width: 100vw;
   height: auto;
   display: block;
   opacity: 0.90;
@@ -39,7 +39,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 16vw;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 35%, #ffffff 85%);
   pointer-events: none;
   z-index: 1;
@@ -47,15 +47,15 @@
 
 .header-text {
   position: absolute;
-  bottom: 0px;
+  bottom: 0vw;
   left: 12vw;
   color: var(--dark-color);
-  padding: 20px;
+  padding: 1vw;
   z-index: 2;
 }
 
 .header-text h1 {
-  font-size: 60px;
+  font-size: 3vw;
   line-height: 1.2;
 }
 
@@ -65,18 +65,18 @@
 
 .home-icon-overlay {
   position: absolute;
-  top: 50px;
+  top: 2.5vw;
   left: 13vw;
   z-index: 2;
   text-decoration: none;
 }
 
 .home-icon-overlay i {
-  font-size: 25px;
+  font-size: 1.25vw;
   color: var(--light-color);
   background-color: var(--primary-color);
   border-radius: 50%;
-  padding: 12px 10px;
+  padding: 0.6vw 0.5vw;
   transition: transform 0.5s, background-color 0.5s ease;
 }
 
@@ -84,7 +84,7 @@
   transform: scale(1.2);
   background-color: var(--light-color);
   color: var(--primary-color);
-  box-shadow: 0 4px 12px rgba(235, 0, 0, 0.3);
+  box-shadow: 0 0.2vw 0.6vw rgba(235, 0, 0, 0.3);
   text-decoration: none;
 }
 
@@ -93,25 +93,24 @@
   display: inline-block;
   background-image: linear-gradient(to bottom, #b8aea7, #ffffff);
   background-repeat: no-repeat;
-  background-size: 100% 12px;
+  background-size: 100% 0.6vw;
   background-position: 0 100%;
-  padding-bottom: 5px;
+  padding-bottom: 0.25vw;
 }
 
 .info p {
-  font-size: 22px;
+  font-size: 1.1vw;
   line-height: 1.5;
   text-align: justify;
   margin-left: 13vw;
-  max-width: 1000px;
+  max-width: 50vw;
   font-weight: 450;
-  padding-bottom: 50px;
+  padding-bottom: 2.5vw;
 }
 
 .info-highlight {
   color: var(--primary-color);
 }
-
 
 /* Lamok Buster Section */
 
@@ -122,13 +121,14 @@
     max-width: 1500px;
     height: 800px;
     background: var(--light-color);
+    border-radius: 25px;
     box-shadow: 0 40px 50px var(--muted-gray);
     overflow: hidden;
 }
 
 .lamok-container .slide .item{
-    width: 600px;
-    height: 700px;
+    width: 625px;
+    height: 750px;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -141,13 +141,14 @@
 }
 
 .slide .item:nth-child(1),
-.slide .item:nth-child(2){
+.slide .item:nth-child(2) {
     top: 0;
     left: 0;
     transform: translate(0, 0);
     border-radius: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
 .slide .item:nth-child(3){
@@ -180,6 +181,7 @@
     color: var(--light-color);
     transform: translate(0, -50%);
     display: none;
+    z-index: 4;
 }
 
 .content .name{
@@ -192,14 +194,14 @@
     animation: animate 1s ease-in-out 1 forwards;
 }
 
-.content .info{
+.content .info {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 20px;
     opacity: 0;
-    background-color: rgba(53, 53, 53, 0.7);
+    background-color: rgba(235, 0, 0, 0.5);
     padding: 20px 40px;
-    text-shadow: 200px var(--dark-color);
+    text-shadow: 100px 10px 200px var(--dark-color);
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
@@ -250,6 +252,146 @@
 .button button:hover{
     background: var(--primary-color);
     color: var(--light-color);
+}
+
+/* Photos Format */
+
+.photos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  gap: 1rem;
+  transition: transform 0.7s ease;
+  z-index: 4;
+}
+
+.photos:hover {
+  transform: scale(1.03);
+}
+
+/* Carousel Photos */
+
+.photos-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.photos-collection {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.photos-collection img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Carousel Formats */
+
+.photo-wrap {
+  position: relative;
+  min-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sub-carousel {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.sub-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.sub-slides img {
+  min-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sub-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.sub-arrow.left {
+  left: 20px;
+}
+
+.sub-arrow.right {
+  right: 20px;
+}
+
+
+/*Arrows Style*/
+
+.photos-arrows {
+  position: absolute;
+  justify-content: space-between;
+  padding: 9px 12px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+  transform: translateY(-10%);
+}
+
+.arrow {
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 6px 16px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: var(--light-color);
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(235, 0, 0, 0.3);
 }
 
 
@@ -377,7 +519,7 @@ span {
 
 .collapse-container {
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 4vh;
 }
 
 .collapse-btn {
@@ -743,13 +885,7 @@ span {
   max-width: 40vw;
   background-color: rgba(217, 217, 217, 0.3);
   padding: 10px 60px;
-}
-
-.num-line-two {
-  width: 50px;
-  height: 150px;
-  margin-left: -800px;
-  background-color: var(--primary-color);
+  border-left: solid 20px #eb0000;
 }
 
 .number-wrap-one {
