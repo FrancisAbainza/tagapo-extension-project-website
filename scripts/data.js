@@ -17,23 +17,6 @@ export const locations = [
     }
   },
   {
-    name: "Zavalla 3 Compound",
-    purok: "Purok 1",
-    image: {
-      src: "./images/map/zavalla3.jpg",
-      alt: "zavalla 3 subdivision image",
-    },
-    marker: {
-      class: "location-zavalla3",
-      id: "locationZavalla3",
-      text: "Zavalla 3",
-      coordinates: {
-        top: "54.98%",
-        left: "46.08%",
-      }
-    }
-  },
-  {
     name: "Don Pablo Compound",
     purok: "Purok 1",
     image: {
@@ -47,6 +30,74 @@ export const locations = [
       coordinates: {
         top: "58.95%",
         left: "49.28%",
+      }
+    }
+  },
+  {
+    name: "Ilem Homes Compound",
+    purok: "Purok 1",
+    image: {
+      src: "./images/map/ilem.png",
+      alt: "ilem homes subdivision image",
+    },
+    marker: {
+      class: "location-ilemhomes",
+      id: "locationIlemHomes",
+      text: "Ilem<br/>Homes",
+      coordinates: {
+        top: "63.64%",
+        left: "46.04%",
+      }
+    }
+  },
+  {
+    name: "Pambuan Alley Compound",
+    purok: "Purok 1",
+    image: {
+      src: "./images/map/pambuan.png",
+      alt: "pambuan alley subdivision image",
+    },
+    marker: {
+      class: "location-pambuanalley",
+      id: "locationPambuanAlley",
+      text: "Pambuan Alley",
+      coordinates: {
+        top: "68.68%",
+        left: "51.89%",
+      }
+    }
+  },
+  {
+    name: "Perlas Compound",
+    purok: "Purok 1",
+    image: {
+      src: "./images/map/perlas.jpg",
+      alt: "perlas subdivision image",
+    },
+    marker: {
+      class: "location-perlas",
+      id: "locationPerlas",
+      text: "Perlas",
+      coordinates: {
+        top: "66.53%",
+        left: "49.52%",
+      }
+    }
+  },
+  {
+    name: "Zavalla 3 Compound",
+    purok: "Purok 1",
+    image: {
+      src: "./images/map/zavalla3.jpg",
+      alt: "zavalla 3 subdivision image",
+    },
+    marker: {
+      class: "location-zavalla3",
+      id: "locationZavalla3",
+      text: "Zavalla 3",
+      coordinates: {
+        top: "54.98%",
+        left: "46.08%",
       }
     }
   },
@@ -119,6 +170,23 @@ export const locations = [
     }
   },
   {
+    name: "Celina Homes 5 Compound",
+    purok: "Purok 3",
+    image: {
+      src: "./images/map/celina_homes.png",
+      alt: "celina homes subdivision image",
+    },
+    marker: {
+      class: "location-celinahomes5",
+      id: "locationCelinaHomes5",
+      text: "Celina Homes 5",
+      coordinates: {
+        top: "66.34%",
+        left: "36.16%",
+      }
+    }
+  },
+  {
     name: "Farmview Compound",
     purok: "Purok 3",
     image: {
@@ -132,6 +200,23 @@ export const locations = [
       coordinates: {
         top: "17.24%",
         left: "39.69%",
+      }
+    }
+  },
+  {
+    name: "Gruenville II Compound",
+    purok: "Purok 3",
+    image: {
+      src: "./images/map/gruenville.png",
+      alt: "gruenville subdivision image",
+    },
+    marker: {
+      class: "location-gruenville",
+      id: "locationGruenvilleII",
+      text: "Gruenville II",
+      coordinates: {
+        top: "31.22%",
+        left: "41.47%",
       }
     }
   },
@@ -170,6 +255,23 @@ export const locations = [
     }
   },
   {
+    name: "Doña Rosina Compound",
+    purok: "Purok 3",
+    image: {
+      src: "./images/map/dona_rosina.png",
+      alt: "dona rosina subdivision image",
+    },
+    marker: {
+      class: "location-donarosina",
+      id: "locationDonaRosina",
+      text: "Doña Rosina",
+      coordinates: {
+        top: "51.06%",
+        left: "34.43%",
+      }
+    }
+  },
+  {
     name: "Fairfield Compound",
     purok: "Purok 3",
     image: {
@@ -204,19 +306,36 @@ export const locations = [
     }
   },
   {
-    name: "Doña Rosina Compound",
+    name: "Tiongco Compound",
     purok: "Purok 3",
     image: {
-      src: "./images/map/dona_rosina.png",
-      alt: "dona rosina subdivision image",
+      src: "./images/map/tiongco.jpg",
+      alt: "tiongco subdivision image",
     },
     marker: {
-      class: "location-donarosina",
-      id: "locationDonaRosina",
-      text: "Doña Rosina",
+      class: "location-tiongco",
+      id: "locationTiongco",
+      text: "Tiongco",
       coordinates: {
-        top: "51.06%",
-        left: "34.43%",
+        top: "60.43%",
+        left: "37.71%",
+      }
+    }
+  },
+  {
+    name: "Anros Compound",
+    purok: "Purok 4",
+    image: {
+      src: "./images/map/anros.jpg",
+      alt: "anros subdivision image",
+    },
+    marker: {
+      class: "location-anros",
+      id: "locationAnros",
+      text: "Anros",
+      coordinates: {
+        top: "53.97%",
+        left: "28.59%",
       }
     }
   },
@@ -421,125 +540,6 @@ export const locations = [
       coordinates: {
         top: "91.28%",
         left: "22.96%",
-      }
-    }
-  },
-  {
-    name: "Gruenville II Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/gruenville.png",
-      alt: "gruenville subdivision image",
-    },
-    marker: {
-      class: "location-gruenville",
-      id: "locationGruenvilleII",
-      text: "Gruenville II",
-      coordinates: {
-        top: "31.22%",
-        left: "41.47%",
-      }
-    }
-  },
-  {
-    name: "Ilem Homes Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/ilem.png",
-      alt: "ilem homes subdivision image",
-    },
-    marker: {
-      class: "location-ilemhomes",
-      id: "locationIlemHomes",
-      text: "Ilem<br/>Homes",
-      coordinates: {
-        top: "63.64%",
-        left: "46.04%",
-      }
-    }
-  },
-  {
-    name: "Tionco Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/tionco.jpg",
-      alt: "tionco subdivision image",
-    },
-    marker: {
-      class: "location-tionco",
-      id: "locationTionco",
-      text: "Tionco",
-      coordinates: {
-        top: "60.43%",
-        left: "37.71%",
-      }
-    }
-  },
-  {
-    name: "Celina Homes 5 Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/celina_homes.png",
-      alt: "celina homes subdivision image",
-    },
-    marker: {
-      class: "location-celinahomes5",
-      id: "locationCelinaHomes5",
-      text: "Celina Homes 5",
-      coordinates: {
-        top: "66.34%",
-        left: "36.16%",
-      }
-    }
-  },
-  {
-    name: "Anros Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/anros.jpg",
-      alt: "anros subdivision image",
-    },
-    marker: {
-      class: "location-anros",
-      id: "locationAnros",
-      text: "Anros",
-      coordinates: {
-        top: "53.97%",
-        left: "28.59%",
-      }
-    }
-  },
-  {
-    name: "Pambuan Alley Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/pambuan.png",
-      alt: "pambuan alley subdivision image",
-    },
-    marker: {
-      class: "location-pambuanalley",
-      id: "locationPambuanAlley",
-      text: "Pambuan Alley",
-      coordinates: {
-        top: "68.68%",
-        left: "51.89%",
-      }
-    }
-  },
-  {
-    name: "Perlas Compound",
-    purok: "Purok --",
-    image: {
-      src: "./images/map/perlas.jpg",
-      alt: "perlas subdivision image",
-    },
-    marker: {
-      class: "location-perlas",
-      id: "locationPerlas",
-      text: "Perlas",
-      coordinates: {
-        top: "66.53%",
-        left: "49.52%",
       }
     }
   },
