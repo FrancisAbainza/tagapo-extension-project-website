@@ -127,17 +127,16 @@
 }
 
 .lamok-container .slide .item{
-    width: 625px;
+    width: 600px;
     height: 750px;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 10px 25px #cbcbcb;
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.6s;
 }
 
 .slide .item:nth-child(1),
@@ -185,8 +184,8 @@
 }
 
 .content .name{
-    font-size: 70px;
-    text-shadow: 0 2px 10px var(--dark-color);
+    font-size: 75px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 1);
     text-transform: uppercase;
     font-weight: bold;
     line-height: 1.1;
@@ -201,7 +200,7 @@
     opacity: 0;
     background-color: rgba(235, 0, 0, 0.5);
     padding: 20px 40px;
-    text-shadow: 100px 10px 200px var(--dark-color);
+    text-shadow: 0 2px 5px var(--dark-color);
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
@@ -217,13 +216,11 @@
     from{
         opacity: 0;
         transform: translate(0, 100px);
-        filter: blur(33px);
     }
 
     to{
         opacity: 1;
         transform: translate(0);
-        filter: blur(0);
     }
 }
 
@@ -270,6 +267,7 @@
   gap: 1rem;
   transition: transform 0.7s ease;
   z-index: 4;
+  transform: translateZ(0);
 }
 
 .photos:hover {
@@ -300,9 +298,12 @@
   flex-shrink: 0;
   border-radius: 20px;
   display: block;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
+.photos-collection img:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 /* Carousel Formats */
 
@@ -319,6 +320,7 @@
   height: auto;
   overflow: hidden;
   border-radius: 20px;
+  transform: translateZ(0);
 }
 
 .sub-slides {
@@ -328,10 +330,11 @@
 }
 
 .sub-slides img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
   flex-shrink: 0;
+  object-fit: cover;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -341,7 +344,7 @@
   transform: translateY(-50%);
   font-size: 25px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 10px;
   cursor: pointer;
   z-index: 5;
@@ -355,43 +358,6 @@
 
 .sub-arrow.right {
   right: 20px;
-}
-
-
-/*Arrows Style*/
-
-.photos-arrows {
-  position: absolute;
-  justify-content: space-between;
-  padding: 9px 12px;
-  margin-bottom: 15px;
-  margin-right: 15px;
-  display: flex;
-  gap: 20px;
-  z-index: 10;
-  transform: translateY(-10%);
-}
-
-.arrow {
-  background: var(--primary-color);
-  color: var(--light-color);
-  padding: 6px 16px;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 22px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s, transform 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-}
-
-.arrow:hover {
-  background: var(--light-color);
-  color: var(--primary-color);
-  box-shadow: 0 4px 12px rgba(235, 0, 0, 0.3);
 }
 
 

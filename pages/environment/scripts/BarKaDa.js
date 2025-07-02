@@ -1,4 +1,7 @@
 /* Lamok Buster */ 
+
+let currentIndex = 0;
+
 let next = document.querySelector('.next')
 let prev = document.querySelector('.prev')
 
@@ -61,6 +64,70 @@ function changeSlide(button, direction) {
     const offset = slideIndexes[carouselIndex] * -100;
     slidesContainer.style.transform = `translateX(${offset}%)`;
 }
+
+
+requestAnimationFrame(() => {
+  container.appendChild(items[0]);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".item").forEach((item) => {
+    const title = item.dataset.title || '';
+    const text = item.dataset.text || '';
+    const images = JSON.parse(item.dataset.images || '[]');
+
+    // Clear any existing content
+    item.innerHTML = "";
+
+    // Create photo carousel structure
+    const photos = document.createElement("div");
+    photos.className = "photos";
+    photos.innerHTML = `
+      <div class="photos-container">
+        <div class="photos-collection">
+          <div class="photo-wrap">
+            <div class="sub-carousel">
+              <span class="sub-arrow left" onclick="changeSlide(this, -1)">&#10094;</span>
+              <div class="sub-slides"></div>
+              <span class="sub-arrow right" onclick="changeSlide(this, 1)">&#10095;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Add images into sub-slides
+    const slidesContainer = photos.querySelector(".sub-slides");
+    images.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = title;
+      img.loading = "lazy";
+      slidesContainer.appendChild(img);
+    });
+
+    // Create content block
+    const content = document.createElement("div");
+    content.className = "content";
+
+    const nameDiv = document.createElement("div");
+    nameDiv.className = "name";
+    nameDiv.textContent = title;
+
+    const infoDiv = document.createElement("div");
+    infoDiv.className = "info";
+    infoDiv.textContent = text;
+
+    content.appendChild(nameDiv);
+    content.appendChild(infoDiv);
+
+    // Append everything into the item
+    item.appendChild(photos);
+    item.appendChild(content);
+  });
+});
+
+
 
 /* Kaminero ni Etaw */
 
