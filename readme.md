@@ -94,7 +94,8 @@ Key areas include:
   - Barangay Hotline  
   - PNP Sta. Rosa  
   - CDRRMO  
-  - Bureau of Fire Protection  
+  - Bureau of Fire Protection
+  - Violence Against Women And Their Children
 
 - **Tanod Map** – Visual outpost deployment  
 - **Report Filing** – 3-step complaint procedure  
@@ -135,16 +136,20 @@ Key areas include:
 ### 🌿 Environment Initiatives
 
 - **Programs:**  
-  - Lamok Buster (mosquito control)  
-  - Kaminero ni Etaw (cleanups)  
-  - Adopt-A-Lot (green spaces)  
+  - BarKada (Barangay Kalinisan Day)
+    - Lamok Buster Team
+    - Kaminero ni Etaw
+    - Material Recovery Facility
+  - BaRCO (Barangay Road Clearing Operation)
+  - HAPAG: Halina't Magtanim ng Prutas at Gulay
+    - Adopt A Lot
+    - Aquaponics Garden Facility
 
 - **Impact Metrics** – Focused on 4 environmental pillars
-
-- **Project Spotlights:**  
-  - HAPAG (Urban Farming)  
-  - Aquaponics Garden  
-  - MRF  
+  - Urban Greening
+  - Biodiversity Care
+  - Sustainable Living
+  - Smart Waste Disposal
 
 - **Volunteer Portal** – Join via “Get Involved” buttons  
 
