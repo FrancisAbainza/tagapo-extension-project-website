@@ -3,9 +3,9 @@
 </p>
 
 <h1 align="center">
-  🌐 <a href="https://francisabainza.github.io/tagapo-extension-project-website/" target="_blank">Barangay Tagapo Community Website</a>
+  🌐 <a href="https://barangay-tagapo-website.vercel.app/" target="_blank">Barangay Tagapo Community Website</a>
 </h1>
-<p align="center"><em>The official? online portal? of Barangay Tagapo, Sta. Rosa, Laguna</em></p>
+<p align="center"><em>The official online portal of Barangay Tagapo, Sta. Rosa, Laguna</em></p>
 
 <p align="center">A centralized digital platform serving the residents of Barangay Tagapo, Sta. Rosa, Laguna — designed to improve access to public services and foster local engagement.</p>
 
@@ -23,6 +23,8 @@
   - [🌿 Environment Initiatives](#-environment-initiatives)
 - [🛠️ Technology Stack](#-technology-stack)  
 - [⚙️ Installation & Setup](#-installation--setup)
+- [📁 Project Files](#-project-files)
+
 ---
 
 ## 📌 Project Overview
@@ -182,3 +184,13 @@ https://code.visualstudio.com/download
 https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 
 # Open with Live Server
+```
+---
+
+## 📁 Project Files
+
+<a href="https://drive.google.com/file/d/1Fy3jilpQes1YSWzQwK6n6XbGkvsPTJeF/view?usp=drive_link"> <h5>Tagapo Extension Project Documentation</h5> </a>
+
+<a href="https://drive.google.com/file/d/1AuLZ9yudMx0NreWr6_Bhr3gkWqW-3nnL/view?usp=drive_link"> <h6>Tagapo Website User Manual<h6> </a>
+
+<a href="https://drive.google.com/file/d/1N94MCZx0eyscOxDTfUsLLdvaTSnWe6Fi/view?usp=drive_link"> <h6>Tagapo Website Video Presentation<h6> </a>
