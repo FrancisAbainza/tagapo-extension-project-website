@@ -80,7 +80,7 @@ section.contact-us {
 .contact-us .container-wrapper .grid .card h2 {
   position: absolute;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 26px;
   color: #eb0000;
   margin: 0;
   top: 135px;
@@ -90,8 +90,13 @@ section.contact-us {
   padding: 0 10px;
 }
 
+.contact-us .container-wrapper .grid .card .vawc {
+  font-size: 20px;
+}
+
 .contact-us .container-wrapper .grid .card h1 {
   position: absolute;
+  font-size: 26px;
   font-weight: 800;
   color: #000;
   bottom: 65px;
